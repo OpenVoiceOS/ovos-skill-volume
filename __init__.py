@@ -32,7 +32,7 @@ class VolumeSkill(MycroftSkill):
 
     def handle_volume_change_gui(self, message):
         percent = message.data["percent"] * 100
-        self.set_volume_by_gui(percent)
+        self.set_volume(percent, set_by_gui=True)
 
     # volume control
     def get_intro_message(self):
@@ -43,7 +43,7 @@ class VolumeSkill(MycroftSkill):
     def get_volume(self):
         return AlsaControl().get_volume_percent()
 
-    def set_volume(self, percent=None):
+    def set_volume(self, percent=None, set_by_gui=False):
         volume = int(percent)
         volume = min(100, volume)
         volume = max(0, volume)
@@ -51,16 +51,10 @@ class VolumeSkill(MycroftSkill):
         play_wav(self.volume_sound)
 
         # report change to GUI
-        percent = volume / 100
-        self.handle_volume_request(
-            Message("mycroft.volume.get", {"percent": percent}))
-
-    def set_volume_by_gui(self, percent=None):
-        volume = int(percent)
-        volume = min(100, volume)
-        volume = max(0, volume)
-        AlsaControl().set_volume_percent(volume)
-        play_wav(self.volume_sound)
+        if not set_by_gui:
+            percent = volume / 100
+            self.handle_volume_request(
+                Message("mycroft.volume.get", {"percent": percent}))
 
     def increase_volume(self, volume_change=None):
         if not volume_change:
