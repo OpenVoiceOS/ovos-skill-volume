@@ -116,6 +116,16 @@ class VolumeSkill(MycroftSkill):
     def handle_low_volume_intent(self, message):
         self.set_volume(30)
 
+    @intent_file_handler('mute.intent')
+    def handle_mute_intent(self, message):
+        self.log.info("User muted audio.")
+        AlsaControl().mute()
+
+    @intent_file_handler('unmute.intent')
+    def handle_unmute_intent(self, message):
+        self.log.info("User unmuted audio.")
+        AlsaControl().unmute()
+
     @intent_handler(IntentBuilder("current_volume").require('current_volume'))
     def handle_query_volume(self, message):
         volume = AlsaControl().get_volume()
