@@ -20,9 +20,9 @@ class VolumeSkill(MycroftSkill):
         self.add_event("mycroft.volume.set.gui",
                        self.handle_volume_change_gui)
         self.handle_volume_request(Message("mycroft.volume.get"))
-        self.add_event("mycroft.volume.mute.gui",
+        self.add_event("mycroft.volume.mute",
                        self.handle_mute_intent)
-        self.add_event("mycroft.volume.unmute.gui",
+        self.add_event("mycroft.volume.unmute",
                        self.handle_unmute_intent)
 
     def handle_volume_request(self, message):
