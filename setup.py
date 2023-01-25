@@ -76,6 +76,7 @@ setup(
     version=get_version(),
     description='ovos skill plugin',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url=URL,
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
