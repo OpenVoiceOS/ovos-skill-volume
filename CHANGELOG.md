@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.1...HEAD)
+
+**Merged pull requests:**
+
+- use the class property to define skill as offline [\#17](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/17) ([AIIX](https://github.com/AIIX))
+
+## [V0.0.1](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.1) (2023-01-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.1a1...V0.0.1)
+
 ## [V0.0.1a1](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.1a1) (2023-01-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/3761aecb82d4de0cb7656a0c959c1ebcd51df724...V0.0.1a1)
