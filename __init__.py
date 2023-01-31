@@ -2,6 +2,7 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler, intent_file_handler
 from mycroft.util import normalize
 from mycroft.util.parse import extract_number
+from ovos_workshop.skills.base import SkillNetworkRequirements, classproperty
 
 MIN_VOLUME = 0
 MAX_VOLUME = 100
@@ -15,6 +16,16 @@ def amount_validator(response):
 
 
 class VolumeSkill(MycroftSkill):
+    @classproperty
+    def network_requirements(self):
+        SkillNetworkRequirements(internet_before_load=False,
+                                 network_before_load=False,
+                                 requires_internet=False,
+                                 requires_network=False,
+                                 no_internet_fallback=True,
+                                 no_network_fallback=True)
+        return SkillNetworkRequirements()
+
     def _query_volume(self, message):
         response = self.bus.wait_for_response(message.forward("mycroft.volume.get"))
         if response:
