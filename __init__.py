@@ -2,7 +2,7 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler, intent_file_handler
 from mycroft.util import normalize
 from mycroft.util.parse import extract_number
-from ovos_workshop.skills.ovos import SkillNetworkRequirements, classproperty
+from ovos_workshop.skills.base import SkillNetworkRequirements, classproperty
 
 MIN_VOLUME = 0
 MAX_VOLUME = 100
