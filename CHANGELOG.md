@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a1...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a2...HEAD)
+
+**Fixed bugs:**
+
+- Fix key and wording [\#19](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/19) ([atd](https://github.com/atd))
+
+## [V0.0.2a2](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a2) (2023-02-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a1...V0.0.2a2)
 
 **Merged pull requests:**
 
