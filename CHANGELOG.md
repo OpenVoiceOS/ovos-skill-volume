@@ -1,5 +1,9 @@
 # Changelog
 
+## [V0.0.2a6](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a6) (2023-09-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a5...V0.0.2a6)
+
 ## [V0.0.2a5](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a5) (2023-09-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a4...V0.0.2a5)
