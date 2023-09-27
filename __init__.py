@@ -1,7 +1,8 @@
-from adapt.intent import IntentBuilder
-from mycroft.skills.core import MycroftSkill, intent_handler, intent_file_handler
-from mycroft.util import normalize
-from mycroft.util.parse import extract_number
+from ovos_workshop.skills import OVOSSkill 
+from ovos_workshop.decorators import intent_handler
+# TODO classifiers > 0.0.8; check if normalize is still needed
+from lingua_franca.parse import normalize, extract_number
+from ovos_utils.intents import IntentBuilder
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils import classproperty
 
@@ -16,7 +17,11 @@ def amount_validator(response):
     return None
 
 
-class VolumeSkill(MycroftSkill):
+class VolumeSkill(OVOSSkill):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    @classproperty
     def runtime_requirements(self):
         return RuntimeRequirements(internet_before_load=False,
                                    network_before_load=False,
@@ -86,32 +91,32 @@ class VolumeSkill(MycroftSkill):
         else:
             self.speak_dialog("volume.max.already")
 
-    @intent_file_handler("volume.max.intent")
+    @intent_handler("volume.max.intent")
     def handle_max_volume_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.set", {"percent": 1.0}))
         self.speak_dialog("volume.max")
 
-    @intent_file_handler("volume.high.intent")
+    @intent_handler("volume.high.intent")
     def handle_high_volume_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.9}))
 
-    @intent_file_handler("volume.default.intent")
+    @intent_handler("volume.default.intent")
     def handle_default_volume_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.7}))
 
-    @intent_file_handler("volume.low.intent")
+    @intent_handler("volume.low.intent")
     def handle_low_volume_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.3}))
 
-    @intent_file_handler("volume.mute.intent")
+    @intent_handler("volume.mute.intent")
     def handle_mute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.mute"))
 
-    @intent_file_handler("volume.unmute.intent")
+    @intent_handler("volume.unmute.intent")
     def handle_unmute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.unmute"))
 
-    @intent_file_handler("volume.mute.toggle.intent")
+    @intent_handler("volume.mute.toggle.intent")
     def handle_toggle_unmute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.mute.toggle"))
 
