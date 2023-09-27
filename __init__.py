@@ -18,9 +18,6 @@ def amount_validator(response):
 
 
 class VolumeSkill(OVOSSkill):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     @classproperty
     def runtime_requirements(self):
         return RuntimeRequirements(internet_before_load=False,
