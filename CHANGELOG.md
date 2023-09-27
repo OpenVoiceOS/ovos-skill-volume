@@ -2,7 +2,26 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a2...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a3...HEAD)
+
+**Implemented enhancements:**
+
+- modernize skill class [\#27](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/27) ([emphasize](https://github.com/emphasize))
+
+**Fixed bugs:**
+
+- Dependency on mycroft imports [\#24](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/24)
+- "tell me more" should not be handled by this skill [\#23](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/23)
+
+**Closed issues:**
+
+- Unable to load the skill when using ovos-workshop launcher [\#22](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/22)
+- ovos\_workshop.skills.base:\_startup:262 - ERROR - Skill initialization failed [\#21](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/21)
+- Should not we archive the old volume skill? [\#20](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/20)
+
+## [V0.0.2a3](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a3) (2023-02-14)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a2...V0.0.2a3)
 
 **Fixed bugs:**
 
