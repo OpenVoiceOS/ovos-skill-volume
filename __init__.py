@@ -1,10 +1,10 @@
-from ovos_workshop.skills import OVOSSkill 
-from ovos_workshop.decorators import intent_handler
 # TODO classifiers > 0.0.8; check if normalize is still needed
 from lingua_franca.parse import normalize, extract_number
-from ovos_utils.intents import IntentBuilder
-from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils import classproperty
+from ovos_utils.process_utils import RuntimeRequirements
+from ovos_workshop.decorators import intent_handler
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.skills import OVOSSkill
 
 MIN_VOLUME = 0
 MAX_VOLUME = 100
