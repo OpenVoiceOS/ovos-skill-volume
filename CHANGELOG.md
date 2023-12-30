@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a7...HEAD)
+
+**Merged pull requests:**
+
+- requirements/latest\_stable [\#28](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/28) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.2a7](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a7) (2023-09-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a6...V0.0.2a7)
+
 ## [V0.0.2a6](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a6) (2023-09-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a5...V0.0.2a6)
