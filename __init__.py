@@ -56,7 +56,7 @@ class VolumeSkill(OVOSSkill):
         )
 
     @intent_handler(
-        IntentBuilder("less_volume").require("quieter").optionally("volume")
+        IntentBuilder("less_volume").require("quieter").require("volume")
     )
     def handle_less_volume_intent(self, message):
         volume = self._query_volume(message)
@@ -70,7 +70,7 @@ class VolumeSkill(OVOSSkill):
         )
 
     @intent_handler(
-        IntentBuilder("increase_volume").require("louder").optionally("volume")
+        IntentBuilder("increase_volume").require("louder").require("volume")
     )
     def handle_increase_volume_intent(self, message):
         volume = self._query_volume(message)
