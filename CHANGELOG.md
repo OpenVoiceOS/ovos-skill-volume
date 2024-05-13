@@ -2,7 +2,17 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a7...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a8...HEAD)
+
+**Fixed bugs:**
+
+- mute should be broken with setting a volume [\#26](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/26)
+- "tell me more" should not be handled by this skill [\#23](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/23)
+- fix intents [\#31](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/31) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.2a8](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a8) (2023-12-30)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a7...V0.0.2a8)
 
 **Merged pull requests:**
 
@@ -31,7 +41,6 @@
 **Fixed bugs:**
 
 - Dependency on mycroft imports [\#24](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/24)
-- "tell me more" should not be handled by this skill [\#23](https://github.com/OpenVoiceOS/skill-ovos-volume/issues/23)
 
 **Closed issues:**
 
