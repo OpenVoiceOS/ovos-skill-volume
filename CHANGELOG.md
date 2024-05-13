@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a8...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a9...HEAD)
+
+**Merged pull requests:**
+
+- added italian [\#30](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/30) ([denics](https://github.com/denics))
+
+## [V0.0.2a9](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2a9) (2024-05-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a8...V0.0.2a9)
 
 **Fixed bugs:**
 
