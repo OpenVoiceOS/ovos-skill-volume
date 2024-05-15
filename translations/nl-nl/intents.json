@@ -1,0 +1,49 @@
+{
+    "volume.mute.toggle.intent": [
+        "Schakel stom",
+        "omschakelen stom",
+        "Schakel audio",
+        "omschakelen audio"
+    ],
+    "volume.unmute.intent": [
+        "unmute volume",
+        "unmute",
+        "unmute audio"
+    ],
+    "volume.default.intent": [
+        "reset volume",
+        "volume resetten",
+        "volume op standaard zetten",
+        "zet het volume op medium",
+        "volume herstellen",
+        "gemiddeld volume",
+        "standaard volume",
+        "stel het volumeniveau in op de standaardwaarde"
+    ],
+    "volume.max.intent": [
+        "maximaal volume",
+        "zet het volume op maximaal",
+        "topvolume",
+        "maximaal volume",
+        "zet het volume op maximaal"
+    ],
+    "volume.high.intent": [
+        "volume hoog",
+        "hoog volume",
+        "volume naar hoog",
+        "volumeniveau hoog",
+        "volume naar hoog niveau",
+        "volumeniveau te hoog"
+    ],
+    "volume.mute.intent": [
+        "volume dempen",
+        "stom",
+        "geluid dempen"
+    ],
+    "volume.low.intent": [
+        "volume naar laag",
+        "volumeniveau te laag",
+        "laag volume",
+        "volume laag"
+    ]
+}

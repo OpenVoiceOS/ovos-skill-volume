@@ -1,0 +1,25 @@
+{
+    "volume.current.dialog": [
+        "Le volume est \u00e0 {volume}",
+        "Le volume est r\u00e9gl\u00e9 sur {volume}"
+    ],
+    "volume.change.amount.dialog": [
+        "Jusqu'\u00e0 quel volume? 0 \u00e0 100 est possible."
+    ],
+    "volume.max.dialog": [
+        "Volume d\u00e9fini au niveau maximal",
+        "Volume mis \u00e0 jour au niveau maximal",
+        "Volume chang\u00e9 au niveau maximal"
+    ],
+    "error.get.volume.dialog": [
+        "Il semble y avoir un probl\u00e8me. Je n'ai pas pu interroger le volume actuel."
+    ],
+    "volume.set.percent.dialog": [
+        "Volume mis \u00e0 jour \u00e0 {level} pour cent",
+        "Volume d\u00e9fini \u00e0 {level} pour cent",
+        "Volume chang\u00e9 \u00e0 {level} pour cent"
+    ],
+    "volume.max.already.dialog": [
+        "Volume d\u00e9j\u00e0 r\u00e9gl\u00e9 au niveau maximal"
+    ]
+}

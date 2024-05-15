@@ -1,0 +1,25 @@
+{
+    "volume.current.dialog": [
+        "Het volume is ingesteld op {volume}",
+        "Het volume staat ingesteld op {volume}"
+    ],
+    "volume.change.amount.dialog": [
+        "Tot welk volume? 0 tot 100 is mogelijk."
+    ],
+    "volume.max.dialog": [
+        "Volume ingesteld op maximaal niveau",
+        "Volume bijgewerkt tot maximaal niveau",
+        "Volume veranderd naar maximaal niveau"
+    ],
+    "error.get.volume.dialog": [
+        "Er lijkt een probleem te zijn. Ik kon het huidige volume niet krijgen."
+    ],
+    "volume.set.percent.dialog": [
+        "Volume ingesteld op {level} procent",
+        "Volume bijgewerkt tot {level} procent",
+        "Volume veranderd in {level} procent"
+    ],
+    "volume.max.already.dialog": [
+        "Het volume is al op maximum"
+    ]
+}

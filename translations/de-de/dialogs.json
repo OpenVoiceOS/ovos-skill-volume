@@ -1,0 +1,25 @@
+{
+    "volume.current.dialog": [
+        "Die Lautst\u00e4rke ist auf {volume} eingestellt",
+        "Die Lautst\u00e4rke steht auf {volume}"
+    ],
+    "volume.change.amount.dialog": [
+        "Auf welche Lautst\u00e4rke? 0 bis 100 ist m\u00f6glich."
+    ],
+    "volume.max.dialog": [
+        "Lautst\u00e4rke ge\u00e4ndert auf maximum.",
+        "Laust\u00e4rke auf maximum.",
+        "aktualisiere laust\u00e4rke auf maximum."
+    ],
+    "error.get.volume.dialog": [
+        "Es scheint ein Problem zu geben. Ich konnte die aktuelle Laust\u00e4rke nicht abfragen. "
+    ],
+    "volume.set.percent.dialog": [
+        "Habe laust\u00e4rke auf {level} Prozent eingestellt.",
+        "Laust\u00e4rke auf {level} Prozent aktualisiert.",
+        "Laust\u00e4rke auf {level} Prozent ge\u00e4ndert."
+    ],
+    "volume.max.already.dialog": [
+        "Die Lautst\u00e4rke ist schon auf maximum"
+    ]
+}

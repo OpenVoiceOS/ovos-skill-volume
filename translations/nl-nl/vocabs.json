@@ -1,0 +1,38 @@
+{
+    "change.voc": [
+        "verander",
+        "verandering",
+        "aanpassen"
+    ],
+    "quieter.voc": [
+        "minder",
+        "verlaag",
+        "naar beneden",
+        "lager",
+        "stiller",
+        "verminderen",
+        "vermindere"
+    ],
+    "louder.voc": [
+        "luider",
+        "luidruchtiger",
+        "verhoog",
+        "hoger",
+        "hoog",
+        "meer",
+        "up",
+        "op"
+    ],
+    "current.voc": [
+        "huidige",
+        "huidig",
+        "momentane",
+        "momentan",
+        "momentaan",
+        "momentaane",
+        "gewoon"
+    ],
+    "volume.voc": [
+        "volume"
+    ]
+}

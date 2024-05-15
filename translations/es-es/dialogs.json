@@ -1,0 +1,25 @@
+{
+    "volume.current.dialog": [
+        "El volumen est\u00e1 fijado en {volume}",
+        "El volumen est\u00e1 en {volume}"
+    ],
+    "volume.change.amount.dialog": [
+        "A qu\u00e9 volumen? 0 a 100 es posible."
+    ],
+    "volume.max.dialog": [
+        "Volumen actualizado al nivel m\u00e1ximo",
+        "Volumen fijado al nivel m\u00e1ximo",
+        "Volumen cambiado al nivel m\u00e1ximo"
+    ],
+    "error.get.volume.dialog": [
+        "Parece haber un problema. No pude consultar el volumen actual."
+    ],
+    "volume.set.percent.dialog": [
+        "Volumen fijado a {level}%",
+        "Volumen cambiado a {level}%",
+        "Volumen actualizado a {level}%"
+    ],
+    "volume.max.already.dialog": [
+        "Volumen ya establecido en el nivel m\u00e1ximo"
+    ]
+}

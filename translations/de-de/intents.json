@@ -1,0 +1,31 @@
+{
+    "volume.mute.toggle.intent": [
+        "( \u00e4ndere | \u00e4nder ) ( die | ) ( audio | audioausgabe | ausgabe )"
+    ],
+    "volume.unmute.intent": [
+        "( schalte | schalt | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) ( ein | an )",
+        "( du | ) kannst ( wieder | ) ( sprechen | reden )"
+    ],
+    "volume.default.intent": [
+        "(stelle | stell | \u00e4nder | \u00e4ndere | ) ( die | ) lautst\u00e4rke ( auf | ) ( mittel | normal | normale stufe | mittlere stufe )"
+    ],
+    "volume.max.intent": [
+        "(stelle | stell | \u00e4nder | \u00e4ndere | ) ( die | ) lautst\u00e4rke ( auf | ) ( maximum | h\u00f6chste stufe )",
+        "(stelle | stell | \u00e4nder | \u00e4ndere | ) ( auf | ) maximale lautst\u00e4rke ( ein | )"
+    ],
+    "volume.high.intent": [
+        "(stelle | stell | \u00e4nder | \u00e4ndere | ) ( die | ) lautst\u00e4rke ( auf | ) ( laut | zweith\u00f6chste stufe )"
+    ],
+    "volume.mute.intent": [
+        "( schalt | schalte | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) aus",
+        "( schalt | schalte | ) ( auf | ) ( stumm | lautlos )",
+        "( auf | ) ( stumm | lautlos ) schalten",
+        "( sei | ) ( still | stumm )",
+        "( geb | gib | ) ruhe "
+    ],
+    "volume.low.intent": [
+        "( stelle | stell | \u00e4nder | \u00e4ndere | sei | ) ( auf | ) leise",
+        "( niedrige | minimale ) lautst\u00e4rke",
+        "( stelle | stell | \u00e4nder | \u00e4ndere | ) laust\u00e4rke ( auf | ) ( niedrig | minimum | minimal )"
+    ]
+}
