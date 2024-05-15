@@ -1,0 +1,33 @@
+{
+    "change.voc": [
+        "d\u00e9finir",
+        "modifier",
+        "faire"
+    ],
+    "quieter.voc": [
+        "r\u00e9duire",
+        "inf\u00e9rieur",
+        "moins",
+        "baisser",
+        "diminution",
+        "baisse",
+        "silencieux",
+        "silenciese"
+    ],
+    "louder.voc": [
+        "Augmentation",
+        "plus",
+        "Montez",
+        "sup\u00e9rieur",
+        "bruyant",
+        "bruyante",
+        "bruyants",
+        "fort"
+    ],
+    "current.voc": [
+        "actuel"
+    ],
+    "volume.voc": [
+        "volume"
+    ]
+}

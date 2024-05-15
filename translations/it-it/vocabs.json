@@ -1,0 +1,23 @@
+{
+    "change.voc": [
+        "imposta",
+        "cambia",
+        "regola"
+    ],
+    "quieter.voc": [
+        "pi\u00f9 piano",
+        "abbassa",
+        "diminuisci"
+    ],
+    "louder.voc": [
+        "pi\u00f9 forte",
+        "alza",
+        "aumenta"
+    ],
+    "current.voc": [
+        "attuale"
+    ],
+    "volume.voc": [
+        "volume"
+    ]
+}
