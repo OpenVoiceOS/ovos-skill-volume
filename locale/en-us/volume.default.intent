@@ -1,7 +1,7 @@
+default volume
+medium volume
 reset volume
+restore volume
+set volume level to default
 set volume to default
 set volume to medium
-restore volume
-medium volume
-default volume
-set volume level to default
