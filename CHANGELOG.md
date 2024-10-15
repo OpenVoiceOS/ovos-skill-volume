@@ -2,7 +2,18 @@
 
 ## [Unreleased](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/HEAD)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a10...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2...HEAD)
+
+**Merged pull requests:**
+
+- fix:long description [\#37](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/37) ([JarbasAl](https://github.com/JarbasAl))
+- Add Catalan translation [\#36](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/36) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#35](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/35) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#34](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/34) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [V0.0.2](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.0.2) (2024-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2a10...V0.0.2)
 
 **Merged pull requests:**
 
