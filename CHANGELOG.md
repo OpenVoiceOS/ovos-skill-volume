@@ -1,23 +1,12 @@
 # Changelog
 
-## [0.1.0a2](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/0.1.0a2) (2024-10-15)
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.1a1) (2024-10-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.1.0a1...0.1.0a2)
-
-**Merged pull requests:**
-
-- semver [\#38](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/38) ([JarbasAl](https://github.com/JarbasAl))
-
-## [V0.1.0a1](https://github.com/OpenVoiceOS/skill-ovos-volume/tree/V0.1.0a1) (2024-10-15)
-
-[Full Changelog](https://github.com/OpenVoiceOS/skill-ovos-volume/compare/V0.0.2...V0.1.0a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.0...0.1.1a1)
 
 **Merged pull requests:**
 
-- fix:long description [\#37](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/37) ([JarbasAl](https://github.com/JarbasAl))
-- Add Catalan translation [\#36](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/36) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#35](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/35) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#34](https://github.com/OpenVoiceOS/skill-ovos-volume/pull/34) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix:compat with latest workshop [\#40](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/40) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
