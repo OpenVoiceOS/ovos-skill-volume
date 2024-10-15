@@ -1,0 +1,30 @@
+{
+  "change.voc": [
+    "posa\nconfigura\nestableix\nestablix",
+    "fés",
+    "canvia"
+  ],
+  "quieter.voc": [
+    "menys",
+    "disminueix\nredueix\ndisminuix\nreduix",
+    "avall",
+    "inferior",
+    "més tranquil",
+    "redueix\nreduix"
+  ],
+  "louder.voc": [
+    "alt",
+    "més sorollós",
+    "sorollós",
+    "augmenta",
+    "més alt",
+    "més",
+    "amunt"
+  ],
+  "current.voc": [
+    "actual"
+  ],
+  "volume.voc": [
+    "volum"
+  ]
+}
