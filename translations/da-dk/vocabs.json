@@ -1,0 +1,30 @@
+{
+  "change.voc": [
+    "sæt",
+    null,
+    null
+  ],
+  "quieter.voc": [
+    "mindre",
+    null,
+    "ned",
+    null,
+    "mere stille",
+    "reducere"
+  ],
+  "louder.voc": [
+    "højere",
+    "mere støjende",
+    "støjende",
+    "øge",
+    "højere",
+    "mere",
+    "op"
+  ],
+  "current.voc": [
+    null
+  ],
+  "volume.voc": [
+    null
+  ]
+}
