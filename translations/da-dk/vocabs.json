@@ -1,14 +1,14 @@
 {
   "change.voc": [
     "sæt",
-    null,
-    null
+    "lav",
+    "ændre"
   ],
   "quieter.voc": [
     "mindre",
-    null,
+    "formindsk",
     "ned",
-    null,
+    "sænk",
     "mere stille",
     "reducere"
   ],
@@ -22,9 +22,9 @@
     "op"
   ],
   "current.voc": [
-    null
+    "nuværende"
   ],
   "volume.voc": [
-    null
+    "volume"
   ]
 }
