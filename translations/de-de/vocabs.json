@@ -1,38 +1,30 @@
 {
-    "change.voc": [
-        "\u00e4ndern",
-        "\u00e4nder",
-        "\u00e4ndere",
-        "ver\u00e4ndern",
-        "ver\u00e4ndere",
-        "stelle",
-        "einstellen",
-        "verstellen",
-        "verstelle"
-    ],
-    "quieter.voc": [
-        "leiser",
-        "runter",
-        "herunter",
-        "weniger",
-        "niedriger"
-    ],
-    "louder.voc": [
-        "lauter",
-        "rauf",
-        "h\u00f6her",
-        "h\u00f6here",
-        "gr\u00f6\u00dfere"
-    ],
-    "current.voc": [
-        "aktuelle",
-        "aktuell",
-        "momentane",
-        "momentan",
-        "gerade"
-    ],
-    "volume.voc": [
-        "lautsprecher",
-        "lautst\u00e4rke"
-    ]
+  "change.voc": [
+    "ändern",
+    "änder",
+    "ändere"
+  ],
+  "quieter.voc": [
+    "leiser",
+    "runter",
+    "herunter",
+    "weniger",
+    "niedriger",
+    "reduziere\nreduzieren"
+  ],
+  "louder.voc": [
+    "lauter",
+    "rauf",
+    "höher",
+    "höhere",
+    "größere",
+    "[UNUSED]",
+    "[UNUSED]"
+  ],
+  "current.voc": [
+    "aktuelle"
+  ],
+  "volume.voc": [
+    "lautsprecher\nLautstärke"
+  ]
 }
