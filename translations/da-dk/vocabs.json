@@ -16,7 +16,7 @@
     "højere",
     "mere støjende",
     "støjende",
-    "øge",
+    "øg",
     "højere",
     "mere",
     "op"
@@ -25,6 +25,6 @@
     "nuværende"
   ],
   "volume.voc": [
-    "volume"
+    "lydstyrke"
   ]
 }
