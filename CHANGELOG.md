@@ -1,12 +1,21 @@
 # Changelog
 
-## [0.1.2a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.2a1) (2024-11-01)
+## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.3a1) (2024-11-04)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.1...0.1.2a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.3a1...0.1.3a1)
 
 **Merged pull requests:**
 
-- fix:allow workshop 2.0.0 [\#42](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/42) ([JarbasAl](https://github.com/JarbasAl))
+- da-dk/translate [\#46](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/46) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- da-dk/translate [\#45](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/45) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.3a1) (2024-11-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.2...0.1.3a1)
+
+**Merged pull requests:**
+
+- de-de/translate [\#44](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/44) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
