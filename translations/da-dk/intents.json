@@ -1,0 +1,47 @@
+{
+  "volume.mute.toggle.intent": [
+    "slå mute til",
+    "skift lyd"
+  ],
+  "volume.unmute.intent": [
+    "slå lyden til",
+    "slå lyden til",
+    "slå lyden til"
+  ],
+  "volume.default.intent": [
+    "nulstil lydstyrken",
+    "indstil lydstyrken til standard",
+    "indstill lydstyrken til medium",
+    "genopret lydstyrken",
+    "medium lydstyrke",
+    "standard lydstyrke",
+    "indstil lydstyrken til standard"
+  ],
+  "volume.max.intent": [
+    "max lydstyrke",
+    "indstil lydstyrken til maksimum",
+    "top lydstyrke",
+    "maksimal lydstyrke",
+    "indstil lydstyrken til maksimum"
+  ],
+  "volume.high.intent": [
+    "lydstyrke høj",
+    "høj lydstyrke",
+    "lydstyrke til høj",
+    "høj lydstyrke",
+    "lydstyrke til højt niveau",
+    "lydstyrken til høj"
+  ],
+  "volume.mute.intent": [
+    "dæm lydstyrken",
+    "mute",
+    "slå lyden fra"
+  ],
+  "volume.low.intent": [
+    "lydstyrken til lav",
+    "lydstyrke niveau til lavt",
+    "lav lydstyrke",
+    "lydstyrke lavt",
+    "lydstyrken lav"
+  ]
+}
