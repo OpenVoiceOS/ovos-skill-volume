@@ -1,20 +1,13 @@
-# TODO classifiers > 0.0.8; check if normalize is still needed
-from lingua_franca.parse import normalize, extract_number
+from ovos_number_parser import extract_number
 from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
+from ovos_utterance_normalizer import UtteranceNormalizerPlugin
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 MIN_VOLUME = 0
 MAX_VOLUME = 100
-
-
-def amount_validator(response):
-    amount = extract_number(normalize(response))
-    if amount:
-        return MIN_VOLUME <= amount <= MAX_VOLUME
-    return None
 
 
 class VolumeSkill(OVOSSkill):
@@ -41,12 +34,22 @@ class VolumeSkill(OVOSSkill):
     # intents
     @intent_handler(IntentBuilder("change_volume").require("change").require("volume"))
     def handle_change_volume_intent(self, message):
-        volume_change = extract_number(normalize(message.data["utterance"]))
+        normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
+        utt = normalizer.normalize(message.data["utterance"])
+        volume_change = extract_number(utt, lang=self.lang)
         if not volume_change:
+
+            def amount_validator(response):
+                response = normalizer.normalize(response)
+                amount = extract_number(response, lang=self.lang)
+                if amount:
+                    return MIN_VOLUME <= amount <= MAX_VOLUME
+                return None
+
             response = self.get_response(
                 "volume.change.amount", validator=amount_validator
             )
-            volume_change = extract_number(normalize(response))
+            volume_change = extract_number(normalizer.normalize(response), lang=self.lang)
         if volume_change >= 100:
             self.speak_dialog("volume.max")
         else:
@@ -59,8 +62,10 @@ class VolumeSkill(OVOSSkill):
         IntentBuilder("less_volume").require("quieter").require("volume")
     )
     def handle_less_volume_intent(self, message):
+        normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
+        utt = normalizer.normalize(message.data["utterance"])
         volume = self._query_volume(message)
-        volume_change = extract_number(normalize(message.data["utterance"])) or 10
+        volume_change = extract_number(utt, lang=self.lang) or 10
         self.bus.emit(
             message.forward("mycroft.volume.decrease", {"percent": volume_change / 100})
         )
@@ -74,8 +79,10 @@ class VolumeSkill(OVOSSkill):
     )
     def handle_increase_volume_intent(self, message):
         volume = self._query_volume(message)
+        normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
+        utt = normalizer.normalize(message.data["utterance"])
         if not (volume == MAX_VOLUME):
-            volume_change = extract_number(normalize(message.data["utterance"])) or 10
+            volume_change = extract_number(utt, lang=self.lang) or 10
             self.bus.emit(
                 message.forward(
                     "mycroft.volume.increase", {"percent": volume_change / 100}
@@ -123,7 +130,3 @@ class VolumeSkill(OVOSSkill):
     def handle_query_volume(self, message):
         volume = self._query_volume(message)
         self.speak_dialog("volume.current", data={"volume": volume})
-
-
-def create_skill():
-    return VolumeSkill()
