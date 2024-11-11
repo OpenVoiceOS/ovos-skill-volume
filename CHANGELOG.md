@@ -1,11 +1,12 @@
 # Changelog
 
-## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.3a1) (2024-11-04)
+## [0.1.4a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.4a1) (2024-11-11)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.3a1...0.1.3a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.3a1...0.1.4a1)
 
 **Merged pull requests:**
 
+- fix: drop lingua-franca [\#47](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/47) ([JarbasAl](https://github.com/JarbasAl))
 - da-dk/translate [\#46](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/46) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 - da-dk/translate [\#45](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/45) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
