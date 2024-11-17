@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.5a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.5a1) (2024-11-17)
+## [0.1.6a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.6a1) (2024-11-17)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.4...0.1.5a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.5...0.1.6a1)
 
 **Merged pull requests:**
 
-- fix: skilljson [\#49](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/49) ([JarbasAl](https://github.com/JarbasAl))
+- added italian [\#54](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/54) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
