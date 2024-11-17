@@ -1,38 +1,47 @@
 {
-    "volume.mute.toggle.intent": [
-        "Stai zitto",
-        "Stai muto",
-        "Zittisciti"
-    ],
-    "volume.unmute.intent": [
-        "Ripristina il volume"
-    ],
-    "volume.default.intent": [
-        "Imposta il volume di default",
-        "Ripristina il volume di default",
-        "Imposta il volume a medio",
-        "Imposta il volume al valore predefinito"
-    ],
-    "volume.max.intent": [
-        "Metti il volume al massimo",
-        "Alza il volume al massimo",
-        "Imposta il volume al massimo"
-    ],
-    "volume.high.intent": [
-        "Aumenta il volume",
-        "Alza il volume",
-        "Metti il volume alto",
-        "Grida",
-        "Urla"
-    ],
-    "volume.mute.intent": [
-        "Silenzio",
-        "Muto"
-    ],
-    "volume.low.intent": [
-        "Diminuisci il volume",
-        "Abbassa il volume",
-        "Metti il volume basso",
-        "Silenzio"
-    ]
+  "volume.mute.toggle.intent": [
+    "Stai zitto",
+    "Stai muto"
+  ],
+  "volume.unmute.intent": [
+    "Ripristina il volume",
+    "Ripristina il volume",
+    "Ripristina il volume"
+  ],
+  "volume.default.intent": [
+    "Imposta il volume di default",
+    "Ripristina il volume di default",
+    "Imposta il volume a medio",
+    "Imposta il volume al valore predefinito",
+    "[UNUSED]",
+    "[UNUSED]",
+    "[UNUSED]"
+  ],
+  "volume.max.intent": [
+    "Metti il volume al massimo",
+    "Alza il volume al massimo",
+    "Imposta il volume al massimo",
+    "Volume massimo",
+    "Alza il volume al massimo"
+  ],
+  "volume.high.intent": [
+    "Aumenta il volume",
+    "Alza il volume",
+    "Metti il volume alto",
+    "Grida",
+    "Urla",
+    "[UNUSED]"
+  ],
+  "volume.mute.intent": [
+    "Silenzio",
+    "Muto",
+    "Zitto"
+  ],
+  "volume.low.intent": [
+    "Diminuisci il volume",
+    "Abbassa il volume",
+    "Metti il volume basso",
+    "Silenzio",
+    "Sussurra"
+  ]
 }
