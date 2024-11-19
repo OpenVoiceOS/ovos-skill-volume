@@ -1,4 +1,4 @@
 ovos-utils>=0.0.38,<1.0.0
-ovos_workshop>=0.0.15,<3.0.0
+ovos_workshop>=0.0.15,<4.0.0
 ovos-utterance-normalizer>=0.0.1,<1.0.0
 ovos-number-parser>=0.0.1,<1.0.0
