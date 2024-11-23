@@ -6,7 +6,7 @@
   "volume.unmute.intent": [
     "deixa de silenciar el volum",
     "treu el silenci\nno silenciïs\nactiva el so\nactiva l'àudio",
-    "deixa de silencia l'àudio"
+    "deixa de silenciar l'àudio"
   ],
   "volume.default.intent": [
     "restableix el volum\nrestablix el volum",
