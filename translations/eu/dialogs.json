@@ -1,0 +1,25 @@
+{
+    "volume.current.dialog": [
+        "Bolumena {volume}(|e)an dago",
+        "Bolumena {volume}(|e)an dago ezarrita"
+    ],
+    "volume.change.amount.dialog": [
+        "Zenbateko bolumenera arte? 0tik 100era bitarte izan daiteke."
+    ],
+    "volume.max.dialog": [
+        "Bolumena maila gorenera aldatu da",
+        "Bolumena maila gorenean ezarri da",
+        "Bolumena maila gorenera eguneratu da"
+    ],
+    "error.get.volume.dialog": [
+        "Badirudi arazo bat dagoela. Ezin izan dut oraingo bolumena kontsultatu."
+    ],
+    "volume.set.percent.dialog": [
+        "Bolumena {level} ehunekora aldatu da",
+        "Bolumena {level} ehunekoan ezarri da",
+        "Bolumena {level} ehunekora eguneratu da"
+    ],
+    "volume.max.already.dialog": [
+        "Bolumena maila gorenean ezarrita dago lehendik"
+    ]
+}
