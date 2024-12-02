@@ -1,0 +1,30 @@
+{
+    "change.voc": [
+        "aldatu",
+        "egin",
+        "ezarri"
+    ],
+    "quieter.voc": [
+        "gutxitu",
+        "jaitsi",
+        "gutxiago",
+        "baxuago",
+        "lasaiago",
+        "murriztu"
+    ],
+    "louder.voc": [
+        "handitu",
+        "goi-mailako",
+        "ozenago",
+        "gehiago",
+        "zaratatsuago",
+        "modu zaratatsuan",
+        "igo"
+    ],
+    "current.voc": [
+        "oraingo"
+    ],
+    "volume.voc": [
+        "bolumena"
+    ]
+}
