@@ -1,12 +1,13 @@
 # Changelog
 
-## [0.1.12a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.12a1) (2024-12-02)
+## [0.1.13a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a1) (2024-12-11)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.11...0.1.12a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.12...0.1.13a1)
 
 **Merged pull requests:**
 
-- import basque translations [\#67](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/67) ([JarbasAl](https://github.com/JarbasAl))
+- added former unused German [\#70](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- added former unused German [\#69](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/69) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
