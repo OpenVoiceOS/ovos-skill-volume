@@ -13,14 +13,14 @@
     "definir o volume para o padrão",
     "volume padrão",
     "repor volume",
-    null,
-    null,
-    null
+    "meio volume",
+    "(nível de|) volume padrão",
+    "restaura o volume"
   ],
   "volume.max.intent": [
     "nível de volume definido para o máximo",
     "volume máximo",
-    null,
+    "volume (no|ao) máximo",
     "volume superior",
     "definir o nível de volume para o máximo"
   ],
@@ -30,7 +30,7 @@
     "volume alto",
     "nível de volume alto",
     "nível de volume para alto",
-    null
+    "alto volume"
   ],
   "volume.mute.intent": [
     "silenciar o volume",
@@ -42,6 +42,6 @@
     "nível de volume baixo",
     "volume para baixo",
     "nível de volume para baixo",
-    null
+    "volume baixo"
   ]
 }
