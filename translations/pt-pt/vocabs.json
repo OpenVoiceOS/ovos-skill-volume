@@ -1,39 +1,30 @@
 {
-    "change.voc": [
-        "fazer",
-        "definir",
-        "alterar",
-        "mudan\u00e7a",
-        "conjunto",
-        "fazer"
-    ],
-    "quieter.voc": [
-        "baixo",
-        "diminui\u00e7\u00e3o",
-        "reduzir",
-        "menos",
-        "inferior",
-        "desligue",
-        "calmo",
-        "silencioso",
-        "calado",
-        "tranquillo"
-    ],
-    "louder.voc": [
-        "mais",
-        "alto",
-        "alta",
-        "barulhento",
-        "ruidoso",
-        "aumento",
-        "superior",
-        "aumentar"
-    ],
-    "current.voc": [
-        "atual"
-    ],
-    "volume.voc": [
-        "volumen",
-        "volume"
-    ]
+  "change.voc": [
+    "põe",
+    "[UNUSED]",
+    "(altera|alterar)"
+  ],
+  "quieter.voc": [
+    "menos",
+    "diminui",
+    "baixo",
+    "(baixa|baixar)",
+    "mais baixo",
+    "reduz"
+  ],
+  "louder.voc": [
+    "mais alto",
+    "mais barulho",
+    "barulhento",
+    "(aumenta|aumentar)",
+    "[UNUSED]",
+    "mais",
+    "[UNUSED]"
+  ],
+  "current.voc": [
+    "atual"
+  ],
+  "volume.voc": [
+    "volume"
+  ]
 }
