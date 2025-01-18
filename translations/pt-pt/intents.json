@@ -1,44 +1,47 @@
 {
-    "volume.mute.toggle.intent": [
-        "Alternar \u00e1udio",
-        "toggle mute"
-    ],
-    "volume.unmute.intent": [
-        "N\u00e3o sei",
-        "\u00e1udio ininterrupto",
-        "volume imut\u00e1vel"
-    ],
-    "volume.default.intent": [
-        "volume m\u00e9dio",
-        "volume de reset",
-        "volume padr\u00e3o",
-        "set volume to default",
-        "conjunto de volume para m\u00e9dio",
-        "n\u00edvel de volume definido para padr\u00e3o",
-        "volume de restaura\u00e7\u00e3o"
-    ],
-    "volume.max.intent": [
-        "n\u00edvel de volume definido para o m\u00e1ximo",
-        "volume m\u00e1ximo",
-        "set volume ao m\u00e1ximo",
-        "volume superior"
-    ],
-    "volume.high.intent": [
-        "volume para alto n\u00edvel",
-        "volume para alto",
-        "volume alto",
-        "n\u00edvel de volume alto",
-        "n\u00edvel de volume para alto"
-    ],
-    "volume.mute.intent": [
-        "Muda",
-        "\u00e1udio mudo",
-        "volume mudo"
-    ],
-    "volume.low.intent": [
-        "volume baixo",
-        "n\u00edvel de volume baixo",
-        "volume para baixo",
-        "n\u00edvel de volume para baixo"
-    ]
+  "volume.mute.toggle.intent": [
+    "Alternar áudio",
+    "alternar áudio"
+  ],
+  "volume.unmute.intent": [
+    "ativar volume",
+    "ativar o som",
+    "ativar áudio"
+  ],
+  "volume.default.intent": [
+    "volume médio",
+    "definir o volume para o padrão",
+    "volume padrão",
+    "repor volume",
+    null,
+    null,
+    null
+  ],
+  "volume.max.intent": [
+    "nível de volume definido para o máximo",
+    "volume máximo",
+    null,
+    "volume superior",
+    "definir o nível de volume para o máximo"
+  ],
+  "volume.high.intent": [
+    "volume para alto nível",
+    "volume para alto",
+    "volume alto",
+    "nível de volume alto",
+    "nível de volume para alto",
+    null
+  ],
+  "volume.mute.intent": [
+    "silenciar o volume",
+    "áudio mudo",
+    "volume mudo"
+  ],
+  "volume.low.intent": [
+    "volume baixo",
+    "nível de volume baixo",
+    "volume para baixo",
+    "nível de volume para baixo",
+    null
+  ]
 }
