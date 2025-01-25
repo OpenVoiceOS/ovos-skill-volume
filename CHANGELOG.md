@@ -1,13 +1,20 @@
 # Changelog
 
-## [0.1.13a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a1) (2024-12-11)
+## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-25)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.12...0.1.13a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a3...0.1.13a3)
 
 **Merged pull requests:**
 
-- added former unused German [\#70](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- added former unused German [\#69](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/69) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix automations [\#73](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/73) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13...0.1.13a3)
+
+**Merged pull requests:**
+
+- pt-pt/translate [\#72](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/72) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
