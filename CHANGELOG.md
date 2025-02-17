@@ -1,11 +1,12 @@
 # Changelog
 
-## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-25)
+## [0.1.13a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a4) (2025-02-17)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a3...0.1.13a3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a3...0.1.13a4)
 
 **Merged pull requests:**
 
+- nl-nl translations [\#74](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/74) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 - fix automations [\#73](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/73) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-18)
