@@ -1,30 +1,30 @@
 {
-    "change.voc": [
-        "mudar",
-        "facer",
-        "definir"
-    ],
-    "quieter.voc": [
-        "diminuír",
-        "baixar",
-        "menos",
-        "máis baixo",
-        "máis silencioso",
-        "reducir"
-    ],
-    "louder.voc": [
-        "maior",
-        "aumentar",
-        "máis alto",
-        "máis",
-        "máis ruidoso",
-        "con ruído",
-        "subir"
-    ],
-    "current.voc": [
-        "actual"
-    ],
-    "volume.voc": [
-        "volume"
-    ]
+  "change.voc": [
+    "definir",
+    "facer",
+    "mudar"
+  ],
+  "quieter.voc": [
+    "menos",
+    "diminuír",
+    "baixar",
+    "máis baixo",
+    "máis silencioso",
+    "reducir"
+  ],
+  "louder.voc": [
+    "máis alto",
+    "máis ruidoso",
+    "con ruído",
+    "aumentar",
+    "maior",
+    "máis",
+    "subir"
+  ],
+  "current.voc": [
+    "actual"
+  ],
+  "volume.voc": [
+    "volume"
+  ]
 }
