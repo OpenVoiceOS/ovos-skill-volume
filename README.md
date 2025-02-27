@@ -2,7 +2,7 @@
 Control the volume of your system
 
 ## About
-Control the volume of Mycroft with verbal commands 
+Control OVOS volume with verbal commands, needs the companion plugin [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa)
 
 ## Examples
 * "Turn up the volume"

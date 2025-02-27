@@ -1,25 +1,25 @@
 {
-    "volume.current.dialog": [
-        "O volume est\u00e1 em {volume}",
-        "O volume \u00e9 definido para {volume}"
-    ],
-    "volume.change.amount.dialog": [
-        "Em que volume? 0 a 100 \u00e9 poss\u00edvel."
-    ],
-    "volume.max.dialog": [
-        "Volume alterado para n\u00edvel m\u00e1ximo",
-        "Conjunto de volume para n\u00edvel m\u00e1ximo",
-        "Volume actualizado ao n\u00edvel m\u00e1ximo"
-    ],
-    "error.get.volume.dialog": [
-        "Parece haver um problema. N\u00e3o podia consultar o volume atual."
-    ],
-    "volume.set.percent.dialog": [
-        "Volume alterado para {level} por cento",
-        "Volume atualizado para {level} por cento",
-        "Volume definido para {level} por cento"
-    ],
-    "volume.max.already.dialog": [
-        "Volume j\u00e1 definido para o n\u00edvel m\u00e1ximo"
-    ]
+  "volume.current.dialog": [
+    "O volume está em {volume}",
+    "O volume está definido para {volume}"
+  ],
+  "volume.change.amount.dialog": [
+    "Que volume? 0 a 100 é possível."
+  ],
+  "volume.max.dialog": [
+    "Volume alterado para nível máximo",
+    "Volume ajustado para nível máximo",
+    "Volume atualizado para o nível máximo"
+  ],
+  "error.get.volume.dialog": [
+    "Parece haver um problema. Não consigo consultar o volume atual."
+  ],
+  "volume.set.percent.dialog": [
+    "Volume alterado para {level} por cento",
+    "Volume atualizado para {level} por cento",
+    "Volume definido para {level} por cento"
+  ],
+  "volume.max.already.dialog": [
+    "Volume já definido para o nível máximo"
+  ]
 }
