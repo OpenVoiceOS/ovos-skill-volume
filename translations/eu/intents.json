@@ -1,47 +1,42 @@
 {
+    "volume.default.intent": [
+        "bolumen ertaina",
+        "bolumen lehenetsia",
+        "bolumena berrezartzea",
+        "bolumena leheneratzea",
+        "ezarri bolumen ertaina",
+        "ezarri bolumen lehenetsia",
+        "ezarri bolumen-maila lehenetsia"
+    ],
     "volume.mute.toggle.intent": [
         "kommutatu audioa",
         "kommutatu mututzea"
     ],
-    "volume.unmute.intent": [
-        "desmututu",
-        "desmututu audioa",
-        "desmututu bolumena"
-    ],
-    "volume.default.intent": [
-        "bolumen lehenetsia",
-        "bolumen ertaina",
-        "bolumena berrezartzea",
-        "bolumena leheneratzea",
-        "ezarri bolumen-maila lehenetsia",
-        "ezarri bolumen lehenetsia",
-        "ezarri bolumen ertaina"
-    ],
-    "volume.max.intent": [
-        "bolumen gorena",
-        "bolumen gorena",
-        "ezarri bolumen-maila gorena",
-        "ezarri bolumen gorena",
-        "bolumen gorena"
+    "volume.low.intent": [
+        "bolumen baxua",
+        "bolumen-maila baxua",
+        "bolumen-maila jaistea",
+        "bolumena jaistea"
     ],
     "volume.high.intent": [
         "bolumen altua",
-        "bolumen altua",
         "bolumen-maila altua",
         "bolumen-maila igotzea",
-        "bolumena igotzea",
-        "bolumen-maila igotzea"
+        "bolumena igotzea"
+    ],
+    "volume.max.intent": [
+        "bolumen gorena",
+        "ezarri bolumen gorena",
+        "ezarri bolumen-maila gorena"
     ],
     "volume.mute.intent": [
         "mututu",
         "mututu audioa",
         "mututu bolumena"
     ],
-    "volume.low.intent": [
-        "bolumen baxua",
-        "bolumen-maila baxua",
-        "bolumen-maila jaistea",
-        "bolumen baxua",
-        "bolumena jaistea"
+    "volume.unmute.intent": [
+        "desmututu",
+        "desmututu audioa",
+        "desmututu bolumena"
     ]
 }

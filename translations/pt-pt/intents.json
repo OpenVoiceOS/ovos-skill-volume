@@ -1,47 +1,46 @@
 {
-  "volume.mute.toggle.intent": [
-    "Alternar áudio",
-    "alternar áudio"
-  ],
-  "volume.unmute.intent": [
-    "ativar volume",
-    "ativar o som",
-    "ativar áudio"
-  ],
-  "volume.default.intent": [
-    "volume médio",
-    "definir o volume para o padrão",
-    "volume padrão",
-    "repor volume",
-    "meio volume",
-    "(nível de|) volume padrão",
-    "restaura o volume"
-  ],
-  "volume.max.intent": [
-    "nível de volume definido para o máximo",
-    "volume máximo",
-    "volume (no|ao) máximo",
-    "volume superior",
-    "definir o nível de volume para o máximo"
-  ],
-  "volume.high.intent": [
-    "volume para alto nível",
-    "volume para alto",
-    "volume alto",
-    "nível de volume alto",
-    "nível de volume para alto",
-    "alto volume"
-  ],
-  "volume.mute.intent": [
-    "silenciar o volume",
-    "áudio mudo",
-    "volume mudo"
-  ],
-  "volume.low.intent": [
-    "volume baixo",
-    "nível de volume baixo",
-    "volume para baixo",
-    "nível de volume para baixo",
-    "volume baixo"
-  ]
+    "volume.default.intent": [
+        "(nível de|) volume padrão",
+        "definir o volume para o padrão",
+        "meio volume",
+        "repor volume",
+        "restaura o volume",
+        "volume médio",
+        "volume padrão"
+    ],
+    "volume.mute.toggle.intent": [
+        "Alternar áudio",
+        "alternar áudio"
+    ],
+    "volume.low.intent": [
+        "nível de volume baixo",
+        "nível de volume para baixo",
+        "volume baixo",
+        "volume para baixo"
+    ],
+    "volume.high.intent": [
+        "alto volume",
+        "nível de volume alto",
+        "nível de volume para alto",
+        "volume alto",
+        "volume para alto",
+        "volume para alto nível"
+    ],
+    "volume.max.intent": [
+        "definir o nível de volume para o máximo",
+        "nível de volume definido para o máximo",
+        "volume (no|ao) máximo",
+        "volume máximo",
+        "volume superior"
+    ],
+    "volume.mute.intent": [
+        "silenciar o volume",
+        "volume mudo",
+        "áudio mudo"
+    ],
+    "volume.unmute.intent": [
+        "ativar o som",
+        "ativar volume",
+        "ativar áudio"
+    ]
 }

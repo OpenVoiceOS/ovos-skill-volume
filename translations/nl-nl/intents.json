@@ -1,47 +1,45 @@
 {
-  "volume.mute.toggle.intent": [
-    "volume uitzetten",
-    "audio aan"
-  ],
-  "volume.unmute.intent": [
-    "volume aanzetten",
-    "geluid aan",
-    "audio aan"
-  ],
-  "volume.default.intent": [
-    "volume resetten",
-    "(zet het) volume (op) standaard",
-    "(zet het) volume (op) gemiddeld",
-    "volume herstellen",
-    "gemiddeld volume",
-    "standaardvolume",
-    "volume(niveau) (instellen op) standaard"
-  ],
-  "volume.max.intent": [
-    "maximaal volume",
-    "(zet) (het) volume (op) maximaal ",
-    "hoogste volume",
-    "maximaal volume",
-    "(zet) (het) volume (op) maximaal "
-  ],
-  "volume.high.intent": [
-    "volume hoog",
-    "hoog volume",
-    "volume naar hoog",
-    "volume niveau hoog",
-    "volume naar hoog niveau",
-    "volumeniveau naar hoog"
-  ],
-  "volume.mute.intent": [
-    "volume dempen",
-    "dempen",
-    "geluid dempen"
-  ],
-  "volume.low.intent": [
-    "volume naar laag",
-    "volumeniveau naar laag",
-    "laag volume",
-    "volume (niveau|level) laag",
-    "volume laag"
-  ]
+    "volume.default.intent": [
+        "(zet het) volume (op) gemiddeld",
+        "(zet het) volume (op) standaard",
+        "gemiddeld volume",
+        "standaardvolume",
+        "volume herstellen",
+        "volume resetten",
+        "volume(niveau) (instellen op) standaard"
+    ],
+    "volume.mute.toggle.intent": [
+        "audio aan",
+        "volume uitzetten"
+    ],
+    "volume.low.intent": [
+        "laag volume",
+        "volume (niveau|level) laag",
+        "volume laag",
+        "volume naar laag",
+        "volumeniveau naar laag"
+    ],
+    "volume.high.intent": [
+        "hoog volume",
+        "volume hoog",
+        "volume naar hoog",
+        "volume naar hoog niveau",
+        "volume niveau hoog",
+        "volumeniveau naar hoog"
+    ],
+    "volume.max.intent": [
+        "(zet) (het) volume (op) maximaal",
+        "hoogste volume",
+        "maximaal volume"
+    ],
+    "volume.mute.intent": [
+        "dempen",
+        "geluid dempen",
+        "volume dempen"
+    ],
+    "volume.unmute.intent": [
+        "audio aan",
+        "geluid aan",
+        "volume aanzetten"
+    ]
 }

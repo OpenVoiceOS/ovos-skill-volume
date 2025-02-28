@@ -1,47 +1,75 @@
 {
-  "volume.mute.toggle.intent": [
-    "alterna el silenci\nconmuta el silenci\ncanvia el silenci",
-    "alterna l'àudio\nconmuta l'àudio\nalterna el so\nconmuta el so"
-  ],
-  "volume.unmute.intent": [
-    "deixa de silenciar el volum",
-    "treu el silenci\nno silenciïs\nactiva el so\nactiva l'àudio",
-    "deixa de silenciar l'àudio"
-  ],
-  "volume.default.intent": [
-    "restableix el volum\nrestablix el volum",
-    "estableix el volum per defecte\nestableix el volum predeterminat\nposa el volum per defecte\nposa el volum predeterminat",
-    "ajusta el volum a la meitat\ncanvia el volum a la meitat\nposa el volum a la meitat",
-    "restaura el volum\nrecupera el volum",
-    "volum mitjà",
-    "volum predeterminat\nvolum per defecte",
-    "estableix el nivell de volum a per defecte\nestableix el nivell de volum predeterminat\nposa el nivell de volum a per defecte\nposa el nivell de volum predeterminat\nconfigura el nivell de volum a per defecte\nconfigura el nivell de volum predeterminat"
-  ],
-  "volume.max.intent": [
-    "volum màxim",
-    "posa el volum al màxim\nestableix el volum al màxim\nconfigura el volum al màxim",
-    "volum superior",
-    "volum màxim",
-    "estableix el nivell de volum al màxim\nposa el nivell de volum al màxim\nconfigura el nivell de volum al màxim\nestablix el nivell de volum al màxim"
-  ],
-  "volume.high.intent": [
-    "volum alt",
-    "volum elevat",
-    "volum a alt",
-    "nivell de volum alt",
-    "volum a nivell alt",
-    "nivell de volum a alt"
-  ],
-  "volume.mute.intent": [
-    "silencia el volum\nmuteja el volum",
-    "silencia\nsilenci\nmuteja",
-    "silencia l'àudio\nmuteja l'àudio"
-  ],
-  "volume.low.intent": [
-    "volum a baix",
-    "nivell de volum a baix",
-    "volum baix",
-    "nivell de volum baix",
-    "volum baix"
-  ]
+    "volume.default.intent": [
+        "ajusta el volum a la meitat",
+        "canvia el volum a la meitat",
+        "configura el nivell de volum a per defecte",
+        "configura el nivell de volum predeterminat",
+        "estableix el nivell de volum a per defecte",
+        "estableix el nivell de volum predeterminat",
+        "estableix el volum per defecte",
+        "estableix el volum predeterminat",
+        "posa el nivell de volum a per defecte",
+        "posa el nivell de volum predeterminat",
+        "posa el volum a la meitat",
+        "posa el volum per defecte",
+        "posa el volum predeterminat",
+        "recupera el volum",
+        "restableix el volum",
+        "restablix el volum",
+        "restaura el volum",
+        "volum mitjà",
+        "volum per defecte",
+        "volum predeterminat"
+    ],
+    "volume.mute.toggle.intent": [
+        "alterna el silenci",
+        "alterna el so",
+        "alterna l'àudio",
+        "canvia el silenci",
+        "conmuta el silenci",
+        "conmuta el so",
+        "conmuta l'àudio"
+    ],
+    "volume.low.intent": [
+        "nivell de volum a baix",
+        "nivell de volum baix",
+        "volum a baix",
+        "volum baix"
+    ],
+    "volume.high.intent": [
+        "nivell de volum a alt",
+        "nivell de volum alt",
+        "volum a alt",
+        "volum a nivell alt",
+        "volum alt",
+        "volum elevat"
+    ],
+    "volume.max.intent": [
+        "configura el nivell de volum al màxim",
+        "configura el volum al màxim",
+        "estableix el nivell de volum al màxim",
+        "estableix el volum al màxim",
+        "establix el nivell de volum al màxim",
+        "posa el nivell de volum al màxim",
+        "posa el volum al màxim",
+        "volum màxim",
+        "volum superior"
+    ],
+    "volume.mute.intent": [
+        "muteja",
+        "muteja el volum",
+        "muteja l'àudio",
+        "silenci",
+        "silencia",
+        "silencia el volum",
+        "silencia l'àudio"
+    ],
+    "volume.unmute.intent": [
+        "activa el so",
+        "activa l'àudio",
+        "deixa de silenciar el volum",
+        "deixa de silenciar l'àudio",
+        "no silenciïs",
+        "treu el silenci"
+    ]
 }

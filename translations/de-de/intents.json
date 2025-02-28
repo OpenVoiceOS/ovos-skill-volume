@@ -1,47 +1,48 @@
 {
-  "volume.mute.toggle.intent": [
-    "umschalten stummschaltung\n( ändere | änder ) ( die | ) ( audio | audioausgabe | ausgabe )",
-    "stummschaltung audioausgabe"
-  ],
-  "volume.unmute.intent": [
-    "( schalte | schalt | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) ( ein | an )",
-    "( du | ) kannst ( wieder | ) ( sprechen | reden )",
-    "den ton wieder anstellen"
-  ],
-  "volume.default.intent": [
-    "(stelle | stell | änder | ändere | ) ( die | ) lautstärke ( auf | ) ( mittel | normal | normale stufe | mittlere stufe )",
-    "setze Lautstärke auf den Standardwert",
-    "Lautstärke auf mittleren Wert",
-    "Lautstärke auf Ausgangswert",
-    "mittlere Lautstärke",
-    "Standardlautstärke",
-    "Lautstärke auf Standardwert"
-  ],
-  "volume.max.intent": [
-    "(stelle | stell | änder | ändere | ) ( die | ) lautstärke ( auf | ) ( maximum | höchste stufe )",
-    "(stelle | stell | änder | ändere | ) ( auf | ) maximale lautstärke ( ein | )",
-    "top Lautstärke",
-    "maximale Lautstärke",
-    "Lautstärke maximal aufdrehen"
-  ],
-  "volume.high.intent": [
-    "(stelle | stell | änder | ändere | ) ( die | ) lautstärke ( auf | ) ( laut | zweithöchste stufe )",
-    "hohe Lautstärke",
-    "Lautstärke hoch",
-    "Lautstärkeregelung auf hoch",
-    "Lautstärke ziemlich aufdrehen",
-    "volle Lautstärke"
-  ],
-  "volume.mute.intent": [
-    "( schalt | schalte | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) aus",
-    "( schalt | schalte | ) ( auf | ) ( stumm | lautlos )",
-    "( auf | ) ( stumm | lautlos ) schalten"
-  ],
-  "volume.low.intent": [
-    "( stelle | stell | änder | ändere | sei | ) ( auf | ) leise",
-    "( niedrige | minimale ) lautstärke",
-    "( stelle | stell | änder | ändere | ) laustärke ( auf | ) ( niedrig | minimum | minimal )",
-    "Lautstärke niedrig",
-    "niedrige Lautstärke"
-  ]
+    "volume.default.intent": [
+        "(stelle | stell | änder | ändere | ) ( die | ) lautstärke ( auf | ) ( mittel | normal | normale stufe | mittlere stufe )",
+        "Lautstärke auf Ausgangswert",
+        "Lautstärke auf Standardwert",
+        "Lautstärke auf mittleren Wert",
+        "Standardlautstärke",
+        "mittlere Lautstärke",
+        "setze Lautstärke auf den Standardwert"
+    ],
+    "volume.mute.toggle.intent": [
+        "( ändere | änder ) ( die | ) ( audio | audioausgabe | ausgabe )",
+        "stummschaltung audioausgabe",
+        "umschalten stummschaltung"
+    ],
+    "volume.low.intent": [
+        "( niedrige | minimale ) lautstärke",
+        "( stelle | stell | änder | ändere | ) laustärke ( auf | ) ( niedrig | minimum | minimal )",
+        "( stelle | stell | änder | ändere | sei | ) ( auf | ) leise",
+        "Lautstärke niedrig",
+        "niedrige Lautstärke"
+    ],
+    "volume.high.intent": [
+        "(stelle | stell | änder | ändere | ) ( die | ) lautstärke ( auf | ) ( laut | zweithöchste stufe )",
+        "Lautstärke hoch",
+        "Lautstärke ziemlich aufdrehen",
+        "Lautstärkeregelung auf hoch",
+        "hohe Lautstärke",
+        "volle Lautstärke"
+    ],
+    "volume.max.intent": [
+        "(stelle | stell | änder | ändere | ) ( auf | ) maximale lautstärke ( ein | )",
+        "(stelle | stell | änder | ändere | ) ( die | ) lautstärke ( auf | ) ( maximum | höchste stufe )",
+        "Lautstärke maximal aufdrehen",
+        "maximale Lautstärke",
+        "top Lautstärke"
+    ],
+    "volume.mute.intent": [
+        "( auf | ) ( stumm | lautlos ) schalten",
+        "( schalt | schalte | ) ( auf | ) ( stumm | lautlos )",
+        "( schalt | schalte | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) aus"
+    ],
+    "volume.unmute.intent": [
+        "( du | ) kannst ( wieder | ) ( sprechen | reden )",
+        "( schalte | schalt | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) ( ein | an )",
+        "den ton wieder anstellen"
+    ]
 }
