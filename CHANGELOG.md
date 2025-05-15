@@ -1,37 +1,12 @@
 # Changelog
 
-## [0.1.13a6](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a6) (2025-02-24)
+## [0.1.14a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.14a1) (2025-05-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a5...0.1.13a6)
-
-**Merged pull requests:**
-
-- gl/translate [\#77](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/77) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.1.13a5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a5) (2025-02-24)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a4...0.1.13a5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.14...0.1.14a1)
 
 **Merged pull requests:**
 
-- gl/translate [\#76](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/76) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.1.13a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a4) (2025-02-17)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a3...0.1.13a4)
-
-**Merged pull requests:**
-
-- nl-nl translations [\#74](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/74) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- fix automations [\#73](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/73) ([JarbasAl](https://github.com/JarbasAl))
-
-## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-18)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13...0.1.13a3)
-
-**Merged pull requests:**
-
-- pt-pt/translate [\#72](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/72) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix: standardize urls / skill-id / pypi-name [\#79](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/79) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
