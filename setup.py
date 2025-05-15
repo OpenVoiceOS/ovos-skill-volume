@@ -4,7 +4,7 @@ import os
 from os import walk, path
 
 
-URL = "https://github.com/OpenVoiceOS/skill-ovos-volume"
+URL = "https://github.com/OpenVoiceOS/ovos-skill-volume"
 SKILL_CLAZZ = "VolumeSkill"  # needs to match __init__.py class name
 PYPI_NAME = "ovos-skill-volume"  # pip install PYPI_NAME
 
