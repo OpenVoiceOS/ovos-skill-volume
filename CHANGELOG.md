@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.16a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.16a1) (2025-06-08)
+## [0.1.17a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a1) (2025-09-07)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.15...0.1.16a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.16...0.1.17a1)
 
 **Merged pull requests:**
 
-- fix; workshop 7.X.X [\#81](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/81) ([JarbasAl](https://github.com/JarbasAl))
+- docs: termux [\#83](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/83) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
