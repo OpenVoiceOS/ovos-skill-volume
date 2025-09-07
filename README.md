@@ -2,7 +2,7 @@
 Control the volume of your system
 
 ## About
-Control OVOS volume with verbal commands, needs the companion plugin [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa)
+Control OVOS volume with verbal commands, needs the companion plugin [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa) or [ovos-PHAL-plugin-termux](https://github.com/HiveMindInsiders/ovos-PHAL-plugin-termux)
 
 ## Examples
 * "Turn up the volume"
