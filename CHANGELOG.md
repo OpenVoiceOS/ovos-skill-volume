@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.17a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a2) (2025-09-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a1...0.1.17a2)
+
+**Merged pull requests:**
+
+- Add pt-BR [\#85](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/85) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.1.17a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a1) (2025-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.16...0.1.17a1)
