@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.17a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a3) (2025-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a2...0.1.17a3)
+
+**Merged pull requests:**
+
+- translate volume [\#87](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/87) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.1.17a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a2) (2025-09-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a1...0.1.17a2)
