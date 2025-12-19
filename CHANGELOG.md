@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.17a6](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a6) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a5...0.1.17a6)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/checkout action to v6 [\#97](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/97) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.17a5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a5) (2025-12-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a4...0.1.17a5)
