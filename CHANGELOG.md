@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.17a9](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a9) (2026-03-22)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a8...0.1.17a9)
+
+**Merged pull requests:**
+
+- Refine French volume control locale [\#106](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/106) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [0.1.17a8](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a8) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a7...0.1.17a8)
