@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.21a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.21a1) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.20a2...0.1.21a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#113](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/113) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.20a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.20a2) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.20a1...0.1.20a2)
