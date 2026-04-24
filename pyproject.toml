@@ -1,3 +1,52 @@
 [build-system]
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-volume"
+dynamic = ["version"]
+description = "ovos skill plugin"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "JarbasAi", email = "jarbasai@mailfence.com" }
+]
+keywords = ["ovos", "skill", "plugin"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "ovos-utils>=0.0.38,<1.0.0",
+    "ovos-workshop>=8.0.0,<9.0.0",
+    "ovos-utterance-normalizer>=0.0.1,<1.0.0",
+    "ovos-number-parser>=0.0.1,<1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-volume"
+
+[project.entry-points."ovos.plugin.skill"]
+"ovos-skill-volume.openvoiceos" = "ovos_skill_volume:VolumeSkill"
+
+[tool.setuptools.dynamic]
+version = { attr = "ovos_skill_volume.version.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_skill_volume*"]
+
+[tool.setuptools.package-dir]
+"ovos_skill_volume" = ""
+
+[tool.setuptools.package-data]
+"ovos_skill_volume" = [
+    "*.json",
+    "locale/**/*",
+    "ui/**/*",
+    "vocab/**/*",
+    "dialog/**/*",
+    "regex/**/*",
+    "skill/**/*",
+]
