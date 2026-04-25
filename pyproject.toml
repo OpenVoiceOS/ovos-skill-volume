@@ -24,6 +24,12 @@ dependencies = [
     "ovos-number-parser>=0.0.1,<1.0.0",
 ]
 
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "ovos-workshop>=8.0.0,<9.0.0",
+]
+
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-skill-volume"
 
@@ -31,14 +37,13 @@ Homepage = "https://github.com/OpenVoiceOS/ovos-skill-volume"
 "ovos-skill-volume.openvoiceos" = "ovos_skill_volume:VolumeSkill"
 
 [tool.setuptools.dynamic]
-version = { attr = "ovos_skill_volume.version.__version__" }
+version = { attr = "version.__version__" }
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["ovos_skill_volume*"]
+[tool.setuptools]
+packages = ["ovos_skill_volume"]
 
 [tool.setuptools.package-dir]
-"ovos_skill_volume" = ""
+"ovos_skill_volume" = "."
 
 [tool.setuptools.package-data]
 "ovos_skill_volume" = [
