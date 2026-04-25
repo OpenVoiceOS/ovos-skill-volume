@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.21a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.21a3) (2026-04-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.21a2...0.1.21a3)
+
+**Merged pull requests:**
+
+- ci: fix build and modernize CI/CD workflows [\#117](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/117) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.21a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.21a2) (2026-04-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.21a1...0.1.21a2)
