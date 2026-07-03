@@ -1,2 +1,1 @@
-toggle audio
-toggle mute
+toggle [the] (mute|muting|audio|sound|volume)

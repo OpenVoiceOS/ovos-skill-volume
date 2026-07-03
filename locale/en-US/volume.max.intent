@@ -1,5 +1,5 @@
-max volume
-maximum volume
-set volume level to maximum
-set volume to maximum
-top volume
+(set|make|turn|put|change) [the] volume [level] [to] (max|maximum|full|highest|top) [level]
+volume [level] [to] (max|maximum|full|highest|top) [level]
+(max|maximum|full|highest|top) volume
+(crank|max) [the] volume [up]
+turn [the] volume all the way up
