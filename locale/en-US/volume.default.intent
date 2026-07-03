@@ -1,7 +1,4 @@
-default volume
-medium volume
-reset volume
-restore volume
-set volume level to default
-set volume to default
-set volume to medium
+(set|make|turn|put|change) [the] volume [level] [to] (default|medium|normal|regular) [level]
+(reset|restore) [the] volume [to (default|medium|normal)]
+volume [level] [to] (default|medium|normal|regular) [level]
+(default|medium|normal|regular) volume
