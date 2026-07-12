@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.22a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.22a3) (2026-07-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a2...0.1.22a3)
+
+**Merged pull requests:**
+
+- fix: allow ovos-workshop 9.x [\#123](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/123) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.22a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.22a2) (2026-07-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a1...0.1.22a2)
