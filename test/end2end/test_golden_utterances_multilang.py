@@ -159,28 +159,49 @@ def _golden_id(row):
 
 
 # Real, reproduced routing defects found by this Tier-1 pass -- NOT coverage
-# gaps, NOT weakened assertions. Root cause: the skill's own adapt intents
-# (current_volume requires only "volume"; change_volume requires "change"+
-# "volume") run in the *-high pipeline tier ahead of padacioso-high, and
-# fire on any utterance that merely contains the "volume" vocab word (or,
-# for da-DK, the "change" vocab word "lav" which also happens to be the
-# Danish adjective for "low") -- shadowing the more specific padatious/
-# padacioso volume.high/low/max.intent matches. See PR body for detail and
-# a suggested fix (require adapt to defer to a higher-confidence padatious/
-# padacioso match, or narrow the colliding vocab entries).
+# gaps, NOT weakened assertions.
+#
+# Most of the original 11 rows here turned out to be over-broad *.voc
+# entries or an incomplete padacioso template, and were fixed in-place
+# (see the PR that introduced this comment block for the collision/fix/
+# red-green evidence per row: nl-NL "hoog", pt-PT "baixo", ca-ES "alt",
+# fr-FR "augmente"/"baisse", it-IT "alza"/"abbassa" were absolute-meaning
+# words that didn't belong in the relative louder.voc/quieter.voc lists
+# (mirroring the en-US precedent, whose louder.voc/quieter.voc only ever
+# contain comparative/imperative words, never the bare high/low adjective);
+# de-DE's "stell die Lautstärke auf leise" was simply missing "die
+# Lautstärke" from its volume.low.intent template line (a typo/omission --
+# the sibling volume.high.intent line already has the correct pattern).
+#
+# The remaining 3 rows below are NOT vocab typos: they are a genuine
+# adapt-vs-padatious pipeline race. ovos-adapt-parser's confidence score is
+# character-length-weighted, not token-count-weighted, so a short
+# 2-word utterance where the *only* recognized adapt vocab word is a long
+# compound noun (German "Lautstärke", Danish "lydstyrke") clears the
+# ovos-adapt-pipeline-plugin-high 0.65 confidence threshold on that single
+# word alone, before padatious/padacioso-high ever gets a turn in the
+# pipeline (see _PIPELINE order above) -- regardless of how the padatious
+# template is worded. There is no over-broad vocab entry to trim here:
+# "hoch"/"høj"/"lav" (as the Danish *adjective*) aren't adapt vocab at all,
+# so nothing can be narrowed without inventing new drafted vocabulary,
+# which is out of scope for this pass. da-DK "lav lydstyrke" was probed by
+# removing the colliding change.voc entry "lav" (='make'); that only swaps
+# which adapt intent shadows volume.low.intent (change_volume -> bare
+# current_volume, since "lydstyrke" alone already clears 0.65), so the
+# entry was kept and the row stays xfail.
 KNOWN_BUGS = {
-    ("de-DE", "Lautstärke hoch"): "adapt current_volume shadows volume.high.intent (bare 'volume' vocab match)",
-    ("de-DE", "stell die Lautstärke auf leise"): "adapt current_volume shadows volume.low.intent",
-    ("fr-FR", "augmente le volume"): "adapt increase_volume shadows volume.high.intent",
-    ("fr-FR", "baisse le volume"): "adapt less_volume shadows volume.low.intent",
-    ("it-IT", "Alza il volume"): "adapt increase_volume shadows volume.high.intent",
-    ("it-IT", "Abbassa il volume"): "adapt less_volume shadows volume.low.intent",
-    ("nl-NL", "hoog volume"): "adapt current_volume shadows volume.high.intent (bare 'volume' vocab match)",
-    ("pt-PT", "volume baixo"): "adapt current_volume shadows volume.low.intent (bare 'volume' vocab match)",
-    ("ca-ES", "volum alt"): "adapt increase_volume shadows volume.high.intent ('alt' is in louder.voc)",
-    ("da-DK", "høj lydstyrke"): "adapt current_volume shadows volume.high.intent (bare 'lydstyrke' vocab match)",
+    ("de-DE", "Lautstärke hoch"): "adapt current_volume shadows volume.high.intent: bare 'Lautstärke' is a "
+                                    "single long compound noun whose char-weighted adapt confidence (0.667) "
+                                    "clears the 0.65 adapt-high threshold before padacioso-high runs; not an "
+                                    "over-broad vocab entry (there is none to trim), needs new vocab work",
+    ("da-DK", "høj lydstyrke"): "adapt current_volume shadows volume.high.intent: same char-weighted "
+                                  "bare-'lydstyrke' confidence (0.692) clearing the adapt-high threshold, "
+                                  "no offending vocab entry to trim",
     ("da-DK", "lav lydstyrke"): "da-DK change.voc entry 'lav' (='make') collides with the Danish adjective "
-                                  "'lav' (='low'); adapt change_volume shadows volume.low.intent",
+                                  "'lav' (='low'); adapt change_volume shadows volume.low.intent. Removing "
+                                  "'lav' from change.voc does not fix this -- current_volume's bare "
+                                  "'lydstyrke' match (0.69 confidence) then shadows it instead, same root "
+                                  "cause as the de-DE/da-DK bare-volume-word rows above",
 }
 
 
@@ -207,7 +228,9 @@ def test_golden_utterance_multilang(minicroft, row):
 # cross-language routing defect, not a weakened assertion.
 KNOWN_NEGATIVE_BUGS = {
     ("en-US", "volume máximo"): "adapt current_volume claims any utterance containing the bare 'volume' vocab word, "
-                                 "including this pt-PT phrase, in an en-US session",
+                                 "including this pt-PT phrase, in an en-US session -- same char-weighted "
+                                 "bare-'volume'-word confidence issue as the de-DE/da-DK KNOWN_BUGS rows above, "
+                                 "not fixable by trimming vocab",
 }
 
 
