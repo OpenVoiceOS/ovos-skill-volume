@@ -74,6 +74,10 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
         return [m.msg_type for m in capture.finish()]
 
     def _assert_intent(self, text, intent):
+        # OVOS-INTENT-2: the per-skill dispatch topic no longer carries the
+        # ".intent" suffix present in the intent file/label (same migration
+        # already applied in ovos-skill-camera#63 / ovos-skill-parrot#119).
+        intent = intent.removesuffix(".intent")
         self.assertIn(f"{SKILL_ID}:{intent}", self._types(text))
 
     # padatious: volume.max.intent
