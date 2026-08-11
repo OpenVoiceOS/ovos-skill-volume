@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.22a5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.22a5) (2026-08-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a4...0.1.22a5)
+
+**Merged pull requests:**
+
+- test: golden-utterance e2e coverage [\#127](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/127) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.22a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.22a4) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a3...0.1.22a4)
