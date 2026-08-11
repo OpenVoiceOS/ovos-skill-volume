@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.23a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.23a1) (2026-08-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a6...0.1.23a1)
+
+**Merged pull requests:**
+
+- fix: resolve 8 of 12 adapt-shadowing xfails in multilang golden suite [\#131](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/131) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.22a6](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.22a6) (2026-08-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a5...0.1.22a6)
