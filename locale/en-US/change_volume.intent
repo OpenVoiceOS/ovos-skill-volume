@@ -1,0 +1,3 @@
+(change|set|make) [the] volume [to] {level}
+volume [to] {level} percent
+volume change [to {level}]
