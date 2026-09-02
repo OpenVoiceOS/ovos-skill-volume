@@ -2,3 +2,4 @@
 (reset|restore) [the] volume [to (default|medium|normal)]
 volume [level] [to] (default|medium|normal|regular) [level]
 (default|medium|normal|regular) volume
+put it back to (normal|default)
