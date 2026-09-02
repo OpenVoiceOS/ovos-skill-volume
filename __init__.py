@@ -3,7 +3,6 @@ from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utterance_normalizer import UtteranceNormalizerPlugin
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 MIN_VOLUME = 0
@@ -32,7 +31,7 @@ class VolumeSkill(OVOSSkill):
             raise TimeoutError("Failed to get volume")
 
     # intents
-    @intent_handler(IntentBuilder("change_volume").require("change").require("volume"))
+    @intent_handler("change_volume.intent")
     def handle_change_volume_intent(self, message):
         normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
         utt = normalizer.normalize(message.data["utterance"])
@@ -58,9 +57,7 @@ class VolumeSkill(OVOSSkill):
             message.forward("mycroft.volume.set", {"percent": volume_change / 100})
         )
 
-    @intent_handler(
-        IntentBuilder("less_volume").require("quieter").require("volume")
-    )
+    @intent_handler("less_volume.intent")
     def handle_less_volume_intent(self, message):
         normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
         utt = normalizer.normalize(message.data["utterance"])
@@ -74,9 +71,7 @@ class VolumeSkill(OVOSSkill):
             data={"level": max(MIN_VOLUME, int(volume - volume_change))},
         )
 
-    @intent_handler(
-        IntentBuilder("increase_volume").require("louder").require("volume")
-    )
+    @intent_handler("increase_volume.intent")
     def handle_increase_volume_intent(self, message):
         volume = self._query_volume(message)
         normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
@@ -124,9 +119,7 @@ class VolumeSkill(OVOSSkill):
     def handle_toggle_unmute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.mute.toggle"))
 
-    @intent_handler(
-        IntentBuilder("current_volume").require("volume").optionally("current")
-    )
+    @intent_handler("current_volume.intent")
     def handle_query_volume(self, message):
         volume = self._query_volume(message)
         self.speak_dialog("volume.current", data={"volume": volume})
