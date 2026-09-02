@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.23a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.23a2) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.23a1...0.1.23a2)
+
+**Merged pull requests:**
+
+- refactor: migrate volume adapt intents to intent files [\#133](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/133) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.23a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.23a1) (2026-08-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.22a6...0.1.23a1)
