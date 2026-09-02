@@ -48,6 +48,9 @@ class VolumeSkill(OVOSSkill):
             response = self.get_response(
                 "volume.change.amount", validator=amount_validator
             )
+            if response is None:
+                self.speak_dialog("error.get.volume")
+                return
             volume_change = extract_number(normalizer.normalize(response), lang=self.lang)
         if volume_change >= 100:
             self.speak_dialog("volume.max")
@@ -90,22 +93,56 @@ class VolumeSkill(OVOSSkill):
         else:
             self.speak_dialog("volume.max.already")
 
+    # level word -> (voc filename, volume percent), most specific first
+    _LEVEL_VOCS = (
+        ("level.max", 1.0),
+        ("level.high", 0.9),
+        ("level.medium", 0.7),
+        ("level.low", 0.3),
+        ("level.default", 0.7),
+    )
+
+    def _set_volume_level(self, message, percent):
+        self.bus.emit(message.forward("mycroft.volume.set", {"percent": percent}))
+        if percent == 1.0:
+            self.speak_dialog("volume.max")
+
+    @intent_handler("volume_level.intent")
+    def handle_set_volume_level(self, message):
+        level = message.data.get("level", "")
+        for voc_filename, percent in self._LEVEL_VOCS:
+            if self.voc_match(level, voc_filename, exact=False):
+                self._set_volume_level(message, percent)
+                return
+        self.speak_dialog("volume.level.unknown", data={"level": level})
+
+    @intent_handler("volume.max.boost.intent")
+    def handle_max_volume_boost_intent(self, message):
+        self._set_volume_level(message, 1.0)
+
+    @intent_handler("volume.reset.intent")
+    def handle_reset_volume_intent(self, message):
+        self._set_volume_level(message, 0.7)
+
+    # Fallback handlers: en-US ships volume_level.intent instead, but the
+    # remaining locales still carry these discrete level intent files
+    # (locale/<lang>/volume.{max,high,default,low}.intent) until each one is
+    # mechanically migrated to the shared {level} slot template.
     @intent_handler("volume.max.intent")
     def handle_max_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 1.0}))
-        self.speak_dialog("volume.max")
+        self._set_volume_level(message, 1.0)
 
     @intent_handler("volume.high.intent")
     def handle_high_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.9}))
+        self._set_volume_level(message, 0.9)
 
     @intent_handler("volume.default.intent")
     def handle_default_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.7}))
+        self._set_volume_level(message, 0.7)
 
     @intent_handler("volume.low.intent")
     def handle_low_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.3}))
+        self._set_volume_level(message, 0.3)
 
     @intent_handler("volume.mute.intent")
     def handle_mute_intent(self, message):

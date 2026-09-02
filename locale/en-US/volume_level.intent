@@ -1,0 +1,12 @@
+[set] volume [level] to {level}
+set [the] volume [level] {level}
+volume [level] {level}
+{level} volume
+turn [the] volume to {level}
+put [the] volume (at|to) {level}
+set volume to {level}
+(make|change) [the] volume level to {level}
+volume [level] to {level}
+{level} volume [please]
+volume to {level}
+put it back to {level}

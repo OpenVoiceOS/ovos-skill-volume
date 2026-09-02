@@ -61,6 +61,7 @@ NEGATIVE_UTTERANCES = [
     ("increase the temperature", "ovos-skill-homeassistant.openvoiceos"),
     ("what's the weather", "ovos-skill-weather.openvoiceos"),
     ("set a timer for 5 minutes", "ovos-skill-alerts.openvoiceos"),
+    ("set an alarm to maximum", "ovos-skill-alerts.openvoiceos"),
 ]
 
 
