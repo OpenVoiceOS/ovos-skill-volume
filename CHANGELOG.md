@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.24a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.24a1) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.23a2...0.1.24a1)
+
+**Merged pull requests:**
+
+- fix: match terse object-less volume follow-ups without "volume" [\#136](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/136) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.23a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.23a2) (2026-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.23a1...0.1.23a2)
