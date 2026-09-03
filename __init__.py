@@ -3,7 +3,6 @@ from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utterance_normalizer import UtteranceNormalizerPlugin
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 MIN_VOLUME = 0
@@ -32,7 +31,7 @@ class VolumeSkill(OVOSSkill):
             raise TimeoutError("Failed to get volume")
 
     # intents
-    @intent_handler(IntentBuilder("change_volume").require("change").require("volume"))
+    @intent_handler("change_volume.intent")
     def handle_change_volume_intent(self, message):
         normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
         utt = normalizer.normalize(message.data["utterance"])
@@ -49,6 +48,9 @@ class VolumeSkill(OVOSSkill):
             response = self.get_response(
                 "volume.change.amount", validator=amount_validator
             )
+            if response is None:
+                self.speak_dialog("error.get.volume")
+                return
             volume_change = extract_number(normalizer.normalize(response), lang=self.lang)
         if volume_change >= 100:
             self.speak_dialog("volume.max")
@@ -58,9 +60,7 @@ class VolumeSkill(OVOSSkill):
             message.forward("mycroft.volume.set", {"percent": volume_change / 100})
         )
 
-    @intent_handler(
-        IntentBuilder("less_volume").require("quieter").require("volume")
-    )
+    @intent_handler("less_volume.intent")
     def handle_less_volume_intent(self, message):
         normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
         utt = normalizer.normalize(message.data["utterance"])
@@ -74,9 +74,7 @@ class VolumeSkill(OVOSSkill):
             data={"level": max(MIN_VOLUME, int(volume - volume_change))},
         )
 
-    @intent_handler(
-        IntentBuilder("increase_volume").require("louder").require("volume")
-    )
+    @intent_handler("increase_volume.intent")
     def handle_increase_volume_intent(self, message):
         volume = self._query_volume(message)
         normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
@@ -95,22 +93,56 @@ class VolumeSkill(OVOSSkill):
         else:
             self.speak_dialog("volume.max.already")
 
+    # level word -> (voc filename, volume percent), most specific first
+    _LEVEL_VOCS = (
+        ("level.max", 1.0),
+        ("level.high", 0.9),
+        ("level.medium", 0.7),
+        ("level.low", 0.3),
+        ("level.default", 0.7),
+    )
+
+    def _set_volume_level(self, message, percent):
+        self.bus.emit(message.forward("mycroft.volume.set", {"percent": percent}))
+        if percent == 1.0:
+            self.speak_dialog("volume.max")
+
+    @intent_handler("volume_level.intent")
+    def handle_set_volume_level(self, message):
+        level = message.data.get("level", "")
+        for voc_filename, percent in self._LEVEL_VOCS:
+            if self.voc_match(level, voc_filename, exact=False):
+                self._set_volume_level(message, percent)
+                return
+        self.speak_dialog("volume.level.unknown", data={"level": level})
+
+    @intent_handler("volume.max.boost.intent")
+    def handle_max_volume_boost_intent(self, message):
+        self._set_volume_level(message, 1.0)
+
+    @intent_handler("volume.reset.intent")
+    def handle_reset_volume_intent(self, message):
+        self._set_volume_level(message, 0.7)
+
+    # Fallback handlers: en-US ships volume_level.intent instead, but the
+    # remaining locales still carry these discrete level intent files
+    # (locale/<lang>/volume.{max,high,default,low}.intent) until each one is
+    # mechanically migrated to the shared {level} slot template.
     @intent_handler("volume.max.intent")
     def handle_max_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 1.0}))
-        self.speak_dialog("volume.max")
+        self._set_volume_level(message, 1.0)
 
     @intent_handler("volume.high.intent")
     def handle_high_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.9}))
+        self._set_volume_level(message, 0.9)
 
     @intent_handler("volume.default.intent")
     def handle_default_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.7}))
+        self._set_volume_level(message, 0.7)
 
     @intent_handler("volume.low.intent")
     def handle_low_volume_intent(self, message):
-        self.bus.emit(message.forward("mycroft.volume.set", {"percent": 0.3}))
+        self._set_volume_level(message, 0.3)
 
     @intent_handler("volume.mute.intent")
     def handle_mute_intent(self, message):
@@ -124,9 +156,7 @@ class VolumeSkill(OVOSSkill):
     def handle_toggle_unmute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.mute.toggle"))
 
-    @intent_handler(
-        IntentBuilder("current_volume").require("volume").optionally("current")
-    )
+    @intent_handler("current_volume.intent")
     def handle_query_volume(self, message):
         volume = self._query_volume(message)
         self.speak_dialog("volume.current", data={"volume": volume})
