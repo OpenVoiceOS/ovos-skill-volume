@@ -53,8 +53,8 @@ POSITIVE_ROWS = [
     ("mute it for a bit", "volume.mute"),
     ("mute it for a minute", "volume.mute"),
     ("unmute it now", "volume.unmute"),
-    ("put it back to normal", "volume.default"),
-    ("put it back to default", "volume.default"),
+    ("put it back to normal", "volume_level"),
+    ("put it back to default", "volume_level"),
 ]
 
 # "turn it up" is accepted as this skill's own by design (#135); it is not a

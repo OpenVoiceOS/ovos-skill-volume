@@ -99,16 +99,16 @@ class TestVolumeIntentsAdaptless(unittest.TestCase):
         self._assert_intent("turn down the volume", "less_volume")
 
     def test_set_the_volume_to_max(self):
-        self._assert_intent("set the volume to max", "volume.max")
+        self._assert_intent("set the volume to max", "volume_level")
 
     def test_set_the_volume_to_high(self):
-        self._assert_intent("set the volume to high", "volume.high")
+        self._assert_intent("set the volume to high", "volume_level")
 
     def test_set_the_volume_to_low(self):
-        self._assert_intent("set the volume to low", "volume.low")
+        self._assert_intent("set the volume to low", "volume_level")
 
     def test_set_the_volume_to_normal(self):
-        self._assert_intent("set the volume to normal", "volume.default")
+        self._assert_intent("set the volume to normal", "volume_level")
 
     def test_change_volume_to_level_percent(self):
         self._assert_intent("set the volume to 50 percent", "change_volume")

@@ -1,8 +1,9 @@
 """End-to-end intent routing tests for the en-US locale.
 
 Each canonical utterance is fired through a real MiniCroft and asserted to
-route to the expected intent handler. Coverage spans the padatious level intents
-(max/high/default/low/mute/unmute/mute-toggle) and the adapt intents
+route to the expected intent handler. Coverage spans the padatious level
+intent (volume_level, covering max/high/default/low plus the max-boost and
+reset idioms) and mute/unmute/mute-toggle, and the adapt intents
 (change/less/increase/current volume). The side effects (mycroft.volume.*, the
 spoken confirmation) vary by hardware backend and are ignored so the assertion
 covers only the intent binding.
@@ -80,33 +81,44 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
         intent = intent.removesuffix(".intent")
         self.assertIn(f"{SKILL_ID}:{intent}", self._types(text))
 
-    # padatious: volume.max.intent
+    # padatious: volume_level.intent (merges the former discrete
+    # volume.{max,high,default,low}.intent files behind a single {level}
+    # slot; see level.{max,high,medium,low,default}.voc for the accepted
+    # level words)
     def test_max_volume(self):
-        self._assert_intent("max volume", "volume.max.intent")
+        self._assert_intent("max volume", "volume_level.intent")
 
     def test_set_volume_to_maximum(self):
-        self._assert_intent("set volume to maximum", "volume.max.intent")
+        self._assert_intent("set volume to maximum", "volume_level.intent")
 
-    # padatious: volume.high.intent
     def test_high_volume(self):
-        self._assert_intent("high volume", "volume.high.intent")
+        self._assert_intent("high volume", "volume_level.intent")
 
     def test_volume_to_high(self):
-        self._assert_intent("volume to high", "volume.high.intent")
+        self._assert_intent("volume to high", "volume_level.intent")
 
-    # padatious: volume.default.intent
     def test_default_volume(self):
-        self._assert_intent("default volume", "volume.default.intent")
+        self._assert_intent("default volume", "volume_level.intent")
 
     def test_reset_volume(self):
-        self._assert_intent("reset volume", "volume.default.intent")
+        self._assert_intent("reset volume", "volume_level.intent")
 
-    # padatious: volume.low.intent
     def test_low_volume(self):
-        self._assert_intent("low volume", "volume.low.intent")
+        self._assert_intent("low volume", "volume_level.intent")
 
     def test_volume_to_low(self):
-        self._assert_intent("volume to low", "volume.low.intent")
+        self._assert_intent("volume to low", "volume_level.intent")
+
+    # padatious: volume.max.boost.intent (non-slot idioms carried over from
+    # the old volume.max.intent -- "crank the volume", "turn it all the way
+    # up" -- that don't fit the {level} slot template)
+    def test_crank_volume(self):
+        self._assert_intent("crank the volume", "volume.max.boost.intent")
+
+    # padatious: volume.reset.intent ("reset/restore THE volume" carries no
+    # level word at all, so it can't bind {level} either)
+    def test_reset_the_volume(self):
+        self._assert_intent("reset the volume", "volume.reset.intent")
 
     # padatious: volume.mute.intent
     def test_mute(self):
