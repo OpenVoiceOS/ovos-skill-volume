@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.24a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.24a2) (2026-09-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.24a1...0.1.24a2)
+
+**Merged pull requests:**
+
+- Merge discrete volume level intents into one {level}-slot intent [\#137](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/137) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.24a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.24a1) (2026-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.23a2...0.1.24a1)
