@@ -110,10 +110,17 @@ class VolumeSkill(OVOSSkill):
     @intent_handler("volume_level.intent")
     def handle_set_volume_level(self, message):
         level = message.data.get("level", "")
-        for voc_filename, percent in self._LEVEL_VOCS:
-            if self.voc_match(level, voc_filename, exact=False):
-                self._set_volume_level(message, percent)
-                return
+        utterance = message.data.get("utterance", "")
+        # a bare level word ("Grida", "Standardlautstärke") carries no {level}
+        # slot at all -- fall back to matching the level vocs against the
+        # whole utterance so those literal-only training lines still resolve
+        for candidate in (level, utterance):
+            if not candidate:
+                continue
+            for voc_filename, percent in self._LEVEL_VOCS:
+                if self.voc_match(candidate, voc_filename, exact=False):
+                    self._set_volume_level(message, percent)
+                    return
         self.speak_dialog("volume.level.unknown", data={"level": level})
 
     @intent_handler("volume.max.boost.intent")
@@ -123,26 +130,6 @@ class VolumeSkill(OVOSSkill):
     @intent_handler("volume.reset.intent")
     def handle_reset_volume_intent(self, message):
         self._set_volume_level(message, 0.7)
-
-    # Fallback handlers: en-US ships volume_level.intent instead, but the
-    # remaining locales still carry these discrete level intent files
-    # (locale/<lang>/volume.{max,high,default,low}.intent) until each one is
-    # mechanically migrated to the shared {level} slot template.
-    @intent_handler("volume.max.intent")
-    def handle_max_volume_intent(self, message):
-        self._set_volume_level(message, 1.0)
-
-    @intent_handler("volume.high.intent")
-    def handle_high_volume_intent(self, message):
-        self._set_volume_level(message, 0.9)
-
-    @intent_handler("volume.default.intent")
-    def handle_default_volume_intent(self, message):
-        self._set_volume_level(message, 0.7)
-
-    @intent_handler("volume.low.intent")
-    def handle_low_volume_intent(self, message):
-        self._set_volume_level(message, 0.3)
 
     @intent_handler("volume.mute.intent")
     def handle_mute_intent(self, message):
