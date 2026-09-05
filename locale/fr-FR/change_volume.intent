@@ -1,2 +1,2 @@
-(change|mets|règle) le volume (à|sur) {level}
-volume à {level} pour cent
+(change|mets|règle) le volume (à|sur) {amount}
+volume à {amount} pour cent

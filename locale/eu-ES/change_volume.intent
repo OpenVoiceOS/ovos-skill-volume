@@ -1,2 +1,2 @@
-(aldatu|ezarri|jarri) bolumena {level}(era|ra)
-bolumena ehuneko {level}(era|ra)
+(aldatu|ezarri|jarri) bolumena {amount}(era|ra)
+bolumena ehuneko {amount}(era|ra)

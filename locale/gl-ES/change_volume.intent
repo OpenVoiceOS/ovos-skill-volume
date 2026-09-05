@@ -1,2 +1,2 @@
-(muda[r]|define|pon) o volume (a|ao) {level}
-volume ao {level} por cento
+(muda[r]|define|pon) o volume (a|ao) {amount}
+volume ao {amount} por cento
