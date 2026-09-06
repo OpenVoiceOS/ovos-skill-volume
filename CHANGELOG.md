@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.2.0a1) (2026-09-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.24a2...0.2.0a1)
+
+**Merged pull requests:**
+
+- feat: unify volume\_level label across all locales [\#141](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/141) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.24a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.24a2) (2026-09-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.24a1...0.1.24a2)
