@@ -1,2 +1,8 @@
 (change|mets|règle) le volume (à|sur) {amount}
 volume à {amount} pour cent
+mets le volume à {amount} pour cent
+change le volume à {amount}
+volume {amount}
+peux-tu mettre le volume à {amount}
+je veux le volume à {amount}
+règle le volume sur {amount} pour cent

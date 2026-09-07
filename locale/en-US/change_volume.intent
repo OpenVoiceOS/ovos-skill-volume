@@ -1,3 +1,8 @@
 (change|set|make) [the] volume [to] {amount}
 volume [to] {amount} percent
 volume change [to {amount}]
+set [the] volume to {amount} percent
+put [the] volume at {amount}
+adjust [the] volume to {amount}
+can you (change|set) [the] volume to {amount}
+i want [the] volume at {amount}

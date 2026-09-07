@@ -1,2 +1,8 @@
 (muda[r]|define|coloca) o volume (para|em) {amount}
 volume em {amount} por cento
+coloca o volume em {amount} por cento
+ajusta o volume para {amount}
+volume {amount}
+pode colocar o volume em {amount}
+quero o volume em {amount}
+sobe o volume para {amount}
