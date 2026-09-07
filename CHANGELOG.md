@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.3.0a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.2.0a1...0.3.0a1)
+
+**Merged pull requests:**
+
+- feat: kab, sv-SE locale parity [\#144](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/144) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.2.0a1) (2026-09-06)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.24a2...0.2.0a1)
