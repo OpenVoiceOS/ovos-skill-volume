@@ -1,0 +1,21 @@
+{
+  "name": "Volumeregeling",
+  "description": "Regel het volume van OVOS met gesproken opdrachten",
+  "examples": [
+    "standaardvolume",
+    "audio omschakelen",
+    "volume dempen",
+    "volumeniveau laag",
+    "zet het volume op maximaal",
+    "demping opheffen",
+    "herstel het volume"
+  ],
+  "tags": [
+    "systeem",
+    "geluid",
+    "volumeregeling",
+    "Configuratie",
+    "volume",
+    "permissieve-licentie"
+  ]
+}

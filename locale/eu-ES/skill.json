@@ -1,0 +1,21 @@
+{
+  "name": "Bolumen kontrola",
+  "description": "Kontrolatu OVOSen bolumena ahots aginduekin",
+  "examples": [
+    "bolumen lehenetsia",
+    "aldatu audioa",
+    "mututu bolumena",
+    "bolumen maila baxua",
+    "ezarri bolumena gorenera",
+    "kendu mututzea",
+    "berrezarri bolumena"
+  ],
+  "tags": [
+    "sistema",
+    "soinua",
+    "bolumen-kontrola",
+    "Konfigurazioa",
+    "bolumena",
+    "lizentzia-baimentzailea"
+  ]
+}
