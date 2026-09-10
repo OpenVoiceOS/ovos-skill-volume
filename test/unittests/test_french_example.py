@@ -3,7 +3,6 @@ from pathlib import Path
 from unittest.mock import Mock
 
 from ovos_bus_client.message import Message
-
 from ovos_skill_volume import VolumeSkill
 
 
