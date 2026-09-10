@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.4.1a1) (2026-09-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.4.0a1...0.4.1a1)
+
+**Merged pull requests:**
+
+- fix: provide complete French volume examples [\#150](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/150) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.4.0a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.3.0a1...0.4.0a1)
