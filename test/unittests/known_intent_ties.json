@@ -1,0 +1,128 @@
+{
+ "ca-ES": {
+  "restableix el volum": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "restaura el volum": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "recupera el volum": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "posa el volum per defecte": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "da-DK": {
+  "genopret lydstyrken": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "nulstil lydstyrken": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "es-ES": {
+  "silenciar": [
+   "volume.mute",
+   "volume.unmute"
+  ]
+ },
+ "fr-FR": {
+  "remets le volume par défaut": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "gl-ES": {
+  "restaurar o volume": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "restabelecer o volume": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "it-IT": {
+  "alza il volume al massimo": [
+   "volume.max.boost",
+   "volume_level"
+  ],
+  "ripristina il volume di default": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "imposta il volume di default": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "kab": {
+  "ali taɣect": [
+   "increase_volume",
+   "volume.max.boost"
+  ],
+  "taɣect afellay": [
+   "increase_volume",
+   "volume_level"
+  ],
+  "taɣect adday": [
+   "less_volume",
+   "volume_level"
+  ],
+  "err taɣect ɣer amezwer": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "err taɣect ɣer alemmas": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "err taɣect ɣer amsedday": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "nl-NL": {
+  "audio aan": [
+   "volume.mute.toggle",
+   "volume.unmute"
+  ]
+ },
+ "oc-FR": {
+  "restablís lo volum": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "restaura lo volum": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "recupèra lo volum": [
+   "volume.reset",
+   "volume_level"
+  ],
+  "met lo volum per defècte": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "pt-PT": {
+  "repor o volume": [
+   "volume.reset",
+   "volume_level"
+  ]
+ },
+ "sv-SE": {
+  "vrid upp volymen": [
+   "increase_volume",
+   "volume.max.boost"
+  ]
+ }
+}

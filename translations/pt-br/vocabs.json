@@ -1,0 +1,30 @@
+{
+  "change.voc": [
+    "definir",
+    "fazer",
+    "mudar"
+  ],
+  "quieter.voc": [
+    "menos",
+    "diminuir",
+    "abaixo",
+    "mais baixo",
+    "mais silencioso",
+    "reduzir"
+  ],
+  "louder.voc": [
+    "mais alto",
+    "mais barulhento",
+    "ruidosamente",
+    "aumentar",
+    "mais alto",
+    "mais",
+    "acima"
+  ],
+  "current.voc": [
+    "atual"
+  ],
+  "volume.voc": [
+    "volume"
+  ]
+}
