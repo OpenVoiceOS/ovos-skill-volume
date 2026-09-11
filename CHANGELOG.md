@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.4.1a4) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.4.1a3...0.4.1a4)
+
+**Merged pull requests:**
+
+- translate\(nl-NL\): add forgotten 'hoog' to louder.voc [\#140](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/140) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.1a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.4.1a3) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.4.1a2...0.4.1a3)
@@ -491,17 +499,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.4a1...0.1.4)
 
-**Merged pull requests:**
-
-- Release 0.1.4a1 [\#48](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/48) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.4a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.4a1) (2024-11-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.3a1...0.1.4a1)
-
-**Merged pull requests:**
-
-- fix: drop lingua-franca [\#47](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/47) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.3a1) (2024-11-02)
 
