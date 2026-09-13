@@ -1,0 +1,21 @@
+{
+  "name": "Contrôle du volume",
+  "description": "Contrôlez le volume d'OVOS avec des commandes vocales.",
+  "examples": [
+    "Volume par défaut",
+    "Bascule la sourdine",
+    "Coupe le son",
+    "Mets le volume sur faible",
+    "Mets le volume sur élevé",
+    "Mets le volume au maximum",
+    "Restaure le volume"
+  ],
+  "tags": [
+    "système",
+    "son",
+    "contrôle-du-volume",
+    "configuration",
+    "volume",
+    "licence-permissive"
+  ]
+}

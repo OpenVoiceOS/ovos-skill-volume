@@ -1,44 +1,40 @@
 {
     "volume.mute.toggle.intent": [
-        "de basculement audio",
-        "toggle mute"
+        "bascule la sourdine",
+        "active ou coupe la sourdine"
     ],
     "volume.unmute.intent": [
-        "unmute volume",
-        "audio unmute",
-        "unmute"
+        "rétablis le son",
+        "enlève la sourdine",
+        "remets le son"
     ],
     "volume.default.intent": [
-        "volume \u00e0 moyen",
-        "set volume to default",
-        "reset volume",
-        "volume par d\u00e9faut",
-        "restaurer le volume",
+        "remets le volume par défaut",
+        "rétablis le volume",
+        "mets le volume à moyen",
         "volume moyen",
-        "d\u00e9finir le niveau de volume par d\u00e9faut"
+        "niveau de volume par défaut"
     ],
     "volume.max.intent": [
-        "niveau de volume maximal",
-        "max",
-        "volume de r\u00e9glage au maximum",
-        "volume maximal",
-        "volume sup\u00e9rieur"
+        "mets le volume au maximum",
+        "volume au maximum",
+        "règle le volume au maximum",
+        "volume maximum"
     ],
     "volume.high.intent": [
-        "volume \u00e9lev\u00e9",
-        "volume \u00e0 haut niveau",
-        "niveau de volume \u00e0 \u00e9lev\u00e9",
-        "volume \u00e0 \u00e9lev\u00e9"
+        "augmente le volume",
+        "monte le volume",
+        "mets le volume fort",
+        "volume fort"
     ],
     "volume.mute.intent": [
-        "mute",
-        "volume",
-        "mute audio"
+        "coupe le son",
+        "mets en sourdine",
+        "coupe l'audio"
     ],
     "volume.low.intent": [
-        "volume faible",
-        "volume \u00e0 faible",
-        "faible volume",
-        "niveau de volume \u00e0 faible"
+        "baisse le volume",
+        "mets le volume faible",
+        "volume faible"
     ]
 }

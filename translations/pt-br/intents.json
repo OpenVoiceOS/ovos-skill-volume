@@ -1,0 +1,47 @@
+{
+  "volume.mute.toggle.intent": [
+    "alternar mudo",
+    "alternar áudio"
+  ],
+  "volume.unmute.intent": [
+    "ativar volume",
+    "ativar som",
+    "ativar áudio"
+  ],
+  "volume.default.intent": [
+    "redefinir volume",
+    "definir volume para o padrão",
+    "ajuste o volume para médio",
+    "restaurar volume",
+    "volume médio",
+    "volume padrão",
+    "definir o nível de volume para o padrão"
+  ],
+  "volume.max.intent": [
+    "volume máximo",
+    "ajuste o volume para o máximo",
+    "volume máximo",
+    "volume máximo",
+    "ajuste o nível de volume para o máximo"
+  ],
+  "volume.high.intent": [
+    "volume alto",
+    "alto volume",
+    "volume muito alto",
+    "nível de volume alto",
+    "volume em nível alto",
+    "nível de volume muito alto"
+  ],
+  "volume.mute.intent": [
+    "volume em mudo",
+    "mudo",
+    "silenciar áudio"
+  ],
+  "volume.low.intent": [
+    "volume muito baixo",
+    "nível de volume muito baixo",
+    "baixo volume",
+    "nível de volume baixo",
+    "volume baixo"
+  ]
+}
