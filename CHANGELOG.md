@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.2a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.5.2a1) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.5.1a1...0.5.2a1)
+
+**Merged pull requests:**
+
+- fix\(fa-IR\): volume up raises the volume instead of setting the maximum [\#161](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/161) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.1a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.5.1a1) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.5.0a1...0.5.1a1)
@@ -483,11 +491,6 @@
 ## [0.1.6a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.6a1) (2024-11-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.5...0.1.6a1)
-
-**Merged pull requests:**
-
-- Release 0.1.6a1 [\#55](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/55) ([github-actions[bot]](https://github.com/apps/github-actions))
-- added italian [\#54](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/54) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.5) (2024-11-17)
 
