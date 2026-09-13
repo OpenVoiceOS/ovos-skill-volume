@@ -56,3 +56,34 @@ def test_no_locale_gains_a_tie(locale):
         f"{locale}: these phrasings now expand out of two intent files, and "
         f"padacioso cannot choose between them:\n  "
         + "\n  ".join(f"{s!r} -> {v}" for s, v in sorted(new.items())))
+
+
+def test_fa_ir_volume_up_raises_the_volume():
+    """"حجم بالا" ("volume up") must raise the volume, not set it to maximum.
+
+    بالا is the fa-IR translation of "up" in the en-US increase_volume line
+    `volume (up|higher|louder)`. It must stay out of the level vocabularies
+    (level.voc, level.max.voc, level.high.voc), or a phrase meaning "volume
+    up" is claimed by volume_level through <level> and sets the volume to
+    the maximum instead of raising it one step.
+    """
+    from padacioso import IntentContainer
+
+    locale = LOCALES / "fa-IR"
+    vocs = vocabularies(locale)
+    container = IntentContainer(str(Path(__file__).parent / "_fa_ir_padacioso_cache"))
+    for f in sorted(locale.glob("*.intent")):
+        samples = []
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                samples.extend(expand(line, vocs))
+            except Exception:
+                samples.append(line.strip())
+        container.add_intent(f.stem, samples)
+
+    result = container.calc_intent("حجم بالا")
+    assert result["name"] == "increase_volume", (
+        f"'حجم بالا' resolved to {result['name']!r}, not 'increase_volume'"
+    )
