@@ -71,7 +71,7 @@ def test_fa_ir_volume_up_raises_the_volume():
 
     locale = LOCALES / "fa-IR"
     vocs = vocabularies(locale)
-    container = IntentContainer(str(Path(__file__).parent / "_fa_ir_padacioso_cache"))
+    container = IntentContainer(fuzz=False)
     for f in sorted(locale.glob("*.intent")):
         samples = []
         for line in f.read_text(encoding="utf-8").splitlines():
