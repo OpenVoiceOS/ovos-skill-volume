@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.1a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.5.1a1) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.5.0a1...0.5.1a1)
+
+**Merged pull requests:**
+
+- fix\(fa-IR\): resolve 3 new padacioso intent ties from \#157 [\#159](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/159) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.5.0a1) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.4.1a4...0.5.0a1)
@@ -433,19 +441,19 @@
 
 ## [0.1.8](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8) (2024-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a1...0.1.8)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a2...0.1.8)
 
 **Merged pull requests:**
 
 - Release 0.1.8a2 [\#60](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/60) ([github-actions[bot]](https://github.com/apps/github-actions))
 
-## [0.1.8a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8a1) (2024-11-23)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a2...0.1.8a1)
-
 ## [0.1.8a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8a2) (2024-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.7...0.1.8a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a1...0.1.8a2)
+
+## [0.1.8a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8a1) (2024-11-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.7...0.1.8a1)
 
 **Merged pull requests:**
 
@@ -467,15 +475,10 @@
 **Merged pull requests:**
 
 - fix:allow workshop 3.0.0 [\#56](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/56) ([JarbasAl](https://github.com/JarbasAl))
-- added italian [\#52](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/52) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.6a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.6a2) (2024-11-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.6a1...0.1.6a2)
-
-**Merged pull requests:**
-
-- added italian [\#53](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/53) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.6a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.6a1) (2024-11-17)
 
