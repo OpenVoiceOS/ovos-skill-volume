@@ -63,7 +63,7 @@ def test_fa_ir_volume_up_raises_the_volume():
 
     بالا is the fa-IR translation of "up" in the en-US increase_volume line
     `volume (up|higher|louder)`. It must stay out of the level vocabularies
-    (level.voc, level.max.voc, level.high.voc), or a phrase meaning "volume
+    (level.voc, level_max.voc, level_high.voc), or a phrase meaning "volume
     up" is claimed by volume_level through <level> and sets the volume to
     the maximum instead of raising it one step.
     """

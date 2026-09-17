@@ -109,34 +109,34 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
     def test_volume_to_low(self):
         self._assert_intent("volume to low", "volume_level.intent")
 
-    # padatious: volume.max.boost.intent (non-slot idioms carried over from
+    # padatious: volume_max_boost.intent (non-slot idioms carried over from
     # the old volume.max.intent -- "crank the volume", "turn it all the way
     # up" -- that don't fit the {level} slot template)
     def test_crank_volume(self):
-        self._assert_intent("crank the volume", "volume.max.boost.intent")
+        self._assert_intent("crank the volume", "volume_max_boost.intent")
 
-    # padatious: volume.reset.intent ("reset/restore THE volume" carries no
+    # padatious: volume_reset.intent ("reset/restore THE volume" carries no
     # level word at all, so it can't bind {level} either)
     def test_reset_the_volume(self):
-        self._assert_intent("reset the volume", "volume.reset.intent")
+        self._assert_intent("reset the volume", "volume_reset.intent")
 
-    # padatious: volume.mute.intent
+    # padatious: volume_mute.intent
     def test_mute(self):
-        self._assert_intent("mute", "volume.mute.intent")
+        self._assert_intent("mute", "volume_mute.intent")
 
     def test_mute_audio(self):
-        self._assert_intent("mute audio", "volume.mute.intent")
+        self._assert_intent("mute audio", "volume_mute.intent")
 
-    # padatious: volume.unmute.intent
+    # padatious: volume_unmute.intent
     def test_unmute(self):
-        self._assert_intent("unmute", "volume.unmute.intent")
+        self._assert_intent("unmute", "volume_unmute.intent")
 
     def test_unmute_audio(self):
-        self._assert_intent("unmute audio", "volume.unmute.intent")
+        self._assert_intent("unmute audio", "volume_unmute.intent")
 
-    # padatious: volume.mute.toggle.intent
+    # padatious: volume_mute_toggle.intent
     def test_toggle_mute(self):
-        self._assert_intent("toggle mute", "volume.mute.toggle.intent")
+        self._assert_intent("toggle mute", "volume_mute_toggle.intent")
 
     # adapt: change_volume. Include a number so the handler sets the level
     # directly instead of opening a get_response follow-up dialog.
