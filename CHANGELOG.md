@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.8.1a1) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.8.0a1...0.8.1a1)
+
+**Merged pull requests:**
+
+- fix: locale resource names per OVOS-INTENT-2 [\#165](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/165) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.8.0a1) (2026-09-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.7.0a1...0.8.0a1)
@@ -448,17 +456,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.9...0.1.10a1)
 
-**Merged pull requests:**
-
-- de-de/translate [\#63](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/63) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.1.9](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.9) (2024-11-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.9a1...0.1.9)
-
-**Merged pull requests:**
-
-- Release 0.1.9a1 [\#62](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/62) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.9a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.9a1) (2024-11-25)
 
