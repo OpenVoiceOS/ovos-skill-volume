@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.9.0a2) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.9.0a1...0.9.0a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every locale [\#173](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/173) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.9.0a1) (2026-09-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.8.1a1...0.9.0a1)
@@ -432,17 +440,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.11...0.1.12a1)
 
-**Merged pull requests:**
-
-- import basque translations [\#67](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/67) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.11](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.11) (2024-12-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.11a1...0.1.11)
-
-**Merged pull requests:**
-
-- Release 0.1.11a1 [\#66](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/66) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.11a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.11a1) (2024-12-02)
 
