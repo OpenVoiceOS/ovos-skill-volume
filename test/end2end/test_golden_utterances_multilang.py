@@ -1,16 +1,15 @@
 """Multilingual golden-utterance end-to-end coverage for ovos-skill-volume.
 
 Extends test_golden_utterances.py (en-US only) to every locale under
-locale/ that ships actual intent/vocab files. One shared MiniCroft is
-booted with en-US as the primary language and every other locale as a
-``secondary_lang`` (ovoscope>=1.6.5a1 / padacioso>=2.2.3a1, which
-contains the upstream fix for padacioso#77 -- cross-language intent
-detach scoping -- verified against the resolved padacioso version before
-relying on a single shared MiniCroft here).
+locale/ that ships actual intent/vocab files.
 
-fa-IR is excluded: its locale/ directory ships only skill.json (store
-metadata) with no .intent/.voc files, so there is nothing to route --
-see the NATIVE_VALIDATION.md top-line finding.
+fa-IR, sv-SE and kab are now covered too: fa-IR ships 8 of the 10 intents
+(missing volume_max_boost.intent and volume_mute_toggle.intent -- a real
+locale gap, not attempted here); sv-SE and kab ship full parity with en-US.
+
+One MiniCroft is booted per locale (lang=<locale>, no secondary_langs --
+see ovos-skill-date-time/test/end2end/test_intents_it_it.py on dev),
+not a single shared secondary_langs boot.
 
 Tier 1 rows are natural-language expansions of the language's own
 locale/<lang>/*.intent templates and assert a hard intent match, same
@@ -71,7 +70,7 @@ END2END_DIR = Path(__file__).parent
 # module docstring / NATIVE_VALIDATION.md).
 LANGS = [
     "de-DE", "es-ES", "fr-FR", "it-IT", "nl-NL", "pt-PT", "pt-BR",
-    "ca-ES", "da-DK", "eu-ES", "gl-ES",
+    "ca-ES", "da-DK", "eu-ES", "gl-ES", "sv-SE", "kab", "fa-IR",
 ]
 
 # Cross-language negatives: an English utterance in a non-English session
@@ -128,11 +127,22 @@ def _as_param(row):
 GOLDEN_ROWS = [_as_param(r) for r in ALL_ROWS]
 
 
+_BOOTED = {}
+
+
 @pytest.fixture(scope="module")
-def minicroft():
-    mc = get_minicroft([SKILL_ID], secondary_langs=LANGS)
-    yield mc
-    mc.stop()
+def mc_factory(request):
+    """Boots one MiniCroft per locale on first use (lang=<locale>, no
+    secondary_langs -- see ovos-skill-date-time/test/end2end/test_intents_it_it.py
+    on dev), reusing it for every row/negative in that locale, and stops
+    every booted instance at module teardown."""
+    def _get(lang):
+        if lang not in _BOOTED:
+            mc = get_minicroft([SKILL_ID], max_wait=150, lang=lang)
+            _BOOTED[lang] = mc
+            request.addfinalizer(mc.stop)
+        return _BOOTED[lang]
+    return _get
 
 
 def _types(mc, text, lang, session_id):
@@ -224,12 +234,13 @@ EQUIVALENT_INTENTS = {
 
 @pytest.mark.timeout(60)
 @pytest.mark.parametrize("row", GOLDEN_ROWS, ids=_golden_id)
-def test_golden_utterance_multilang(minicroft, row):
+def test_golden_utterance_multilang(mc_factory, row):
+    mc = mc_factory(row["lang"])
     candidates = _candidates(SKILL_ID, row["intent_label"])
     equivalent = EQUIVALENT_INTENTS.get((row["lang"], row["utterance"]))
     if equivalent:
         candidates |= _candidates(SKILL_ID, equivalent)
-    types = _types(minicroft, row["utterance"], row["lang"], f"golden-{_golden_id(row)}")
+    types = _types(mc, row["utterance"], row["lang"], f"golden-{_golden_id(row)}")
     matched = any(t in candidates for t in types)
     bug_key = (row["lang"], row["utterance"])
     if bug_key in KNOWN_BUGS and not matched:
@@ -256,9 +267,10 @@ KNOWN_NEGATIVE_BUGS = {
 
 @pytest.mark.timeout(60)
 @pytest.mark.parametrize("negative", CROSS_LANG_NEGATIVES, ids=lambda n: f"{n[1]}-{n[0]}")
-def test_cross_language_negative(minicroft, negative):
+def test_cross_language_negative(mc_factory, negative):
     text, lang, _why = negative
-    types = _types(minicroft, text, lang, f"negative-{lang}-{text}")
+    mc = mc_factory(lang)
+    types = _types(mc, text, lang, f"negative-{lang}-{text}")
     claimed = any(t.startswith(f"{SKILL_ID}:") for t in types)
     bug_key = (lang, text)
     if bug_key in KNOWN_NEGATIVE_BUGS and claimed:
@@ -338,11 +350,12 @@ def _percent_for(mc, text, lang, session_id):
 
 @pytest.mark.timeout(60)
 @pytest.mark.parametrize("case", NUMERIC_ROWS, ids=lambda c: f"{c[0]}-{c[1]}")
-def test_numeric_amount_never_claimed_by_volume_level(minicroft, case):
+def test_numeric_amount_never_claimed_by_volume_level(mc_factory, case):
     lang, text = case
+    mc = mc_factory(lang)
     for _trial in range(3):
         types, percent, claimed_volume_level = _percent_for(
-            minicroft, text, lang, f"numeric-{lang}-{text}-{_trial}"
+            mc, text, lang, f"numeric-{lang}-{text}-{_trial}"
         )
         assert not claimed_volume_level, (
             f"[{lang}] {text!r} was claimed by volume_level.intent instead of change_volume "
@@ -355,9 +368,10 @@ def test_numeric_amount_never_claimed_by_volume_level(minicroft, case):
 
 @pytest.mark.timeout(60)
 @pytest.mark.parametrize("case", LEVEL_PERCENT_ROWS, ids=lambda c: f"{c[0]}-{c[1]}")
-def test_level_word_sets_correct_percent(minicroft, case):
+def test_level_word_sets_correct_percent(mc_factory, case):
     lang, text, expected = case
-    types, percent, claimed_volume_level = _percent_for(minicroft, text, lang, f"percent-{lang}-{text}")
+    mc = mc_factory(lang)
+    types, percent, claimed_volume_level = _percent_for(mc, text, lang, f"percent-{lang}-{text}")
     assert claimed_volume_level, (
         f"[{lang}] {text!r}: a level word must be claimed by volume_level.intent, not lost to "
         f"change_volume's {{amount}} slot (got {types!r})"
