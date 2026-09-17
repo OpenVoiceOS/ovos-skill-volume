@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.6.0a1) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.5.2a1...0.6.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill nl-NL, pt-BR and pt-PT gaps against en-US [\#167](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/167) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- feat\(locale\): fill de-DE, es-ES, gl-ES, eu-ES and ca-ES gaps against en-US [\#166](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/166) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.2a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.5.2a1) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.5.1a1...0.5.2a1)
@@ -466,23 +475,14 @@
 **Merged pull requests:**
 
 - Add Catalan translation [\#59](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/59) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#58](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/58) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.7](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.7) (2024-11-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.7a1...0.1.7)
 
-**Merged pull requests:**
-
-- Release 0.1.7a1 [\#57](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/57) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.7a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.7a1) (2024-11-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.6a2...0.1.7a1)
-
-**Merged pull requests:**
-
-- fix:allow workshop 3.0.0 [\#56](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/56) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.6a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.6a2) (2024-11-17)
 
