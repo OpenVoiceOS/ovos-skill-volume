@@ -206,8 +206,8 @@ KNOWN_BUGS = {
 
 # volume_level.intent's default/max level words ("default", "massimo", ...)
 # are also plain English for "reset the volume"/"crank it up", so a handful
-# of reset/boost phrasings ported from en-US's volume.reset.intent /
-# volume.max.boost.intent legitimately overlap with a volume_level.intent
+# of reset/boost phrasings ported from en-US's volume_reset.intent /
+# volume_max_boost.intent legitimately overlap with a volume_level.intent
 # literal expansion of the same words. Both outcomes set the identical
 # percent (handle_reset_volume_intent and the default/max branch of
 # handle_set_volume_level agree on 0.7/1.0), so either intent winning the
@@ -215,10 +215,10 @@ KNOWN_BUGS = {
 # either label.
 EQUIVALENT_INTENTS = {
     ("it-IT", "Alza il volume al massimo"): "volume_level.intent",
-    ("it-IT", "Ripristina il volume di default"): "volume.reset.intent",
-    ("ca-ES", "restableix el volum"): "volume.reset.intent",
-    ("da-DK", "nulstil lydstyrken"): "volume.reset.intent",
-    ("gl-ES", "restaurar o volume"): "volume.reset.intent",
+    ("it-IT", "Ripristina il volume di default"): "volume_reset.intent",
+    ("ca-ES", "restableix el volum"): "volume_reset.intent",
+    ("da-DK", "nulstil lydstyrken"): "volume_reset.intent",
+    ("gl-ES", "restaurar o volume"): "volume_reset.intent",
 }
 
 

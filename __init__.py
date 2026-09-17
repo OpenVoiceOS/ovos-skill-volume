@@ -27,7 +27,7 @@ class VolumeSkill(OVOSSkill):
         if response:
             return int(response.data["percent"] * 100)
         else:
-            self.speak_dialog("error.get.volume")
+            self.speak_dialog("error_get_volume")
             raise TimeoutError("Failed to get volume")
 
     # intents
@@ -46,16 +46,16 @@ class VolumeSkill(OVOSSkill):
                 return None
 
             response = self.get_response(
-                "volume.change.amount", validator=amount_validator
+                "volume_change_amount", validator=amount_validator
             )
             if response is None:
-                self.speak_dialog("error.get.volume")
+                self.speak_dialog("error_get_volume")
                 return
             volume_change = extract_number(normalizer.normalize(response), lang=self.lang)
         if volume_change >= 100:
-            self.speak_dialog("volume.max")
+            self.speak_dialog("volume_max")
         else:
-            self.speak_dialog("volume.set.percent", data={"level": int(volume_change)})
+            self.speak_dialog("volume_set_percent", data={"level": int(volume_change)})
         self.bus.emit(
             message.forward("mycroft.volume.set", {"percent": volume_change / 100})
         )
@@ -70,7 +70,7 @@ class VolumeSkill(OVOSSkill):
             message.forward("mycroft.volume.decrease", {"percent": volume_change / 100})
         )
         self.speak_dialog(
-            "volume.set.percent",
+            "volume_set_percent",
             data={"level": max(MIN_VOLUME, int(volume - volume_change))},
         )
 
@@ -87,25 +87,25 @@ class VolumeSkill(OVOSSkill):
                 )
             )
             self.speak_dialog(
-                "volume.set.percent",
+                "volume_set_percent",
                 data={"level": min(MAX_VOLUME, int(volume + volume_change))},
             )
         else:
-            self.speak_dialog("volume.max.already")
+            self.speak_dialog("volume_max_already")
 
     # level word -> (voc filename, volume percent), most specific first
     _LEVEL_VOCS = (
-        ("level.max", 1.0),
-        ("level.high", 0.9),
-        ("level.medium", 0.7),
-        ("level.low", 0.3),
-        ("level.default", 0.7),
+        ("level_max", 1.0),
+        ("level_high", 0.9),
+        ("level_medium", 0.7),
+        ("level_low", 0.3),
+        ("level_default", 0.7),
     )
 
     def _set_volume_level(self, message, percent):
         self.bus.emit(message.forward("mycroft.volume.set", {"percent": percent}))
         if percent == 1.0:
-            self.speak_dialog("volume.max")
+            self.speak_dialog("volume_max")
 
     @intent_handler("volume_level.intent")
     def handle_set_volume_level(self, message):
@@ -118,29 +118,29 @@ class VolumeSkill(OVOSSkill):
             if self.voc_match(utterance, voc_filename, exact=False):
                 self._set_volume_level(message, percent)
                 return
-        self.speak_dialog("volume.level.unknown", data={"level": utterance})
+        self.speak_dialog("volume_level_unknown", data={"level": utterance})
 
-    @intent_handler("volume.max.boost.intent")
+    @intent_handler("volume_max_boost.intent")
     def handle_max_volume_boost_intent(self, message):
         self._set_volume_level(message, 1.0)
 
-    @intent_handler("volume.reset.intent")
+    @intent_handler("volume_reset.intent")
     def handle_reset_volume_intent(self, message):
         self._set_volume_level(message, 0.7)
 
-    @intent_handler("volume.mute.intent")
+    @intent_handler("volume_mute.intent")
     def handle_mute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.mute"))
 
-    @intent_handler("volume.unmute.intent")
+    @intent_handler("volume_unmute.intent")
     def handle_unmute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.unmute"))
 
-    @intent_handler("volume.mute.toggle.intent")
+    @intent_handler("volume_mute_toggle.intent")
     def handle_toggle_unmute_intent(self, message):
         self.bus.emit(message.forward("mycroft.volume.mute.toggle"))
 
     @intent_handler("current_volume.intent")
     def handle_query_volume(self, message):
         volume = self._query_volume(message)
-        self.speak_dialog("volume.current", data={"volume": volume})
+        self.speak_dialog("volume_current", data={"volume": volume})

@@ -1,9 +1,9 @@
 {
-    "volume.mute.toggle.intent": [
+    "volume_mute_toggle.intent": [
         "bascule la sourdine",
         "active ou coupe la sourdine"
     ],
-    "volume.unmute.intent": [
+    "volume_unmute.intent": [
         "rétablis le son",
         "enlève la sourdine",
         "remets le son"
@@ -27,7 +27,7 @@
         "mets le volume fort",
         "volume fort"
     ],
-    "volume.mute.intent": [
+    "volume_mute.intent": [
         "coupe le son",
         "mets en sourdine",
         "coupe l'audio"

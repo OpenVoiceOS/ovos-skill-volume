@@ -5,7 +5,7 @@ expected intent -- a handler that matched and then did nothing would still
 pass. This suite drives a real MiniCroft over a real bus and asserts the
 consequence of ``handle_set_volume_level`` for the "max" level word: the
 ``mycroft.volume.set`` bus message the handler emits (with ``percent``
-actually 1.0) and the ``volume.max`` dialog it speaks.
+actually 1.0) and the ``volume_max`` dialog it speaks.
 
 Also boots with it-IT active and drives the Italian "set volume to max"
 phrasing, since the skill ships an it-IT locale (``locale/it-IT``) and a
@@ -50,8 +50,8 @@ def _assert_max_volume_effect(messages, utterance):
     )
     speaks = [m for m in messages if m.msg_type in ("speak", "ovos.utterance.speak")]
     assert speaks, f"{utterance!r}: no speak message emitted"
-    assert speaks[0].data["meta"]["dialog"] == "volume.max", (
-        f"{utterance!r}: expected dialog 'volume.max', got {speaks[0].data['meta']!r}"
+    assert speaks[0].data["meta"]["dialog"] == "volume_max", (
+        f"{utterance!r}: expected dialog 'volume_max', got {speaks[0].data['meta']!r}"
     )
 
 

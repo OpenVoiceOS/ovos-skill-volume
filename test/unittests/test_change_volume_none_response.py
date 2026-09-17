@@ -39,4 +39,4 @@ class TestChangeVolumeNoneResponse(unittest.TestCase):
         )
         # must not raise TypeError: expected string or bytes-like object
         skill.handle_change_volume_intent(message)
-        skill.speak_dialog.assert_called_once_with("error.get.volume")
+        skill.speak_dialog.assert_called_once_with("error_get_volume")
