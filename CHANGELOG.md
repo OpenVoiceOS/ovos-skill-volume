@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.10.0a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.9.0a2...0.10.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill volume\_max\_boost and volume\_mute\_toggle intents for fa-IR against en-US [\#175](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/175) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.9.0a2) (2026-09-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.9.0a1...0.9.0a2)
@@ -426,15 +434,10 @@
 **Merged pull requests:**
 
 - added former unused German [\#70](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- added former unused German [\#69](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/69) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.12](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.12) (2024-12-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.12a1...0.1.12)
-
-**Merged pull requests:**
-
-- Release 0.1.12a1 [\#68](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/68) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.12a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.12a1) (2024-12-02)
 
