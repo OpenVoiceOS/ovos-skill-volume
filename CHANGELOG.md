@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.11.0a1) (2026-09-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.10.0a2...0.11.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): carry the new phrasings of \#147 onto the consolidated intents [\#179](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/179) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.10.0a2) (2026-09-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.10.0a1...0.10.0a2)
@@ -413,15 +421,10 @@
 
 - Release 0.1.13a4 [\#75](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/75) ([github-actions[bot]](https://github.com/apps/github-actions))
 - nl-nl translations [\#74](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/74) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- fix automations [\#73](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/73) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13...0.1.13a3)
-
-**Merged pull requests:**
-
-- pt-pt/translate [\#72](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/72) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.13](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13) (2025-01-06)
 
