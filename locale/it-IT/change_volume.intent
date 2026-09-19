@@ -1,2 +1,7 @@
 (cambia|imposta|regola) il volume (a|al) {amount}
 volume al {amount} per cento
+metti il volume al {amount} per cento
+volume {amount}
+puoi mettere il volume a {amount}
+voglio il volume a {amount}
+porta il volume a {amount}
