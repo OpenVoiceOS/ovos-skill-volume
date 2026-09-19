@@ -1,2 +1,8 @@
 (aldatu|ezarri|jarri) bolumena {amount}(era|ra)
 bolumena ehuneko {amount}(era|ra)
+ezarri bolumena ehuneko {amount}
+bolumena {amount}
+bolumena ehuneko {amount} izan dadila
+nahi dut bolumena {amount}(era|ra)
+igo bolumena {amount}(era|ra)
+jarri bolumen maila {amount}(era|ra)
