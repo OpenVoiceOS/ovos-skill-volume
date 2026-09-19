@@ -1,9 +1,9 @@
 {
-  "volume.mute.toggle.intent": [
+  "volume_mute_toggle.intent": [
     "umschalten stummschaltung\n( ändere | änder ) ( die | ) ( audio | audioausgabe | ausgabe )",
     "stummschaltung audioausgabe"
   ],
-  "volume.unmute.intent": [
+  "volume_unmute.intent": [
     "( schalte | schalt | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) ( ein | an )",
     "( du | ) kannst ( wieder | ) ( sprechen | reden )",
     "den ton wieder anstellen"
@@ -32,7 +32,7 @@
     "Lautstärke ziemlich aufdrehen",
     "volle Lautstärke"
   ],
-  "volume.mute.intent": [
+  "volume_mute.intent": [
     "( schalt | schalte | ) ( die | ) ( audio | audioausgabe | ausgabe | sprache | sprachausgabe ) aus",
     "( schalt | schalte | ) ( auf | ) ( stumm | lautlos )",
     "( auf | ) ( stumm | lautlos ) schalten"
