@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.10.0a2) (2026-09-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.10.0a1...0.10.0a2)
+
+**Merged pull requests:**
+
+- test: every dialog the code speaks resolves in every shipped locale [\#177](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/177) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.10.0a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.9.0a2...0.10.0a1)
@@ -419,10 +427,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a2...0.1.13)
 
-**Merged pull requests:**
-
-- Release 0.1.13a2 [\#71](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/71) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.13a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a2) (2024-12-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a1...0.1.13a2)
@@ -430,10 +434,6 @@
 ## [0.1.13a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a1) (2024-12-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.12...0.1.13a1)
-
-**Merged pull requests:**
-
-- added former unused German [\#70](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.12](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.12) (2024-12-02)
 
