@@ -1,9 +1,9 @@
 {
-  "volume.mute.toggle.intent": [
+  "volume_mute_toggle.intent": [
     "Alternar áudio",
     "alternar áudio"
   ],
-  "volume.unmute.intent": [
+  "volume_unmute.intent": [
     "ativar volume",
     "ativar o som",
     "ativar áudio"
@@ -32,7 +32,7 @@
     "nível de volume para alto",
     "alto volume"
   ],
-  "volume.mute.intent": [
+  "volume_mute.intent": [
     "silenciar o volume",
     "áudio mudo",
     "volume mudo"
