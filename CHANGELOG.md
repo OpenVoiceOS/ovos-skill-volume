@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.11.0a2) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.11.0a1...0.11.0a2)
+
+**Merged pull requests:**
+
+- test\(golden\): one row per locale for the phrasings \#179 carried [\#181](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/181) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.11.0a1) (2026-09-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.10.0a2...0.11.0a1)
@@ -416,11 +424,6 @@
 ## [0.1.13a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a4) (2025-02-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a3...0.1.13a4)
-
-**Merged pull requests:**
-
-- Release 0.1.13a4 [\#75](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/75) ([github-actions[bot]](https://github.com/apps/github-actions))
-- nl-nl translations [\#74](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/74) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.13a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a3) (2025-01-18)
 
