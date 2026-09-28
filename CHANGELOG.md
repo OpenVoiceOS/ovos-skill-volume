@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.0a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.11.0a2...0.12.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): draft es-CO from es-ES \(copy, unvouched\) [\#183](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/183) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.11.0a2) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.11.0a1...0.11.0a2)
@@ -409,17 +417,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a5...0.1.13a6)
 
-**Merged pull requests:**
-
-- gl/translate [\#77](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/77) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.1.13a5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a5) (2025-02-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a4...0.1.13a5)
-
-**Merged pull requests:**
-
-- gl/translate [\#76](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/76) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.13a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a4) (2025-02-17)
 
