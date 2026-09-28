@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.0a2) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.0a1...0.12.0a2)
+
+**Merged pull requests:**
+
+- locale: draft pl-PL ru-RU from en-US \(machine translation, unvouched\) [\#185](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/185) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.0a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.0a1) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.11.0a2...0.12.0a1)
@@ -401,17 +409,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.14...0.1.14a1)
 
-**Merged pull requests:**
-
-- fix: standardize urls / skill-id / pypi-name [\#79](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/79) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.14](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.14) (2025-02-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.13a6...0.1.14)
-
-**Merged pull requests:**
-
-- Release 0.1.13a5 [\#78](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/78) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.13a6](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.13a6) (2025-02-24)
 
