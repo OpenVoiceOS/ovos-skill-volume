@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.0a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.0a3) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.0a2...0.12.0a3)
+
+**Merged pull requests:**
+
+- locale: skill.json for the drafted locales, from their own intent lines [\#188](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/188) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.0a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.0a2) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.0a1...0.12.0a2)
@@ -393,17 +401,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.15...0.1.16a1)
 
-**Merged pull requests:**
-
-- fix; workshop 7.X.X [\#81](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/81) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.15](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.15) (2025-05-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.14a1...0.1.15)
-
-**Merged pull requests:**
-
-- Release 0.1.14a1 [\#80](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/80) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.14a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.14a1) (2025-05-15)
 
@@ -475,15 +475,15 @@
 
 ## [0.1.8](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8) (2024-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a1...0.1.8)
-
-## [0.1.8a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8a1) (2024-11-23)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a2...0.1.8a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a2...0.1.8)
 
 ## [0.1.8a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8a2) (2024-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.7...0.1.8a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.8a1...0.1.8a2)
+
+## [0.1.8a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.8a1) (2024-11-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.7...0.1.8a1)
 
 ## [0.1.7](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.7) (2024-11-19)
 
