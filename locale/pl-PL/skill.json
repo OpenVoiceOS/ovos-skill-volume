@@ -1,0 +1,23 @@
+{
+  "name": "Volume Control",
+  "description": "Control the volume of OVOS with verbal commands",
+  "examples": [
+    "zmiana objętości",
+    "objętość",
+    "Głośniej.",
+    "Ciszej",
+    "Objętość aż do góry",
+    "wyciąć",
+    "przełączanie audio",
+    "zresetować objętość",
+    "Unmutuj audio"
+  ],
+  "tags": [
+    "system",
+    "sound",
+    "volume-control",
+    "Configuration",
+    "volume",
+    "permissive-license"
+  ]
+}
