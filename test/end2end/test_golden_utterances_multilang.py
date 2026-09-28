@@ -68,10 +68,9 @@ END2END_DIR = Path(__file__).parent
 
 # Every locale with real intent/vocab content (fa-IR is metadata-only, see
 # module docstring / NATIVE_VALIDATION.md).
-LANGS = [
-    "de-DE", "es-ES", "fr-FR", "it-IT", "nl-NL", "pt-PT", "pt-BR",
-    "ca-ES", "da-DK", "eu-ES", "gl-ES", "sv-SE", "kab", "fa-IR",
-]
+LANGS = sorted(p.stem.split("golden_utterances_", 1)[1]
+               for p in END2END_DIR.glob("golden_utterances_*.jsonl"))
+assert LANGS, "no golden_utterances_<lang>.jsonl files found"
 
 # Cross-language negatives: an English utterance in a non-English session
 # (and vice versa) must not match, and phrasing lifted from other skills'
@@ -110,6 +109,7 @@ def _load_rows(lang):
             if row.get("needs_manual"):
                 continue
             rows.append(row)
+    assert rows, f"{lang}: no golden rows"
     return rows
 
 
