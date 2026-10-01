@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "изменение объема 50", "lang": "ru-RU", "intent_label": "change_volume.intent", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "увеличение объема", "lang": "ru-RU", "intent_label": "increase_volume.intent", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "беззвуковой объем", "lang": "ru-RU", "intent_label": "volume_mute.intent", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": true}

@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "zmiana objętości 50", "lang": "pl-PL", "intent_label": "change_volume.intent", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "zwiększenie objętości", "lang": "pl-PL", "intent_label": "increase_volume.intent", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "wycichnąć objętość", "lang": "pl-PL", "intent_label": "volume_mute.intent", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": true}
