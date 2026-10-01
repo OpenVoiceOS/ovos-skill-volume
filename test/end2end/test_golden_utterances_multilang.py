@@ -40,6 +40,8 @@ from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
 from ovoscope import CaptureSession, get_minicroft
 
+from ovos_skill_volume import VolumeSkill
+
 SKILL_ID = "ovos-skill-volume.openvoiceos"
 
 _PIPELINE = [
@@ -379,4 +381,34 @@ def test_level_word_sets_correct_percent(mc_factory, case):
     assert percent == pytest.approx(expected), (
         f"[{lang}] {text!r}: expected mycroft.volume.set percent={expected!r}, got {percent!r} "
         f"(types={types!r})"
+    )
+
+
+# "reset volume" and "restore volume" ask for the reset intent, not for a
+# level named "reset". They route through volume_reset.intent and must land
+# on the same percent as volume_level's default branch, so which of the two
+# claims a reset phrasing cannot change what the user hears.
+RESET_PERCENT_ROWS = [
+    ("en-US", "reset volume"),
+    ("en-US", "restore volume"),
+    ("en-US", "reset the volume"),
+    ("en-US", "restore the volume to default"),
+]
+
+DEFAULT_PERCENT = dict(VolumeSkill._LEVEL_VOCS)["level_default"]
+
+
+@pytest.mark.timeout(60)
+@pytest.mark.parametrize("case", RESET_PERCENT_ROWS, ids=lambda c: f"{c[0]}-{c[1]}")
+def test_reset_phrasing_sets_the_default_percent(mc_factory, case):
+    lang, text = case
+    mc = mc_factory(lang)
+    types, percent, _ = _percent_for(mc, text, lang, f"reset-{lang}-{text}")
+    assert set(types) & _candidates(SKILL_ID, "volume_reset.intent"), (
+        f"[{lang}] {text!r}: a reset phrasing must be claimed by volume_reset.intent "
+        f"(got {types!r})"
+    )
+    assert percent == pytest.approx(DEFAULT_PERCENT), (
+        f"[{lang}] {text!r}: expected mycroft.volume.set percent={DEFAULT_PERCENT!r}, "
+        f"got {percent!r} (types={types!r})"
     )
