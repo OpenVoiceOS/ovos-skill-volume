@@ -1,23 +1,15 @@
 """Multilingual golden-utterance end-to-end coverage for ovos-skill-volume.
 
-Extends test_golden_utterances.py (en-US only) to every locale under
-locale/ that ships actual intent/vocab files.
-
-fa-IR, sv-SE and kab are now covered too: fa-IR ships 8 of the 10 intents
-(missing volume_max_boost.intent and volume_mute_toggle.intent -- a real
-locale gap, not attempted here); sv-SE and kab ship full parity with en-US.
+Extends test_golden_utterances.py (en-US only) to every locale that has a
+``golden_utterances_<lang>.jsonl`` file next to this module. Every row in
+every file runs, including machine-generated rows marked ``needs_manual``:
+those rows are expansions of the locale's own ``locale/<lang>/*.intent``
+templates, and a row that does not route to its labelled intent is a real
+template gap that fails the suite.
 
 One MiniCroft is booted per locale (lang=<locale>, no secondary_langs --
 see ovos-skill-date-time/test/end2end/test_intents_it_it.py on dev),
 not a single shared secondary_langs boot.
-
-Tier 1 rows are natural-language expansions of the language's own
-locale/<lang>/*.intent templates and assert a hard intent match, same
-standard as the en-US golden suite. Machine-drafted Tier 2 paraphrase rows
-were dropped from this suite (no drafted/translated content -- see
-NATIVE_VALIDATION.md); the ``machine_generated``-row xfail branch below is
-kept only as a landing spot for future human-contributed paraphrase rows,
-not populated by anything in this suite today.
 
 Known routing bugs unrelated to template coverage (e.g. the skill's own
 adapt intents shadowing more specific padatious/padacioso matches) stay
@@ -47,6 +39,7 @@ _PIPELINE = [
     "ovos-padatious-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-medium",
+    "ovos-padatious-pipeline-plugin-medium",
     "ovos-padacioso-pipeline-plugin-medium",
     "ovos-adapt-pipeline-plugin-low",
 ]
@@ -66,12 +59,10 @@ _IGNORE = [
 
 END2END_DIR = Path(__file__).parent
 
-# Every locale with real intent/vocab content (fa-IR is metadata-only, see
-# module docstring / NATIVE_VALIDATION.md).
-LANGS = [
-    "de-DE", "es-ES", "fr-FR", "it-IT", "nl-NL", "pt-PT", "pt-BR",
-    "ca-ES", "da-DK", "eu-ES", "gl-ES", "sv-SE", "kab", "fa-IR",
-]
+LANGS = sorted(
+    p.stem[len("golden_utterances_"):]
+    for p in END2END_DIR.glob("golden_utterances_*.jsonl")
+)
 
 # Cross-language negatives: an English utterance in a non-English session
 # (and vice versa) must not match, and phrasing lifted from other skills'
@@ -106,10 +97,7 @@ def _load_rows(lang):
             line = line.strip()
             if not line:
                 continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                continue
-            rows.append(row)
+            rows.append(json.loads(line))
     return rows
 
 
@@ -245,8 +233,6 @@ def test_golden_utterance_multilang(mc_factory, row):
     bug_key = (row["lang"], row["utterance"])
     if bug_key in KNOWN_BUGS and not matched:
         pytest.xfail(reason=f"known-bug: {KNOWN_BUGS[bug_key]}")
-    if row.get("machine_generated") and not matched:
-        pytest.xfail(reason="coverage-gap (machine-drafted, pending native validation)")
     assert matched, (
         f"[{row['lang']}] {row['utterance']!r}: expected one of {sorted(candidates)!r}, got {types!r}"
     )
@@ -379,4 +365,19 @@ def test_level_word_sets_correct_percent(mc_factory, case):
     assert percent == pytest.approx(expected), (
         f"[{lang}] {text!r}: expected mycroft.volume.set percent={expected!r}, got {percent!r} "
         f"(types={types!r})"
+    )
+
+
+def test_every_shipping_locale_has_a_golden_file():
+    golden = {p.stem.split("_", 2)[2]
+              for p in END2END_DIR.glob("golden_utterances_*.jsonl")}
+    # en-US rows live in the unsuffixed golden_utterances.jsonl, which
+    # test_golden_utterances.py runs.
+    if (END2END_DIR / "golden_utterances.jsonl").is_file():
+        golden.add("en-US")
+    locale_root = END2END_DIR.parent.parent / "locale"
+    shipping = {d.name for d in locale_root.iterdir()
+                if d.is_dir() and any(d.rglob("*.intent"))}
+    assert golden == shipping, (
+        f"golden files {sorted(golden ^ shipping)} differ from shipping locales"
     )
