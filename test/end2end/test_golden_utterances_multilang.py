@@ -217,18 +217,6 @@ EQUIVALENT_INTENTS = {
     ("ca-ES", "restableix el volum"): "volume_reset.intent",
     ("da-DK", "nulstil lydstyrken"): "volume_reset.intent",
     ("gl-ES", "restaurar o volume"): "volume_reset.intent",
-    ("ca-ES", "restaura el volum"): "volume_level.intent",
-    ("ca-ES", "recupera el volum"): "volume_level.intent",
-    ("ca-ES", "posa el volum per defecte"): "volume_level.intent",
-    ("da-DK", "genopret lydstyrken"): "volume_level.intent",
-    ("it-IT", "Imposta il volume di default"): "volume_level.intent",
-    ("oc-FR", "restablís lo volum"): "volume_level.intent",
-    ("oc-FR", "restaura lo volum"): "volume_level.intent",
-    ("oc-FR", "recupèra lo volum"): "volume_level.intent",
-    ("pt-PT", "repor o volume"): "volume_level.intent",
-    ("fr-FR", "remets le volume par défaut"): "volume_level.intent",
-    ("gl-ES", "restabelecer o volume"): "volume_level.intent",
-    ("kab", "err taɣect ɣer amezwer"): "volume_level.intent",
 }
 
 
@@ -315,18 +303,6 @@ LEVEL_PERCENT_ROWS = [
     ("en-US", "set the volume to low", 0.3),
     ("en-US", "set the volume to max", 1.0),
     ("en-US", "set the volume to normal", 0.7),
-    ("ca-ES", "restaura el volum", 0.7),
-    ("ca-ES", "recupera el volum", 0.7),
-    ("ca-ES", "posa el volum per defecte", 0.7),
-    ("da-DK", "genopret lydstyrken", 0.7),
-    ("it-IT", "Imposta il volume di default", 0.7),
-    ("oc-FR", "restablís lo volum", 0.7),
-    ("oc-FR", "restaura lo volum", 0.7),
-    ("oc-FR", "recupèra lo volum", 0.7),
-    ("pt-PT", "repor o volume", 0.7),
-    ("fr-FR", "remets le volume par défaut", 0.7),
-    ("gl-ES", "restabelecer o volume", 0.7),
-    ("kab", "err taɣect ɣer amezwer", 0.7),
 ]
 
 
