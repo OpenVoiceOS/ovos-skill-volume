@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.1a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.1a1) (2026-10-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.0a3...0.12.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): drop 'silenciar' from es-ES and es-CO volume\_unmute templates [\#191](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/191) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.0a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.0a3) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.0a2...0.12.0a3)
@@ -385,17 +393,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.16...0.1.17a1)
 
-**Merged pull requests:**
-
-- docs: termux [\#83](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/83) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.16](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.16) (2025-06-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.16a1...0.1.16)
-
-**Merged pull requests:**
-
-- Release 0.1.16a1 [\#82](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/82) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.16a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.16a1) (2025-06-08)
 
