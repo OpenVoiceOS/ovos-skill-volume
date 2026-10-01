@@ -58,18 +58,10 @@ def test_no_locale_gains_a_tie(locale):
         + "\n  ".join(f"{s!r} -> {v}" for s, v in sorted(new.items())))
 
 
-def test_fa_ir_volume_up_raises_the_volume():
-    """"حجم بالا" ("volume up") must raise the volume, not set it to maximum.
-
-    بالا is the fa-IR translation of "up" in the en-US increase_volume line
-    `volume (up|higher|louder)`. It must stay out of the level vocabularies
-    (level.voc, level_max.voc, level_high.voc), or a phrase meaning "volume
-    up" is claimed by volume_level through <level> and sets the volume to
-    the maximum instead of raising it one step.
-    """
+def intent_container(locale: Path):
+    """A padacioso container holding every expansion of one locale's intents."""
     from padacioso import IntentContainer
 
-    locale = LOCALES / "fa-IR"
     vocs = vocabularies(locale)
     container = IntentContainer(fuzz=False)
     for f in sorted(locale.glob("*.intent")):
@@ -82,8 +74,43 @@ def test_fa_ir_volume_up_raises_the_volume():
             except Exception:
                 samples.append(line.strip())
         container.add_intent(f.stem, samples)
+    return container
 
-    result = container.calc_intent("حجم بالا")
+
+def test_fa_ir_volume_up_raises_the_volume():
+    """"حجم بالا" ("volume up") must raise the volume, not set it to maximum.
+
+    بالا is the fa-IR translation of "up" in the en-US increase_volume line
+    `volume (up|higher|louder)`. It must stay out of the level vocabularies
+    (level.voc, level_max.voc, level_high.voc), or a phrase meaning "volume
+    up" is claimed by volume_level through <level> and sets the volume to
+    the maximum instead of raising it one step.
+    """
+    result = intent_container(LOCALES / "fa-IR").calc_intent("حجم بالا")
     assert result["name"] == "increase_volume", (
         f"'حجم بالا' resolved to {result['name']!r}, not 'increase_volume'"
+    )
+
+
+# The same rule as the fa-IR test above, read on the source locale: a level
+# vocabulary holds the NAMES of levels, so a verb in it makes volume_level
+# claim a phrase that asks for a different intent. "reset" and "restore" are
+# verbs, and through <level> they also build sentences nobody says, such as
+# "volume to reset" and "set the volume level to restore", which reach the
+# intent corpus as volume_level phrasings.
+EN_US_LEVEL_ROUTING = [
+    ("reset volume", "volume_reset"),
+    ("restore volume", "volume_reset"),
+    ("reset the volume", "volume_reset"),
+    ("default volume", "volume_level"),
+    ("normal volume", "volume_level"),
+    ("standard volume", "volume_level"),
+]
+
+
+@pytest.mark.parametrize("utterance,expected", EN_US_LEVEL_ROUTING)
+def test_en_us_reset_verbs_are_not_level_words(utterance, expected):
+    result = intent_container(LOCALES / "en-US").calc_intent(utterance)
+    assert result["name"] == expected, (
+        f"{utterance!r} resolved to {result['name']!r}, not {expected!r}"
     )

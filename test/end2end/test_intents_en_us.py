@@ -100,9 +100,6 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
     def test_default_volume(self):
         self._assert_intent("default volume", "volume_level.intent")
 
-    def test_reset_volume(self):
-        self._assert_intent("reset volume", "volume_level.intent")
-
     def test_low_volume(self):
         self._assert_intent("low volume", "volume_level.intent")
 
@@ -115,10 +112,16 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
     def test_crank_volume(self):
         self._assert_intent("crank the volume", "volume_max_boost.intent")
 
-    # padatious: volume_reset.intent ("reset/restore THE volume" carries no
+    # padatious: volume_reset.intent ("reset/restore the volume" carries no
     # level word at all, so it can't bind {level} either)
     def test_reset_the_volume(self):
         self._assert_intent("reset the volume", "volume_reset.intent")
+
+    def test_reset_volume(self):
+        self._assert_intent("reset volume", "volume_reset.intent")
+
+    def test_restore_volume(self):
+        self._assert_intent("restore volume", "volume_reset.intent")
 
     # padatious: volume_mute.intent
     def test_mute(self):
