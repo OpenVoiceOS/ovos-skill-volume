@@ -87,3 +87,41 @@ def test_fa_ir_volume_up_raises_the_volume():
     assert result["name"] == "increase_volume", (
         f"'حجم بالا' resolved to {result['name']!r}, not 'increase_volume'"
     )
+
+
+# Same rule as test_fa_ir_volume_up_raises_the_volume, read on es-ES:
+# level.voc holds the NAMES of levels, so a verb in it ("restaurar") makes
+# volume_level claim a phrase that asks for volume_reset. "restaurar volumen"
+# must route to volume_reset, and level names must keep routing to
+# volume_level.
+ES_ES_LEVEL_ROUTING = [
+    ("restaurar volumen", "volume_reset"),
+    ("restaurar el volumen", "volume_reset"),
+    ("volumen alto", "volume_level"),
+    ("volumen medio", "volume_level"),
+    ("volumen por defecto", "volume_level"),
+]
+
+
+@pytest.mark.parametrize("utterance,expected", ES_ES_LEVEL_ROUTING)
+def test_es_es_reset_verb_is_not_a_level_word(utterance, expected):
+    from padacioso import IntentContainer
+
+    locale = LOCALES / "es-ES"
+    vocs = vocabularies(locale)
+    container = IntentContainer(fuzz=False)
+    for f in sorted(locale.glob("*.intent")):
+        samples = []
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                samples.extend(expand(line, vocs))
+            except Exception:
+                samples.append(line.strip())
+        container.add_intent(f.stem, samples)
+
+    result = container.calc_intent(utterance)
+    assert result["name"] == expected, (
+        f"{utterance!r} resolved to {result['name']!r}, not {expected!r}"
+    )
