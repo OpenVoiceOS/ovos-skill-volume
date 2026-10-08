@@ -6,14 +6,14 @@ shared ovoscope golden-utterance dataset, keyed by
 (module-scoped fixture) is booted for the whole suite; every row is its own
 parametrized test item.
 
-Some volume handlers (eg. plain "change volume" with no target level) call
-``get_response()`` for a follow-up, which deadlocks on a bare ``FakeBus``
-(the upstream fix is in flight, see ovoscope#130). Following the same
-mechanism as ``test_intents_en_us.py``, capture ends at
-``mycroft.skill.handler.start`` (right after the intent binding fires, before
-any handler body runs) rather than waiting for ``ovos.utterance.handled``, so
-the intent-routing assertion under test never depends on the handler
-finishing.
+Capture ends at ``mycroft.skill.handler.start``, the same mechanism as
+``test_intents_en_us.py``: the intent-routing assertion under test is
+complete there. FakeBus delivers each message in the calling thread, so the
+handler body still runs inside ``capture()``. Some handlers (eg. plain
+"change volume" with no target level) call ``get_response()`` for a
+follow-up, which waits for a reply that never comes on a bare MiniCroft
+(ovoscope#130). The ``_no_follow_up_prompt`` fixture answers every
+follow-up prompt with None, so no row waits on one.
 """
 import json
 from pathlib import Path
@@ -21,6 +21,7 @@ from pathlib import Path
 import pytest
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
+from ovos_skill_volume import VolumeSkill
 from ovoscope import CaptureSession, get_minicroft
 
 SKILL_ID = "ovos-skill-volume.openvoiceos"
@@ -88,37 +89,22 @@ def _load_golden_rows():
             line = line.strip()
             if not line:
                 continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                continue
-            rows.append(row)
+            rows.append(json.loads(line))
     return rows
 
 
-# "volume change" carries no numeric amount, so handle_change_volume_intent
-# falls into a get_response() follow-up (validated against a spoken number)
-# once the handler body runs. get_response() can deadlock on a bare
-# FakeBus/MiniCroft with no real STT round-trip -- upstream fix in flight,
-# see ovoscope#130. This suite's capture already ends at
-# "mycroft.skill.handler.start" (right after the intent binding fires, before
-# the handler body/get_response ever runs -- see the module docstring), so
-# the row itself does not observe that deadlock; no xfail is needed here.
-# Defensive: give it a tighter per-row timeout than the suite default so
-# that if some future environment's ordering of "mycroft.skill.handler.start"
-# vs. get_response() differs and this DOES hang, it fails fast (20s) rather
-# than consuming the full 60s suite timeout.
-_ROW_TIMEOUTS = {
-    "volume change": 20,
-}
-
-
 def _as_param(row):
-    timeout = _ROW_TIMEOUTS.get(row["utterance"])
-    marks = pytest.mark.timeout(timeout) if timeout else ()
-    return pytest.param(row, id=row["utterance"], marks=marks)
+    return pytest.param(row, id=row["utterance"])
 
 
 GOLDEN_ROWS = [_as_param(r) for r in _load_golden_rows()]
+
+
+@pytest.fixture(scope="module", autouse=True)
+def _no_follow_up_prompt():
+    with pytest.MonkeyPatch.context() as mp:
+        mp.setattr(VolumeSkill, "get_response", lambda self, *args, **kwargs: None)
+        yield
 
 
 @pytest.fixture(scope="module")
