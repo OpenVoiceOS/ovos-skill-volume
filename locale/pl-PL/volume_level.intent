@@ -1,9 +1,12 @@
-objętość do <level>
-ustalona objętość <level>
-objętość <level>
-<level> objętość
-umieścić objętość do <level>
-ustawić objętość do <level>
-zwiększenie poziomu objętości do <level>
-zmianę poziomu objętości do <level>
+głośność do <level>
+ustalona głośność <level>
+głośność <level>
+<level> głośność
+umieścić głośność do <level>
+ustawić głośność do <level>
+zwiększenie poziomu głośności do <level>
+zmianę poziomu głośności do <level>
 Odłóż to z powrotem <level>
+ustaw (wysoki|niski|średni|maksymalny|domyślny) poziom głośności
+głośność na (wysoki|niski|średni|maksymalny|domyślny) poziom
+przestaw głośność na poziom (wysoki|niski|średni|maksymalny|domyślny)

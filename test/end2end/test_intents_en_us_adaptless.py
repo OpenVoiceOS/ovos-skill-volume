@@ -1,11 +1,11 @@
 """Adapt-less end-to-end coverage for the four intents migrated from
-IntentBuilder (Adapt) to ``.intent`` files (padatious/padacioso): change,
+IntentBuilder (Adapt) to ``.intent`` files (padacioso): change,
 less, increase and current volume.
 
 The pipeline here deliberately excludes every ``ovos-adapt-pipeline-plugin-*``
 entry. Before the migration these four intents only existed as Adapt
 IntentBuilder requirements, so none of them can match at all without Adapt in
-the pipeline. After the migration they are plain padatious/padacioso
+the pipeline. After the migration they are plain padacioso
 templates and route correctly even with Adapt absent -- proving the intent
 files, not Adapt vocab, now carry the match.
 """
@@ -19,7 +19,6 @@ SKILL_ID = "ovos-skill-volume.openvoiceos"
 LANG = "en-US"
 
 _PIPELINE = [
-    "ovos-padatious-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-medium",
 ]
