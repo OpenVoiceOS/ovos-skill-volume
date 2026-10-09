@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.1a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.1a3) (2026-10-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.1a2...0.12.1a3)
+
+**Merged pull requests:**
+
+- test: gate natural golden rows on the m2v pipeline in every locale [\#195](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/195) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.1a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.1a2) (2026-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.1a1...0.12.1a2)
@@ -384,10 +392,6 @@
 ## [0.1.17a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a3) (2025-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a2...0.1.17a3)
-
-**Merged pull requests:**
-
-- translate volume [\#87](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/87) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.17a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a2) (2025-09-29)
 
