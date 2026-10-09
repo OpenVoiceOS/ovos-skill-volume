@@ -1,9 +1,16 @@
-zmiana objętości {amount}
-ustalona objętość {amount}
-objętość {amount} procent
-zmiana objętości
-ustawić objętość do {amount} procent
-dostosować objętość do {amount}
+zmiana głośności {amount}
+ustalona głośność {amount}
+głośność {amount} procent
+zmiana głośności
+ustawić głośność do {amount} procent
+dostosować głośność do {amount}
 może zmienić na {amount}
-można ustawić objętość {amount}
-Chcę mieć objętość {amount}
+można ustawić głośność {amount}
+Chcę mieć głośność {amount}
+proszę ustawić głośność na {amount}
+zmień poziom głośności na {amount}
+głośność na {amount} procent
+przestaw głośność na {amount}
+zrób głośność {amount}
+ustaw poziom głośności na {amount}
+niech głośność będzie {amount}

@@ -6,3 +6,8 @@ volumen {amount}
 puedes poner el volumen a {amount}
 quiero el volumen a {amount}
 sube el volumen a {amount}
+bájale el volumen a {amount}
+baja el volumen hasta {amount}
+deja el volumen al {amount}
+bájalo a {amount}
+baja el sonido a {amount}

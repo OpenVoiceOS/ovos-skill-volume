@@ -6,3 +6,6 @@ lydstyrke {amount}
 kan du sætte lydstyrken til {amount}
 jeg vil have lydstyrken på {amount}
 juster lydstyrken til {amount}
+skru lydstyrken op til {amount}
+skru ned til {amount}
+skru lyden ned til {amount}

@@ -6,3 +6,5 @@ volume {amount}
 kun je het volume op {amount} zetten
 ik wil het volume op {amount}
 draai het volume naar {amount}
+volume naar {amount}
+zet het volume naar {amount}

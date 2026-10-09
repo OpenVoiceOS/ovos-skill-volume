@@ -1,16 +1,9 @@
 """Pytest collection config for the test suite.
 
-The ``test/end2end/`` suite is an ovoscope-driven end-to-end suite that requires
-the heavy e2e stack (``ovoscope`` + ``ovos-core[plugins,lgpl]``, which needs
-swig/libfann system headers). It is exercised by the dedicated ``ovoscope`` CI
-job (``install_extras: 'end2end'`` + ``require_padatious``/``require_adapt``).
-
-The lightweight ``build_tests``/``coverage`` jobs install only the ``test``
-extra and scan the whole ``test/`` tree, so without ovoscope present pytest
-would error out trying to import the end2end modules. When ovoscope is not
-installed we skip collecting that directory entirely so those jobs stay green.
-When ovoscope IS installed (the ovoscope job) the directory is collected and the
-e2e tests actually run.
+The ``test/end2end/`` suite boots ovoscope MiniCrofts on the adapt, padacioso
+and m2v pipelines. The ``test`` and ``end2end`` extras both install ovoscope.
+When ovoscope is not installed, pytest skips that directory, so a run with
+only the core dependencies still collects the unit tests.
 """
 from importlib.util import find_spec
 

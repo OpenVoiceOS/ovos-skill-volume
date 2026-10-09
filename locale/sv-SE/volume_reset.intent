@@ -1,4 +1,4 @@
-(återställ) volymen [till (standard|medel|normalt)]
+återställ volymen [till (standard|medel|normalt)]
 ställ tillbaka volymen till normalt
 sätt ljudet till standardvärdet
 volymen tillbaka till normalt tack
@@ -6,3 +6,6 @@ volymen tillbaka till normalt tack
 nollställ volymen
 ställ tillbaka volymen
 sätt ljudnivån som den var
+tillbaka till normal volym
+gå tillbaka till standardvolym
+ställ volymen tillbaka till normal

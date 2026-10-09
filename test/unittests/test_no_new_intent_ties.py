@@ -59,7 +59,7 @@ def test_no_locale_gains_a_tie(locale):
 
 
 def test_fa_ir_volume_up_raises_the_volume():
-    """"حجم بالا" ("volume up") must raise the volume, not set it to maximum.
+    """"صدا بالا" ("volume up") must raise the volume, not set it to maximum.
 
     بالا is the fa-IR translation of "up" in the en-US increase_volume line
     `volume (up|higher|louder)`. It must stay out of the level vocabularies
@@ -83,7 +83,7 @@ def test_fa_ir_volume_up_raises_the_volume():
                 samples.append(line.strip())
         container.add_intent(f.stem, samples)
 
-    result = container.calc_intent("حجم بالا")
+    result = container.calc_intent("صدا بالا")
     assert result["name"] == "increase_volume", (
-        f"'حجم بالا' resolved to {result['name']!r}, not 'increase_volume'"
+        f"'صدا بالا' resolved to {result['name']!r}, not 'increase_volume'"
     )

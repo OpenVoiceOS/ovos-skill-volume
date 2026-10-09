@@ -27,17 +27,20 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "pytest",
+    "pytest-timeout",
     "ovos-workshop>=8.0.0,<10.0.0",
     "ovos-plugin-manager",
     "ovos-utils",
+    "ovoscope>=1.11.2a1",
+    "ovos-m2v-pipeline>=0.32.0a1",
+    "ovos-adapt-parser>=1.0.9,<2.0.0",
 ]
-# heavy extra for the ovoscope end-to-end suite; ovos-core[plugins,lgpl] drags
-# in fann2 which needs swig + libfann system headers, so the ovoscope CI job
-# apt-installs them via require_padatious/require_adapt.
+# extra for the ovoscope end-to-end suite (adapt, padacioso and m2v pipelines)
 end2end = [
     "pytest",
     "pytest-timeout",
-    "ovoscope>=1.0.1a1",
+    "ovoscope>=1.11.2a1",
+    "ovos-m2v-pipeline>=0.32.0a1",
     "ovos-adapt-parser>=1.0.9,<2.0.0",
 ]
 

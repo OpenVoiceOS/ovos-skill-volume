@@ -1,7 +1,7 @@
 """End-to-end intent routing tests for the en-US locale.
 
 Each canonical utterance is fired through a real MiniCroft and asserted to
-route to the expected intent handler. Coverage spans the padatious level
+route to the expected intent handler. Coverage spans the padacioso level
 intent (volume_level, covering max/high/default/low plus the max-boost and
 reset idioms) and mute/unmute/mute-toggle, and the adapt intents
 (change/less/increase/current volume). The side effects (mycroft.volume.*, the
@@ -19,7 +19,6 @@ LANG = "en-US"
 
 _PIPELINE = [
     "ovos-adapt-pipeline-plugin-high",
-    "ovos-padatious-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-medium",
     "ovos-padacioso-pipeline-plugin-medium",
@@ -81,7 +80,7 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
         intent = intent.removesuffix(".intent")
         self.assertIn(f"{SKILL_ID}:{intent}", self._types(text))
 
-    # padatious: volume_level.intent (merges the former discrete
+    # padacioso: volume_level.intent (merges the former discrete
     # volume.{max,high,default,low}.intent files behind a single {level}
     # slot; see level.{max,high,medium,low,default}.voc for the accepted
     # level words)
@@ -109,32 +108,32 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
     def test_volume_to_low(self):
         self._assert_intent("volume to low", "volume_level.intent")
 
-    # padatious: volume_max_boost.intent (non-slot idioms carried over from
+    # padacioso: volume_max_boost.intent (non-slot idioms carried over from
     # the old volume.max.intent -- "crank the volume", "turn it all the way
     # up" -- that don't fit the {level} slot template)
     def test_crank_volume(self):
         self._assert_intent("crank the volume", "volume_max_boost.intent")
 
-    # padatious: volume_reset.intent ("reset/restore THE volume" carries no
+    # padacioso: volume_reset.intent ("reset/restore THE volume" carries no
     # level word at all, so it can't bind {level} either)
     def test_reset_the_volume(self):
         self._assert_intent("reset the volume", "volume_reset.intent")
 
-    # padatious: volume_mute.intent
+    # padacioso: volume_mute.intent
     def test_mute(self):
         self._assert_intent("mute", "volume_mute.intent")
 
     def test_mute_audio(self):
         self._assert_intent("mute audio", "volume_mute.intent")
 
-    # padatious: volume_unmute.intent
+    # padacioso: volume_unmute.intent
     def test_unmute(self):
         self._assert_intent("unmute", "volume_unmute.intent")
 
     def test_unmute_audio(self):
         self._assert_intent("unmute audio", "volume_unmute.intent")
 
-    # padatious: volume_mute_toggle.intent
+    # padacioso: volume_mute_toggle.intent
     def test_toggle_mute(self):
         self._assert_intent("toggle mute", "volume_mute_toggle.intent")
 
