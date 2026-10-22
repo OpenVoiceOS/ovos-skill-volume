@@ -1,0 +1,23 @@
+{
+  "name": "Volume Control",
+  "description": "Control the volume of OVOS with verbal commands",
+  "examples": [
+    "Изменение объема",
+    "объем",
+    "громче",
+    "Потише.",
+    "полный звук",
+    "немой",
+    "Включите немой.",
+    "перезагрузить объем",
+    "Отдай мне звук."
+  ],
+  "tags": [
+    "system",
+    "sound",
+    "volume-control",
+    "Configuration",
+    "volume",
+    "permissive-license"
+  ]
+}

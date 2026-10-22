@@ -1,9 +1,9 @@
 {
-  "volume.mute.toggle.intent": [
+  "volume_mute_toggle.intent": [
     "volume uitzetten",
     "audio aan"
   ],
-  "volume.unmute.intent": [
+  "volume_unmute.intent": [
     "volume aanzetten",
     "geluid aan",
     "audio aan"
@@ -32,7 +32,7 @@
     "volume naar hoog niveau",
     "volumeniveau naar hoog"
   ],
-  "volume.mute.intent": [
+  "volume_mute.intent": [
     "volume dempen",
     "dempen",
     "geluid dempen"
