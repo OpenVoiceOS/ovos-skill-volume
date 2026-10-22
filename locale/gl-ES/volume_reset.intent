@@ -1,5 +1,4 @@
-restaurar o volume
-restabelecer o volume
+(restaurar|restabelecer) [o] volume
 deixa o volume como estaba
 volve ao volume normal
 pon o son predefinido
