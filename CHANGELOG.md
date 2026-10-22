@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.2a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.2a1) (2026-10-22)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.1a3...0.12.2a1)
+
+**Merged pull requests:**
+
+- fix: give each volume phrasing a single intent owner [\#197](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/197) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.12.1a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.1a3) (2026-10-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.1a2...0.12.1a3)
@@ -384,10 +392,6 @@
 ## [0.1.17a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a4) (2025-11-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a3...0.1.17a4)
-
-**Merged pull requests:**
-
-- es-es/translate [\#89](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/89) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.17a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a3) (2025-10-08)
 
