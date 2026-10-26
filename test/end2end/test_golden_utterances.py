@@ -51,33 +51,6 @@ NEGATIVE_KNOWN_CLAIMS = {
 # printed, and the per-intent floor still fails the test. A locale that
 # reaches MIN_MATCH_RATE fails until it is removed from here.
 GOLDEN_LOCALE_GAPS = {
-    "es-CO": (
-        'measured 75.0% of 32 rows match in three runs, below 80%. Misses: '
-        "'¿me cuentas qué tan duro está sonando esto?' (expected "
-        "current_volume, got None); 'no oigo bien, póngalo más duro' "
-        "(expected increase_volume, got volume_max_boost); 'eso está muy "
-        "duro, bájele un poquito' (expected less_volume, got None); 'deja "
-        "el volumen en el nivel predeterminado' (expected volume_level, got "
-        "volume_reset); 'súbele todo al volumen' (expected "
-        "volume_max_boost, got increase_volume); 'que no se escuche "
-        "absolutamente nada, por favor' (expected volume_mute, got None); "
-        "'si está en silencio quítalo y si no, ponlo' (expected "
-        "volume_mute_toggle, got volume_mute); 'restablece el volumen, por "
-        "favor' (expected volume_reset, got None). The published m2v model "
-        'predates these templates; remove after retrain.'),
-    "it-IT": (
-        'measured 79.5% of 39 rows match in three runs, below 80%. Misses: '
-        "'preferisco ascoltare su un livello alto' (expected volume_level, "
-        'got None); "metti l\'altoparlante in muto" (expected volume_mute, '
-        'got None); "fammi sentire di nuovo l\'audio" (expected '
-        "volume_unmute, got None); 'alto, mi raccomando, deve sentirsi da "
-        'lontano\' (expected volume_level, got None); "non sento quasi '
-        'niente, dai un po\' più di volume" (expected increase_volume, got '
-        "None); 'mi fa male alle orecchie, puoi scendere un pochino?' "
-        "(expected less_volume, got None); 'metti il volume a palla' "
-        '(expected volume_max_boost, got None); "silenzia l\'altoparlante" '
-        '(expected volume_mute, got None). The published m2v model predates '
-        'these templates; remove after retrain.'),
     "pl-PL": (
         'measured 75.0% of 32 rows match in three runs, below 80%. Misses: '
         "'ścisz to odrobinę, dobrze?' (expected less_volume, got None); "
@@ -98,18 +71,7 @@ GOLDEN_LOCALE_GAPS = {
 # rows in the rate; only the floor check ignores it. A pair whose intent
 # reaches the floor fails until it is removed from here. A missing .intent file
 # still fails test/unittests/test_locale_intent_parity.py.
-GOLDEN_INTENT_GAPS = {
-    ("kab", "current_volume"): "measured: 0 of 3 rows match on m2v; kab is "
-                               "unvouched machine Kabyle",
-    ("kab", "volume_unmute"): "measured: 0 of 3 rows match on m2v; kab is "
-                              "unvouched machine Kabyle",
-    ("kab", "volume_mute_toggle"): (
-        "measured: 0 of 3 rows match on m2v, none matches any intent: 'ma "
-        "tzemreḍ, qleb asgens ɣer tama nniḍen'; 'ma yella yesgens err-it, "
-        "ma yella yeldi sgens-it'; 'abeddel gar tsusmi d imesli, ttxil-k'. "
-        'The published m2v model predates these templates; remove after '
-        'retrain.'),
-}
+GOLDEN_INTENT_GAPS = {}
 END2END_DIR = Path(__file__).parent
 
 
