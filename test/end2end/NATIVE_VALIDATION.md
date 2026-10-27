@@ -10,13 +10,13 @@ This file tells a native speaker what to check in the test data of this skill.
 |---|---|---|
 | `golden_utterances_<lang>.jsonl` | Natural requests, one row per sentence, labelled with the intent the request means. One file for each locale in `locale/`. | `test_golden_utterances.py` on the m2v pipeline |
 | `negative_utterances_<lang>.jsonl` | Requests for other skills that this skill must not claim. | `test_golden_utterances.py` on the m2v pipeline |
-| `test_routing_multilang.py` | Cross-language negatives, numeric amounts and level percents. | adapt and padacioso pipelines |
+| `test_routing_multilang.py` | Cross-language negatives, numeric amounts and level percents. | m2v pipeline |
 
-No test pipeline in this directory includes padatious. The routing tests use adapt and padacioso, the golden test uses m2v, and the whole suite passes without ovos-padatious installed.
+Every test in this directory runs on the m2v prototype pipeline, and the whole suite passes without ovos-padatious installed.
 
 ## How the golden test decides
 
-For each locale, at least 80% of the golden rows must route to their labelled intent. Every intent with rows in the locale must route at least one of its rows. No negative row may route to this skill, except the measured false claims in `NEGATIVE_KNOWN_CLAIMS` in `test_golden_utterances.py`.
+Each golden row is one routing check, which goes right when the row routes to its labelled intent. Each negative row is one routing check, which goes right when no intent of this skill claims it. A check that goes wrong skips its test. The share of routing checks that go right must reach `ovoscope_min_routing_rate` in `pyproject.toml`, or the session fails.
 
 ## What a native speaker checks
 

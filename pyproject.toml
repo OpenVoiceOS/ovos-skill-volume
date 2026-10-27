@@ -31,15 +31,15 @@ test = [
     "ovos-workshop>=8.0.0,<10.0.0",
     "ovos-plugin-manager",
     "ovos-utils",
-    "ovoscope>=1.11.2a1",
+    "ovoscope>=1.12.1a1",
     "ovos-m2v-pipeline>=0.37.3a1",
     "ovos-adapt-parser>=1.0.9,<2.0.0",
 ]
-# extra for the ovoscope end-to-end suite (adapt, padacioso and m2v pipelines)
+# extra for the ovoscope end-to-end suite (m2v prototype pipeline)
 end2end = [
     "pytest",
     "pytest-timeout",
-    "ovoscope>=1.11.2a1",
+    "ovoscope>=1.12.1a1",
     "ovos-m2v-pipeline>=0.37.3a1",
     "ovos-adapt-parser>=1.0.9,<2.0.0",
 ]
@@ -69,3 +69,6 @@ packages = ["ovos_skill_volume"]
     "regex/**/*",
     "skill/**/*",
 ]
+
+[tool.pytest.ini_options]
+ovoscope_min_routing_rate = 0.80

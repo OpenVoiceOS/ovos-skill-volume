@@ -13,23 +13,18 @@ default en-US boot only registers en-US intents.
 """
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-volume.openvoiceos"
 
-_PIPELINE = [
-    "ovos-adapt-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-adapt-pipeline-plugin-medium",
-    "ovos-padacioso-pipeline-plugin-medium",
-    "ovos-adapt-pipeline-plugin-low",
-]
+VOLUME_LEVEL = f"{SKILL_ID}:volume_level"
 
 
 def _drive(mc, utterance: str, lang: str, session_id: str):
     session = Session(session_id)
     session.lang = lang
-    session.pipeline = list(_PIPELINE)
+    session.pipeline = list(PIPELINE)
     session.blacklisted_intents = []
     msg = Message(
         "recognizer_loop:utterance",
@@ -42,6 +37,7 @@ def _drive(mc, utterance: str, lang: str, session_id: str):
 
 
 def _assert_max_volume_effect(messages, utterance):
+    TALLY.assert_routed(utterance, VOLUME_LEVEL, [m.msg_type for m in messages])
     sets = [m for m in messages if m.msg_type == "mycroft.volume.set"]
     assert sets, f"{utterance!r}: no mycroft.volume.set emitted, got {[m.msg_type for m in messages]!r}"
     assert sets[0].data["percent"] == 1.0, (
@@ -55,7 +51,7 @@ def _assert_max_volume_effect(messages, utterance):
 
 
 def test_set_volume_to_max_en_us():
-    mc = get_minicroft([SKILL_ID])
+    mc = get_prototype_minicroft([SKILL_ID])
     try:
         messages = _drive(mc, "set the volume to max", "en-US", "e2e-vol-max-en")
         _assert_max_volume_effect(messages, "set the volume to max")
@@ -64,7 +60,7 @@ def test_set_volume_to_max_en_us():
 
 
 def test_set_volume_to_max_it_it():
-    mc = get_minicroft([SKILL_ID], lang="it-IT")
+    mc = get_prototype_minicroft([SKILL_ID], lang="it-IT")
     try:
         messages = _drive(mc, "imposta il volume al massimo", "it-IT", "e2e-vol-max-it")
         _assert_max_volume_effect(messages, "imposta il volume al massimo")

@@ -8,21 +8,20 @@ confusables are NOT claimed by this skill -- the new lines are anchored on
 the "it" object pronoun specifically so that phrasings naming an explicit
 target ("the music", "the song") stay out of scope.
 """
+from pathlib import Path
+
 import pytest
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-volume.openvoiceos"
 LANG = "en-US"
 
-_PIPELINE = [
-    "ovos-adapt-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-adapt-pipeline-plugin-medium",
-    "ovos-padacioso-pipeline-plugin-medium",
-    "ovos-adapt-pipeline-plugin-low",
-]
+# every intent the skill registers, read from its en-US .intent files
+SKILL_INTENTS = [f"{SKILL_ID}:{path.stem}" for path in sorted(
+    (Path(__file__).parents[2] / "locale" / "en-US").rglob("*.intent"))]
 
 _IGNORE = [
     "speak",
@@ -75,7 +74,7 @@ NEGATIVE_UTTERANCES = [
 
 @pytest.fixture(scope="module")
 def minicroft():
-    mc = get_minicroft([SKILL_ID])
+    mc = get_prototype_minicroft([SKILL_ID])
     yield mc
     mc.stop()
 
@@ -83,9 +82,7 @@ def minicroft():
 def _types(mc, text, session_id):
     session = Session(session_id)
     session.lang = LANG
-    session.pipeline = list(_PIPELINE)
-    # blacklisted_intents defaults to None on a fresh Session, which crashes
-    # the padacioso pipeline (NoneType membership test) - force an empty list.
+    session.pipeline = list(PIPELINE)
     session.blacklisted_intents = []
     utterance = Message(
         "recognizer_loop:utterance",
@@ -106,12 +103,11 @@ def _types(mc, text, session_id):
 def test_terse_followup_routes_to_intent(minicroft, row):
     text, intent = row
     types = _types(minicroft, text, f"terse-{text}")
-    assert f"{SKILL_ID}:{intent}" in types, f"{text!r}: expected {intent!r}, got {types!r}"
+    TALLY.assert_routed(text, f"{SKILL_ID}:{intent}", types)
 
 
 @pytest.mark.timeout(60)
 @pytest.mark.parametrize("text", NEGATIVE_UTTERANCES)
 def test_media_confusable_not_claimed(minicroft, text):
     types = _types(minicroft, text, f"terse-negative-{text}")
-    claimed = any(t.startswith(f"{SKILL_ID}:") for t in types)
-    assert not claimed, f"{text!r} was incorrectly claimed by {SKILL_ID}: {types!r}"
+    TALLY.assert_not_routed(text, SKILL_INTENTS, types)
