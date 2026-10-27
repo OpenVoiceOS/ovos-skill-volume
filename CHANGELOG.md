@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.2a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.2a2) (2026-10-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.2a1...0.12.2a2)
+
+**Merged pull requests:**
+
+- test\(golden\): re-pin model-dependent gaps and claims for the 0.56 prototype low tier [\#200](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/200) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.2a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.2a1) (2026-10-22)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.1a3...0.12.2a1)
@@ -369,10 +377,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a6...0.1.17a7)
 
-**Merged pull requests:**
-
-- chore\(deps\): update dependency python to 3.14 [\#92](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/92) ([renovate[bot]](https://github.com/apps/renovate))
-
 ## [0.1.17a6](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a6) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a5...0.1.17a6)
@@ -384,10 +388,6 @@
 ## [0.1.17a5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a5) (2025-12-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a4...0.1.17a5)
-
-**Merged pull requests:**
-
-- chore: Configure Renovate [\#91](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/91) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [0.1.17a4](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a4) (2025-11-24)
 
