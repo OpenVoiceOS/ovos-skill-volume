@@ -1,7 +1,7 @@
 """Pytest collection config for the test suite.
 
-The ``test/end2end/`` suite boots ovoscope MiniCrofts on the adapt, padacioso
-and m2v pipelines. The ``test`` and ``end2end`` extras both install ovoscope.
+The ``test/end2end/`` suite boots ovoscope MiniCrofts on the m2v prototype
+pipeline. The ``test`` and ``end2end`` extras both install ovoscope.
 When ovoscope is not installed, pytest skips that directory, so a run with
 only the core dependencies still collects the unit tests.
 """

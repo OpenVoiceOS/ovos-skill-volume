@@ -1,7 +1,6 @@
 """Multilingual routing and effect checks for ovos-skill-volume.
 
-These tests run on the adapt and padacioso pipelines. Golden-row coverage
-per locale lives in ``test_golden_utterances.py`` on the m2v pipeline.
+Golden-row coverage per locale lives in ``test_golden_utterances.py``.
 
 One MiniCroft is booted per locale (lang=<locale>, no secondary_langs).
 The tests cover three things: utterances in another language or from
@@ -13,21 +12,22 @@ handler that calls get_response() would wait for a reply that never comes
 on a bare MiniCroft (ovoscope#130), so the ``_no_follow_up_prompt`` fixture
 answers every follow-up prompt with None.
 """
+from pathlib import Path
+
 import pytest
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
 from ovos_skill_volume import VolumeSkill
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-volume.openvoiceos"
 
-_PIPELINE = [
-    "ovos-adapt-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-adapt-pipeline-plugin-medium",
-    "ovos-padacioso-pipeline-plugin-medium",
-    "ovos-adapt-pipeline-plugin-low",
-]
+VOLUME_LEVEL = f"{SKILL_ID}:volume_level"
+CHANGE_VOLUME = f"{SKILL_ID}:change_volume"
+# every intent the skill registers, read from its en-US .intent files
+SKILL_INTENTS = [f"{SKILL_ID}:{path.stem}" for path in sorted(
+    (Path(__file__).parents[2] / "locale" / "en-US").rglob("*.intent"))]
 
 _IGNORE = [
     "speak",
@@ -67,13 +67,6 @@ CROSS_LANG_NEGATIVES = [
 ]
 
 
-def _candidates(skill_id: str, intent_label: str) -> set:
-    """Padatious and padacioso plugin versions register the matched-intent
-    bus event under the ``.intent`` basename with or without the extension."""
-    base = intent_label[:-len(".intent")] if intent_label.endswith(".intent") else intent_label
-    return {f"{skill_id}:{intent_label}", f"{skill_id}:{base}"}
-
-
 _BOOTED = {}
 
 
@@ -92,7 +85,7 @@ def mc_factory(request):
     every booted instance at module teardown."""
     def _get(lang):
         if lang not in _BOOTED:
-            mc = get_minicroft([SKILL_ID], max_wait=150, lang=lang)
+            mc = get_prototype_minicroft([SKILL_ID], max_wait=150, lang=lang)
             _BOOTED[lang] = mc
             request.addfinalizer(mc.stop)
         return _BOOTED[lang]
@@ -102,7 +95,7 @@ def mc_factory(request):
 def _types(mc, text, lang, session_id):
     session = Session(session_id)
     session.lang = lang
-    session.pipeline = list(_PIPELINE)
+    session.pipeline = list(PIPELINE)
     session.blacklisted_intents = []
     utterance = Message(
         "recognizer_loop:utterance",
@@ -124,8 +117,7 @@ def test_cross_language_negative(mc_factory, negative):
     text, lang, _why = negative
     mc = mc_factory(lang)
     types = _types(mc, text, lang, f"negative-{lang}-{text}")
-    claimed = any(t.startswith(f"{SKILL_ID}:") for t in types)
-    assert not claimed, f"[{lang}] {text!r} was incorrectly claimed by {SKILL_ID}"
+    TALLY.assert_not_routed(text, SKILL_INTENTS, types)
 
 
 # ---------------------------------------------------------------------------
@@ -173,7 +165,7 @@ LEVEL_PERCENT_ROWS = [
 def _percent_for(mc, text, lang, session_id):
     session = Session(session_id)
     session.lang = lang
-    session.pipeline = list(_PIPELINE)
+    session.pipeline = list(PIPELINE)
     session.blacklisted_intents = []
     utterance = Message(
         "recognizer_loop:utterance",
@@ -188,14 +180,9 @@ def _percent_for(mc, text, lang, session_id):
     capture.capture(utterance, timeout=30)
     msgs = capture.finish()
     types = [m.msg_type for m in msgs]
-    percent = None
-    claimed_volume_level = False
-    for m in msgs:
-        if m.msg_type == "mycroft.volume.set":
-            percent = m.data.get("percent")
-        if m.msg_type in _candidates(SKILL_ID, "volume_level.intent"):
-            claimed_volume_level = True
-    return types, percent, claimed_volume_level
+    percent = next((m.data.get("percent") for m in msgs
+                    if m.msg_type == "mycroft.volume.set"), None)
+    return types, percent
 
 
 @pytest.mark.timeout(60)
@@ -204,13 +191,8 @@ def test_numeric_amount_never_claimed_by_volume_level(mc_factory, case):
     lang, text = case
     mc = mc_factory(lang)
     for _trial in range(3):
-        types, percent, claimed_volume_level = _percent_for(
-            mc, text, lang, f"numeric-{lang}-{text}-{_trial}"
-        )
-        assert not claimed_volume_level, (
-            f"[{lang}] {text!r} was claimed by volume_level.intent instead of change_volume "
-            f"(got {types!r})"
-        )
+        types, percent = _percent_for(mc, text, lang, f"numeric-{lang}-{text}-{_trial}")
+        TALLY.assert_routed(text, CHANGE_VOLUME, types)
         assert percent == pytest.approx(0.4), (
             f"[{lang}] {text!r}: expected mycroft.volume.set percent=0.4, got {percent!r} (types={types!r})"
         )
@@ -221,11 +203,8 @@ def test_numeric_amount_never_claimed_by_volume_level(mc_factory, case):
 def test_level_word_sets_correct_percent(mc_factory, case):
     lang, text, expected = case
     mc = mc_factory(lang)
-    types, percent, claimed_volume_level = _percent_for(mc, text, lang, f"percent-{lang}-{text}")
-    assert claimed_volume_level, (
-        f"[{lang}] {text!r}: a level word must be claimed by volume_level.intent, not lost to "
-        f"change_volume's {{amount}} slot (got {types!r})"
-    )
+    types, percent = _percent_for(mc, text, lang, f"percent-{lang}-{text}")
+    TALLY.assert_routed(text, VOLUME_LEVEL, types)
     assert percent == pytest.approx(expected), (
         f"[{lang}] {text!r}: expected mycroft.volume.set percent={expected!r}, got {percent!r} "
         f"(types={types!r})"
