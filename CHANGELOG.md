@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.2a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.2a3) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.2a2...0.12.2a3)
+
+**Merged pull requests:**
+
+- test: run the end2end suite on the m2v prototype pipeline [\#199](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/199) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.2a2](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.2a2) (2026-10-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.2a1...0.12.2a2)
