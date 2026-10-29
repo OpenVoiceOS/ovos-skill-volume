@@ -1,9 +1,9 @@
 {
-  "volume.mute.toggle.intent": [
+  "volume_mute_toggle.intent": [
     "alterna el silenci\nconmuta el silenci\ncanvia el silenci",
     "alterna l'àudio\nconmuta l'àudio\nalterna el so\nconmuta el so"
   ],
-  "volume.unmute.intent": [
+  "volume_unmute.intent": [
     "deixa de silenciar el volum",
     "treu el silenci\nno silenciïs\nactiva el so\nactiva l'àudio",
     "deixa de silenciar l'àudio"
@@ -32,7 +32,7 @@
     "volum a nivell alt",
     "nivell de volum a alt"
   ],
-  "volume.mute.intent": [
+  "volume_mute.intent": [
     "silencia el volum\nmuteja el volum",
     "silencia\nsilenci\nmuteja",
     "silencia l'àudio\nmuteja l'àudio"
