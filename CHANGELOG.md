@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.3a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.3a1) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.2a3...0.12.3a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): take the reset verbs out of the en-US level vocabulary [\#193](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/193) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.2a3](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.2a3) (2026-10-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.2a2...0.12.2a3)
@@ -388,10 +396,6 @@
 ## [0.1.17a6](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a6) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a5...0.1.17a6)
-
-**Merged pull requests:**
-
-- chore\(deps\): update actions/checkout action to v6 [\#97](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/97) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [0.1.17a5](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a5) (2025-12-18)
 
