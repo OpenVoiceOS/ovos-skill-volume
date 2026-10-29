@@ -85,9 +85,6 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
     def test_default_volume(self):
         self._assert_intent("default volume", "volume_level.intent")
 
-    def test_reset_volume(self):
-        self._assert_intent("reset volume", "volume_level.intent")
-
     def test_low_volume(self):
         self._assert_intent("low volume", "volume_level.intent")
 
@@ -100,10 +97,16 @@ class TestVolumeIntentsEnUS(unittest.TestCase):
     def test_crank_volume(self):
         self._assert_intent("crank the volume", "volume_max_boost.intent")
 
-    # volume_reset.intent ("reset/restore THE volume" carries no
-    # level word at all, so it can't bind {level} either)
+    # volume_reset.intent: "reset" and "restore" are verbs, not level names,
+    # so they are not in the level vocabularies that volume_level inlines
     def test_reset_the_volume(self):
         self._assert_intent("reset the volume", "volume_reset.intent")
+
+    def test_reset_volume(self):
+        self._assert_intent("reset volume", "volume_reset.intent")
+
+    def test_restore_volume_please(self):
+        self._assert_intent("restore volume please", "volume_reset.intent")
 
     # volume_mute.intent
     def test_mute(self):
