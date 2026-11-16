@@ -1,7 +1,6 @@
 from fractions import Fraction
 
-from numtag import tag_numbers
-from numtag.tagger import ARTICLE_CONFIDENCE
+from numtag import Reason, tag_numbers
 from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import intent_handler
@@ -38,7 +37,7 @@ class VolumeSkill(OVOSSkill):
         numtag also reads "cent" as 100. A lone article ("um pouco") is no
         amount."""
         for mention in tag_numbers(utterance, self.lang):
-            if mention.confidence > ARTICLE_CONFIDENCE:
+            if Reason.ARTICLE not in mention.reasons:
                 return float(Fraction(mention.value))
         return None
 

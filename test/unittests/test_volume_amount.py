@@ -31,6 +31,7 @@ def emitted(skill):
     ("en-US", "set the volume to zero", 0.0),
     ("pt-PT", "põe o volume a vinte e cinco por cento", 0.25),
     ("pt-PT", "põe o volume nos setenta e cinco por cento", 0.75),
+    ("pt-PT", "põe um volume a trinta por cento", 0.3),
     ("pt-BR", "coloca o volume em vinte e cinco por cento", 0.25),
     ("fr-FR", "mets le volume à cinquante pour cent", 0.5),
     ("es-ES", "pon el volumen al veinticinco por ciento", 0.25),
