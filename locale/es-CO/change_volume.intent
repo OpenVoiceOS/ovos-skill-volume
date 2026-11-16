@@ -1,0 +1,13 @@
+(cambia[r]|establece[r]|pon) el volumen (a|al) {amount}
+volumen al {amount} por ciento
+pon el volumen al {amount} por ciento
+ajusta el volumen a {amount}
+volumen {amount}
+puedes poner el volumen a {amount}
+quiero el volumen a {amount}
+sube el volumen a {amount}
+bájale el volumen a {amount}
+baja el volumen hasta {amount}
+deja el volumen al {amount}
+bájalo a {amount}
+baja el sonido a {amount}

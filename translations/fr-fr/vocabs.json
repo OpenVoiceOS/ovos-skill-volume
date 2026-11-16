@@ -1,28 +1,20 @@
 {
     "change.voc": [
-        "d\u00e9finir",
-        "modifier",
-        "faire"
+        "change",
+        "mets",
+        "règle"
     ],
     "quieter.voc": [
-        "r\u00e9duire",
-        "inf\u00e9rieur",
-        "moins",
-        "baisser",
-        "diminution",
         "baisse",
-        "silencieux",
-        "silenciese"
+        "moins",
+        "plus bas",
+        "réduis"
     ],
     "louder.voc": [
-        "Augmentation",
+        "augmente",
+        "monte",
         "plus",
-        "Montez",
-        "sup\u00e9rieur",
-        "bruyant",
-        "bruyante",
-        "bruyants",
-        "fort"
+        "plus fort"
     ],
     "current.voc": [
         "actuel"

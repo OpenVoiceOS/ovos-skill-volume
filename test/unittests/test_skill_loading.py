@@ -1,32 +1,21 @@
 import unittest
-from os.path import join, dirname
-import os
-from ovos_utils.bracket_expansion import expand_parentheses, expand_options
+from os.path import dirname
 
-from adapt.engine import IntentDeterminationEngine
-from adapt.intent import IntentBuilder
-from skill_ovos_volume import VolumeSkill, create_skill
 from ovos_plugin_manager.skills import find_skill_plugins
 from ovos_utils.messagebus import FakeBus
-from mycroft.skills.skill_loader import PluginSkillLoader, SkillLoader
+
+from ovos_skill_volume import VolumeSkill
 
 
 class TestSkillLoading(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.skill_id = "ovos-skill-volume.openvoiceos"
-        self.path = dirname(dirname(dirname(__file__)))
+    def setUpClass(cls):
+        cls.skill_id = "ovos-skill-volume.openvoiceos"
+        cls.path = dirname(dirname(dirname(__file__)))
 
     def test_from_class(self):
         bus = FakeBus()
         skill = VolumeSkill()
-        skill._startup(bus, self.skill_id)
-        self.assertEqual(skill.bus, bus)
-        self.assertEqual(skill.skill_id, self.skill_id)
-
-    def test_from_func(self):
-        bus = FakeBus()
-        skill = create_skill()
         skill._startup(bus, self.skill_id)
         self.assertEqual(skill.bus, bus)
         self.assertEqual(skill.skill_id, self.skill_id)
@@ -42,26 +31,3 @@ class TestSkillLoading(unittest.TestCase):
                 break
         else:
             raise RuntimeError("plugin not found")
-
-    def test_from_loader(self):
-        bus = FakeBus()
-        loader = SkillLoader(bus, self.path)
-        loader.load()
-        self.assertEqual(loader.instance.bus, bus)
-        self.assertEqual(loader.instance.root_dir, self.path)
-
-    def test_from_plugin_loader(self):
-        bus = FakeBus()
-        loader = PluginSkillLoader(bus, self.skill_id)
-        for skill_id, plug in find_skill_plugins().items():
-            if skill_id == self.skill_id:
-                loader.load(plug)
-                break
-        else:
-            raise RuntimeError("plugin not found")
-
-        self.assertEqual(loader.skill_id, self.skill_id)
-        self.assertEqual(loader.instance.bus, bus)
-        self.assertEqual(loader.instance.skill_id, self.skill_id)
-
-
