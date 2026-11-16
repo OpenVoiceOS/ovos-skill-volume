@@ -1,7 +1,8 @@
-from ovos_number_parser import extract_number
+from fractions import Fraction
+
+from numtag import Reason, tag_numbers
 from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
-from ovos_utterance_normalizer import UtteranceNormalizerPlugin
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.skills import OVOSSkill
 
@@ -30,28 +31,36 @@ class VolumeSkill(OVOSSkill):
             self.speak_dialog("error_get_volume")
             raise TimeoutError("Failed to get volume")
 
+    def _extract_amount(self, utterance: str) -> float | None:
+        """The first number of the utterance. The number that names the
+        amount comes before the percent word, and in "cinquante pour cent"
+        numtag also reads "cent" as 100. A lone article ("um pouco") is no
+        amount."""
+        for mention in tag_numbers(utterance, self.lang):
+            if Reason.ARTICLE not in mention.reasons:
+                return float(Fraction(mention.value))
+        return None
+
     # intents
     @intent_handler("change_volume.intent")
     def handle_change_volume_intent(self, message):
-        normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
-        utt = normalizer.normalize(message.data["utterance"])
-        volume_change = extract_number(utt, lang=self.lang)
-        if not volume_change:
+        volume_change = self._extract_amount(message.data["utterance"])
+        if volume_change is None:
 
             def amount_validator(response):
-                response = normalizer.normalize(response)
-                amount = extract_number(response, lang=self.lang)
-                if amount:
+                amount = self._extract_amount(response)
+                if amount is not None:
                     return MIN_VOLUME <= amount <= MAX_VOLUME
                 return None
 
             response = self.get_response(
                 "volume_change_amount", validator=amount_validator
             )
-            if response is None:
+            if response is not None:
+                volume_change = self._extract_amount(response)
+            if volume_change is None:
                 self.speak_dialog("error_get_volume")
                 return
-            volume_change = extract_number(normalizer.normalize(response), lang=self.lang)
         if volume_change >= 100:
             self.speak_dialog("volume_max")
         else:
@@ -62,10 +71,8 @@ class VolumeSkill(OVOSSkill):
 
     @intent_handler("less_volume.intent")
     def handle_less_volume_intent(self, message):
-        normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
-        utt = normalizer.normalize(message.data["utterance"])
         volume = self._query_volume(message)
-        volume_change = extract_number(utt, lang=self.lang) or 10
+        volume_change = self._extract_amount(message.data["utterance"]) or 10
         self.bus.emit(
             message.forward("mycroft.volume.decrease", {"percent": volume_change / 100})
         )
@@ -77,10 +84,8 @@ class VolumeSkill(OVOSSkill):
     @intent_handler("increase_volume.intent")
     def handle_increase_volume_intent(self, message):
         volume = self._query_volume(message)
-        normalizer = UtteranceNormalizerPlugin.get_normalizer(self.lang)
-        utt = normalizer.normalize(message.data["utterance"])
         if not (volume == MAX_VOLUME):
-            volume_change = extract_number(utt, lang=self.lang) or 10
+            volume_change = self._extract_amount(message.data["utterance"]) or 10
             self.bus.emit(
                 message.forward(
                     "mycroft.volume.increase", {"percent": volume_change / 100}

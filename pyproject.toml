@@ -16,12 +16,11 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
     "ovos-utils>=0.0.38,<1.0.0",
     "ovos-workshop>=8.0.0,<10.0.0",
-    "ovos-utterance-normalizer>=0.0.1,<1.0.0",
-    "ovos-number-parser>=0.0.1,<1.0.0",
+    "numtag>=0.9.0a1",
 ]
 
 [project.optional-dependencies]
