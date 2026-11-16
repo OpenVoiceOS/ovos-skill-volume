@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.4a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.4a1) (2026-11-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.3a1...0.12.4a1)
+
+**Merged pull requests:**
+
+- fix: read the volume amount with numtag [\#204](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/204) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.3a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.3a1) (2026-10-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.2a3...0.12.3a1)
