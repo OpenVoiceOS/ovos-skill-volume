@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.5a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.5a1) (2026-11-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.4a1...0.12.5a1)
+
+**Merged pull requests:**
+
+- fix\(da-DK\): apply native review of volume phrases [\#206](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/206) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.12.4a1](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.12.4a1) (2026-11-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.12.3a1...0.12.4a1)
@@ -392,10 +400,6 @@
 ## [0.1.17a8](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a8) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-volume/compare/0.1.17a7...0.1.17a8)
-
-**Merged pull requests:**
-
-- chore\(deps\): update dependency ovos\_workshop to v8 [\#101](https://github.com/OpenVoiceOS/ovos-skill-volume/pull/101) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [0.1.17a7](https://github.com/OpenVoiceOS/ovos-skill-volume/tree/0.1.17a7) (2025-12-19)
 
