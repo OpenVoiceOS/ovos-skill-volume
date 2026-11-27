@@ -1,9 +1,9 @@
 {
-  "volume.mute.toggle.intent": [
+  "volume_mute_toggle.intent": [
     "Stai zitto",
     "Stai muto"
   ],
-  "volume.unmute.intent": [
+  "volume_unmute.intent": [
     "Ripristina il volume",
     "Ripristina il volume",
     "Ripristina il volume"
@@ -32,7 +32,7 @@
     "Urla",
     "[UNUSED]"
   ],
-  "volume.mute.intent": [
+  "volume_mute.intent": [
     "Silenzio",
     "Muto",
     "Zitto"

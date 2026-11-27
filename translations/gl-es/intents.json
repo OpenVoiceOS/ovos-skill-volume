@@ -1,9 +1,9 @@
 {
-  "volume.mute.toggle.intent": [
+  "volume_mute_toggle.intent": [
     "alternar o modo silencio",
     "alternar audio"
   ],
-  "volume.unmute.intent": [
+  "volume_unmute.intent": [
     "activar volume",
     "activar son ",
     "activar audio"
@@ -32,7 +32,7 @@
     "subir o nivel de volume",
     "nivel de volume alto"
   ],
-  "volume.mute.intent": [
+  "volume_mute.intent": [
     "silenciar volume",
     "silenciar",
     "silenciar audio"

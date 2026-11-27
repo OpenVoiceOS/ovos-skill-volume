@@ -1,0 +1,40 @@
+{
+  "name": "Lydstyrkekontrol",
+  "description": "Styr lydstyrken på OVOS med verbale kommandoer",
+  "examples": [
+    "standard lydstyrke",
+    "skift lyd",
+    "dæmp lydstyrken",
+    "lydstyrke til lavt",
+    "volumen til lav",
+    "lydstyrken til høj",
+    "indstille lydstyrken til maksimum",
+    "slå mute til",
+    "lydstyrke lav",
+    "høj lydstyrke",
+    "lydstyrke til højt niveau",
+    "maksimal lydstyrke",
+    "indstil volumen til medium",
+    "genopret lydstyrken",
+    "medium volumen",
+    "volumen høj",
+    "slå lyden fra",
+    "slå lyden til",
+    "volumen til høj",
+    "max volumen",
+    "nulstil lydstyrken",
+    "indstil lydstyrken til standard",
+    "lav lydstyrke",
+    "volumen lav",
+    "stum",
+    "topvolumen"
+  ],
+  "tags": [
+    "system",
+    "lyd",
+    "lydstyrke-kontrol",
+    "Konfiguration",
+    "lydstyrke",
+    "permissive-licens"
+  ]
+}

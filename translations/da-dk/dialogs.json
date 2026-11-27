@@ -1,25 +1,25 @@
 {
-  "volume.current.dialog": [
+  "volume_current.dialog": [
     "Lydstyrken er indstillet til {volume}",
     "Lydstyrken er på {volume}"
   ],
-  "volume.change.amount.dialog": [
+  "volume_change_amount.dialog": [
     "Til hvilken lydstyrke? 0 til 100 er muligt."
   ],
-  "volume.max.dialog": [
+  "volume_max.dialog": [
     "Lydstyrke indstillet til maksimalt niveau",
     "Lydstyrke opdateret til maksimalt niveau",
     "Lydstyrken ændret til maksimalt niveau"
   ],
-  "error.get.volume.dialog": [
+  "error_get_volume.dialog": [
     "Der ser ud til at være et problem. Jeg kunne ikke forespørge på den aktuelle lydstyrke."
   ],
-  "volume.set.percent.dialog": [
+  "volume_set_percent.dialog": [
     "Lydstyrken er indstillet til {level} procent",
     "Lydstyrken opdateret til {level} procent",
     "Lydstyrken blev ændret til {level} procent"
   ],
-  "volume.max.already.dialog": [
+  "volume_max_already.dialog": [
     "Lydstyrken er allerede indstillet til maksimalt niveau"
   ]
 }

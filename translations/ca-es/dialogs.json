@@ -1,25 +1,25 @@
 {
-  "volume.current.dialog": [
+  "volume_current.dialog": [
     "El volum s'ha establert a {volume}",
     "El volum és a {volume}"
   ],
-  "volume.change.amount.dialog": [
+  "volume_change_amount.dialog": [
     "A quin volum? És possible un valor entre 0 i 100."
   ],
-  "volume.max.dialog": [
+  "volume_max.dialog": [
     "S'ha establert el volum al màxim",
     "El volum s'ha apujat al màxim nivell",
     "S'ha canviat el volum al nivell màxim"
   ],
-  "error.get.volume.dialog": [
+  "error_get_volume.dialog": [
     "Sembla que hi ha un problema. No he pogut consultar el volum actual."
   ],
-  "volume.set.percent.dialog": [
+  "volume_set_percent.dialog": [
     "El volum s'ha establert al {level} per cent",
     "El volum s'ha apujat al {level} per cent",
     "S'ha canviat el volum al {level} per cent"
   ],
-  "volume.max.already.dialog": [
+  "volume_max_already.dialog": [
     "El volum ja està configurat al nivell màxim"
   ]
 }

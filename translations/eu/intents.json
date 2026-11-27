@@ -1,9 +1,9 @@
 {
-    "volume.mute.toggle.intent": [
+    "volume_mute_toggle.intent": [
         "kommutatu audioa",
         "kommutatu mututzea"
     ],
-    "volume.unmute.intent": [
+    "volume_unmute.intent": [
         "desmututu",
         "desmututu audioa",
         "desmututu bolumena"
@@ -32,7 +32,7 @@
         "bolumena igotzea",
         "bolumen-maila igotzea"
     ],
-    "volume.mute.intent": [
+    "volume_mute.intent": [
         "mututu",
         "mututu audioa",
         "mututu bolumena"
