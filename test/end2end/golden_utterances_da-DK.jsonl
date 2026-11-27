@@ -35,3 +35,4 @@
 {"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "slå lydløs fra", "lang": "da-DK", "intent_label": "volume_unmute", "expected_messages": ["speak"], "needs_manual": true, "machine_generated": true, "rewritten_from": "fjern lydløs"}
 {"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "skru lydstyrken ned til 20", "lang": "da-DK", "intent_label": "change_volume", "needs_manual": true, "machine_generated": true}
 {"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "sæt lyden på 75 procent", "lang": "da-DK", "intent_label": "change_volume", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-volume.openvoiceos", "utterance": "juster lydstyrken til høj", "lang": "da-DK", "intent_label": "volume_level", "expected_messages": ["speak"], "needs_manual": false, "machine_generated": false}
